@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.SelectionController">
+   <children>
+      <JFXButton fx:id="select_btn" buttonType="RAISED" layoutX="119.0" layoutY="94.0" text="Add file.." />
+      <Text fx:id="file_name" layoutX="281.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="199.13671875" />
+      <JFXButton fx:id="generate" layoutX="219.0" layoutY="246.0" prefHeight="26.0" prefWidth="199.0" text="Generate Time Table" />
+      <Text layoutX="133.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Input File" wrappingWidth="205.7294921875" />
+      <Text layoutX="112.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IIIT-ALLAHABAD" wrappingWidth="118.0000014603138" />
+      <Text layoutX="236.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Table Generator" wrappingWidth="164.7294921875" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,145 @@
+Year: 0
+SECTION: 0	9-10				10-11			       11:15-12:15		       12:15-1:15
+MONDAY     	0 SMAT130C(sku)		     	1 SMAT130C(sku)		     	2 MLCS102C(ps)		     	3 MLCS102C(ps)		
+
+TUESDAY     	0 SMAT130C(sku)		     	1 MLCS102C(ps)		     	2 ECAS130C(aks)		     	3 ECAS130C(aks)		
+
+WEEDNESDAY     	0 ECAS130C(aks)		     	1 SEGP132C(at)		     	2 IITP132C(vkc)		     	3 IITP132C(vkc)		
+
+THURSDAY     	0 SEGP132C(at)		     	1 SEGP132C(at)		     	2 IITP132C(vkc)		     	3 EEDC132C(sanjay)		
+
+FRIDAY     	0 EEDC132C(sanjay)		     	1 EEDC132C(sanjay)		     	     	     	     	
+
+
+
+
+Year: 0
+SECTION: 1	9-10				10-11			       11:15-12:15		       12:15-1:15
+MONDAY     	0 SMAT130C(abab)		     	1 SMAT130C(abab)		     	2 MLCS102C(sm)		     	3 MLCS102C(sm)		
+
+TUESDAY     	0 SMAT130C(abab)		     	1 MLCS102C(sm)		     	2 SEGP132C(sb)		     	3 SEGP132C(sb)		
+
+WEEDNESDAY     	0 SEGP132C(sb)		     	1 ECAS130C(aks)		     	2 IITP132C(tp)		     	3 IITP132C(tp)		
+
+THURSDAY     	0 ECAS130C(aks)		     	1 ECAS130C(aks)		     	2 IITP132C(tp)		     	3 EEDC132C(pk)		
+
+FRIDAY     	0 EEDC132C(pk)		     	1 EEDC132C(pk)		     	     	     	     	
+
+
+
+
+Year: 0
+SECTION: 2	9-10				10-11			       11:15-12:15		       12:15-1:15
+MONDAY     	0 SMAT130C(akt)		     	1 SMAT130C(akt)		     	2 MLCS102C(sr)		     	3 MLCS102C(sr)		
+
+TUESDAY     	0 SMAT130C(akt)		     	1 MLCS102C(sr)		     	2 SEGP132C(sanjai)		     	3 SEGP132C(sanjai)		
+
+WEEDNESDAY     	0 SEGP132C(sanjai)		     	1 IITP132C(js)		     	2 ECAS130C(aks)		     	3 ECAS130C(aks)		
+
+THURSDAY     	0 IITP132C(js)		     	1 IITP132C(js)		     	2 ECAS130C(aks)		     	3 EEDC132C(sbh)		
+
+FRIDAY     	0 EEDC132C(sbh)		     	1 EEDC132C(sbh)		     	     	     	     	
+
+
+
+
+Year: 1
+SECTION: 0	9-10				10-11			       11:15-12:15		       12:15-1:15
+MONDAY     	0 IOOM332C(rv)		     	1 IOOM332C(rv)		     	2 SMAT330C(akt)		     	3 SMAT330C(akt)		
+
+TUESDAY     	0 IOOM332C(rv)		     	1 SMAT330C(akt)		     	2 ITOC330C(mk)		     	3 ITOC330C(mk)		
+
+WEEDNESDAY     	0 ITOC330C(mk)		     	1 EMIP33C(mg)		     	2 IOPS332C(bhibhas)		     	3 IOPS332C(bhibhas)		
+
+THURSDAY     	0 EMIP33C(mg)		     	1 EMIP33C(mg)		     	2 IOPS332C(bhibhas)		     	     	
+
+FRIDAY     	     	     	     	     	     	     	     	
+
+
+
+
+Year: 1
+SECTION: 1	9-10				10-11			       11:15-12:15		       12:15-1:15
+MONDAY     	0 IOOM332C(tp)		     	1 IOOM332C(tp)		     	2 SMAT330C(sku)		     	3 SMAT330C(sku)		
+
+TUESDAY     	0 IOOM332C(tp)		     	1 SMAT330C(sku)		     	2 EMIP33C(mg)		     	3 EMIP33C(mg)		
+
+WEEDNESDAY     	0 EMIP33C(mg)		     	1 ITOC330C(mk)		     	2 IOPS332C(js)		     	3 IOPS332C(js)		
+
+THURSDAY     	0 ITOC330C(mk)		     	1 ITOC330C(mk)		     	2 IOPS332C(js)		     	     	
+
+FRIDAY     	     	     	     	     	     	     	     	
+
+
+
+
+Year: 1
+SECTION: 2	9-10				10-11			       11:15-12:15		       12:15-1:15
+MONDAY     	0 EAES3332C(rekha)		     	1 EAES3332C(rekha)		     	2 EEFW330C(rajat)		     	3 EEFW330C(rajat)		
+
+TUESDAY     	0 EAES3332C(rekha)		     	1 EEFW330C(rajat)		     	2 IOPS332C(s maity)		     	3 IOPS332C(s maity)		
+
+WEEDNESDAY     	0 IOPS332C(s maity)		     	1 EACN332C(np)		     	2 EBEE332C(ashutosh)		     	3 EBEE332C(ashutosh)		
+
+THURSDAY     	0 EACN332C(np)		     	1 EACN332C(np)		     	2 EBEE332C(ashutosh)		     	     	
+
+FRIDAY     	     	     	     	     	     	     	     	
+
+
+
+
+SECTION :0
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+SECTION :1
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+SECTION :2
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+SECTION :3
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+SECTION :4
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+SECTION :5
+0 0
+1 0
+2 0
+3 0
+4 0
+5 0
+6 0
+
+Time: 0

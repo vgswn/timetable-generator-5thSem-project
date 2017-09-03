@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.FirstController">
+    <stylesheets>
+        <URL value="@first.css" />
+    </stylesheets>
+   <children>
+      <ComboBox fx:id="what" layoutX="377.0" layoutY="172.0" prefHeight="26.0" prefWidth="118.0" promptText="Select " AnchorPane.bottomAnchor="202.0" AnchorPane.leftAnchor="377.0" AnchorPane.rightAnchor="105.0" AnchorPane.topAnchor="172.0" />
+      <JFXButton fx:id="okbtn" layoutX="277.0" layoutY="252.0" style="-fx-background-color: Cream;" text="OK" />
+      <Text layoutX="95.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IIIT-ALLAHABAD" wrappingWidth="118.0000014603138" />
+      <Text layoutX="232.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Table Generator" wrappingWidth="164.7294921875" />
+      <Text layoutX="78.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select to view Generated Time Table" />
+   </children>
+</AnchorPane>

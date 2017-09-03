@@ -1,0 +1,5 @@
+MONDAY;$;$;EEFW330C(rajat);EEFW330C(rajat);
+TUESDAY;EEFW330C(rajat);IOPS332C(s.maity);EACN332C(np);EACN332C(np);
+WEDNESDAY;IOPS332C(s.maity);IOPS332C(s.maity);EACN332C(np);EBEE332C(ashutosh);
+THURSDAY;EBEE332C(ashutosh);EBEE332C(ashutosh);$;EAES3332C(rekha);
+FRIDAY;$;$;EAES3332C(rekha);EAES3332C(rekha);

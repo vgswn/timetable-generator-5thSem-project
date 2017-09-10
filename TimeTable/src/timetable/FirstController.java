@@ -56,7 +56,8 @@ public class FirstController implements Initializable {
 
                 if (what.getValue() == "Teacher") {
                     try {
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("teacher.fxml"));
+                        batch=-1;
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
                         
                     //    System.out.println("dssff");
                         
@@ -73,7 +74,32 @@ public class FirstController implements Initializable {
                     } catch (IOException ex) {
                         Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
                     }
-                } else if ((what.getValue() == "1st_Year")|| (what.getValue() == "2nd_Year")|| (what.getValue() =="3rd_Year")||(what.getValue() == "4th_Year")){
+                } 
+                else if (what.getValue() == "4th_Year") {
+                    try {
+                        batch=100;
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
+                        
+                    //    System.out.println("dssff");
+                        
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        System.out.println(root1);
+                        stage.setScene(new Scene(root1));
+                        System.out.println("dsf");
+                        stage.show();
+                        stage.setTitle((String) what.getValue());
+                        Stage stage5;
+                        stage5 = (Stage)okbtn.getScene().getWindow();
+                        stage5.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } 
+                
+                
+                
+                else if ((what.getValue() == "1st_Year")|| (what.getValue() == "2nd_Year")|| (what.getValue() =="3rd_Year")){
                     String s=(String)what.getValue();
                     batch = Integer.parseInt(s.substring(0,1))-1;
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));

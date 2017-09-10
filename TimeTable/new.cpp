@@ -1,352 +1,465 @@
 #include<bits/stdc++.h>
 #include<unistd.h>
+#include<string>
 using namespace std;
 
-map<int,string>m;
-map<int,string>m_day;
+typedef struct subj_struct {
+    int elective;
 
-map<int,string>map_subject[6];
-vector < pair <int, pair<int, int> > >v[6][5];
-int sec_teacher[6][7] = {
-    {0,1,2,3,4,5,25},
-    {7,23,2,8,9,6,26},
-    {10,24,2,11,12,13,27},
-    {29,14,15,16,17,28,10},
-    {31,9,15,16,12,30,0},
-    {33,19,20,21,22,32,18}
-};
+    string s_sub[3];
+    int teacher[3];
+    string s_teacher[3];
+} sec_subj;
+sec_subj waste;
 
-int avail_teacher[35][5][4];
-int hours_left[6][7];
-string IntToString (int a)
-{
+
+sec_subj v[7][5][4];
+sec_subj sec_teacher[7][7];
+int avail_teacher[400][5][4];
+int hours_left[7][7];
+
+
+void print_t(){
+    for ( int t  =0; t <= 40; t++){
+
+    }
+}
+
+
+
+string IntToString(int a) {
     ostringstream temp;
-    temp<<a;
+    temp << a;
     return temp.str();
 }
-int find_sec(int ts){
-	return (ts%6);
-}
-int find_day(int ts){
-	int x=find_sec(ts);
-	return (ts-x)/24;
-}
-int find_slot(int ts){
-	int x=find_sec(ts);
-	x=(ts-x)%24;
-	return x/6;
-}
-int all_hrs_finished(){
-	int flag=1;
-	 for (int j = 0; j < 6; j++) {
 
-        for (int i = 0; i < 7; i++)
-        	{
-        		if(hours_left[j][i]>0){
+int find_sec(int ts) {
+    return (ts % 7);
+}
 
-        			flag=0;
-        			break;
-					}
+int find_day(int ts) {
+    int x = find_sec(ts);
+    return (ts - x) / 28;
+}
 
-			}
+int find_slot(int ts) {
+    int x = find_sec(ts);
+    x = (ts - x) % 28;
+    return x / 7;
+}
+
+int all_hrs_finished() {
+    int flag = 1;
+    for (int j = 0; j < 7; j++) {
+
+        for (int i = 0; i < 7; i++) {
+            if (hours_left[j][i] > 0) {
+
+                flag = 0;
+                break;
+            }
+
+        }
 
 
     }
-     return flag;
+    return flag;
 
 
 }
 
+void all_hrs_finished_print() {
+    int flag = 1;
+    for (int j = 0; j < 7; j++) {
+
+        for (int i = 0; i < 7; i++) {
+            cout << hours_left[j][i] << endl;
+
+        }
+
+
+    }
+
+
+
+}
+
+int free_or_not(int sec, int sub, int slot, int day) {
+    if (sec_teacher[sec][sub].elective > 0) {
+        int k = sec_teacher[sec][sub].elective;
+        int flag = 0;
+        for (int i = 0; i < k; i++) {
+            if (avail_teacher[sec_teacher[sec][sub].teacher[i]][day][slot] != -1)
+                flag = 1;
+        }
+        if (flag == 0)
+            return 1;
+
+    } else {
+        if (avail_teacher[sec_teacher[sec][sub].teacher[0]][day][slot] == -1)
+            return 1;
+    }
+    return 0;
+}
 
 int count_hr(int sub, int ts) {
-	int c=0;
-	int slot = find_slot(ts);
-	int day = find_day(ts);
-	int sec = find_sec(ts);
-	int teacher=sec_teacher[sec][sub];
-	pair<int,int>p=make_pair(sub,teacher);
-	vector< pair <int, pair<int,int> > >::iterator it;
-	for(it=v[sec][day].begin();it!=v[sec][day].end();it++)
-	{
-
-		pair<int ,int>p1=it->second;
-	//	cout<<"sfdgh"<<it->first<<p1.first<<p1.second<<endl;
-		//cout<<p.first<<" "<<sub<<endl;
-		int q=p1.first;
-		if(q==sub){
-		//	cout<<"q hai "<<q<<sec<<day<<endl;
-			c++;
-		}
-
-	//	cout<<c<<endl;
-	}
-	return c;
+    int c = 0;
+    int slot = find_slot(ts);
+    int day = find_day(ts);
+    int sec = find_sec(ts);
+    for (int i = 0; i < slot; i++) {
+        if (v[sec][day][i].s_sub[0] == sec_teacher[sec][sub].s_sub[0]) {
+            c++;
+        }
+    }
+    return c;
 
 
 }
 
-int is_Safe(int sub, int ts){
-	int slot = find_slot(ts);
-	int day = find_day(ts);
-	int sec = find_sec(ts);
+int is_Safe(int sub, int ts) {
+    int slot = find_slot(ts);
+    int day = find_day(ts);
+    int sec = find_sec(ts);
 
-	if(hours_left[sec][sub] == 3) {
-		if ( avail_teacher[/*find techer*/sec_teacher[sec][sub]][day][slot] == -1){
-			return 1;
-		}
-	} else if ( hours_left[sec][sub] == 2 ) {
-		pair<int, int> p = make_pair(sub, sec_teacher[sec][sub]);
-        pair<int, pair <int, int> > p1 = make_pair(slot - 1, p);
-        //if just befroe
-        if (find(v[sec][day].begin(), v[sec][day].end(), p1) != v[sec][day].end()&&find_slot(ts)!=2) {
+    if (hours_left[sec][sub] == 3) {
 
-            if (avail_teacher[/*find techer*/sec_teacher[sec][sub]][day][slot] == -1) {
+        int a = free_or_not(sec, sub, slot, day);
+
+        return a;
+
+    } else if (hours_left[sec][sub] == 2) {
+
+        if (v[sec][day][find_slot(ts) - 1].s_sub[0] == sec_teacher[sec][sub].s_sub[0] && find_slot(ts) != 2) {
+
+            return free_or_not(sec, sub, slot, day);
+        } else if (count_hr(sub, ts) == 0) {
+            return free_or_not(sec, sub, slot, day);
+        }
+    } else if (hours_left[sec][sub] == 1) {
+
+
+        if (v[sec][day][find_slot(ts) - 1].s_sub[0] == sec_teacher[sec][sub].s_sub[0] && find_slot(ts) != 2) {
+            if (count_hr(sub, ts) == 1) {
+                return free_or_not(sec, sub, slot, day);
+            }
+
+        }
+        if (count_hr(sub, ts) == 0) {
+
+            return free_or_not(sec, sub, slot, day);
+        }
+    }
+
+    return 0;
+}
+
+int algo(int ts) {
+    if (all_hrs_finished()) {
+        return 1;
+    }
+
+    int day = find_day(ts);
+    int sec = find_sec(ts);
+    int slot = find_slot(ts);
+    for (int sub = 0; sub < 7; sub = sub + 1) {
+
+        if (is_Safe(sub, ts)) {
+
+
+            sec_subj p = sec_teacher[sec][sub];
+            hours_left[find_sec(ts)][sub]--;
+            v[sec][day][find_slot(ts)] = p;
+            if (sec_teacher[sec][sub].elective > 0) {
+                int k = sec_teacher[sec][sub].elective;
+                int flag = 0;
+                for (int i = 0; i < k; i++) {
+                    avail_teacher[sec_teacher[sec][sub].teacher[i]][day][slot] = ts;
+
+                }
+
+            } else {
+                avail_teacher[sec_teacher[sec][sub].teacher[0]][day][slot] = ts;
+            }
+
+
+            if (algo(ts + 1)) {
+
                 return 1;
-        	}
-    	} else if ( count_hr(sub,ts) == 0 ) {
-            if (avail_teacher[/*find techer*/sec_teacher[sec][sub]][day][slot] == -1) {
-                return 1;
-        	}
-		}
-	} else if (hours_left[sec][sub] == 1) {
+            }
+            if (sec_teacher[sec][sub].elective > 0) {
+                int k = sec_teacher[sec][sub].elective;
+                int flag = 0;
+                for (int i = 0; i < k; i++) {
+                    avail_teacher[sec_teacher[sec][sub].teacher[i]][day][slot] = -1;
 
-		pair<int, int> p = make_pair(sub, sec_teacher[sec][sub]);
-        pair<int, pair <int, int> > p1 = make_pair(slot - 1, p);
-		//if just befroe
-        if (find(v[sec][day].begin(), v[sec][day].end(), p1) != v[sec][day].end()&&find_slot(ts)!=2) {
-        		//cout<<"yi pe hai"<<endl;
-        	if ( count_hr(sub,ts) == 1 ){
-        		if (avail_teacher[/*find techer*/sec_teacher[sec][sub]][day][slot] == -1) {
+                }
+            } else {
+                avail_teacher[sec_teacher[sec][sub].teacher[0]][day][slot] = -1;
+            }
 
-                return 1;
-        		}
-			}
+
+            v[sec][day][find_slot(ts)] = waste;
+            hours_left[find_sec(ts)][sub]++;
+
+        }
+    }
+
+    return 0;
+}
+
+void print_timetable() {
+
+    map<int, string>m_day;
+    m_day[0] = "MONDAY";
+    m_day[1] = "TUESDAY";
+    m_day[2] = "WEDNESDAY";
+    m_day[3] = "THURSDAY";
+    m_day[4] = "FRIDAY";
+
+    for (int sec = 0; sec < 7; sec++) {
+
+        string tmp = "test" + IntToString(sec) + ".txt";
+
+        char *q = const_cast<char*> (tmp.c_str());
+        ofstream outfile(q);
+        ofstream out;
+        out.open(q);
+
+        for (int day = 0; day < 5; day++) {
+            out << m_day[day] << ";";
+
+map<int, string>m_day;
+    m_day[0] = "MONDAY";
+    m_day[1] = "TUESDAY";
+    m_day[2] = "WEDNESDAY";
+    m_day[3] = "THURSDAY";
+    m_day[4] = "FRIDAY";
+            for (int slot = 0; slot < 4; slot++) {
+
+                if (v[sec][day][slot].elective == 0)
+                    out << "$";
+                else if (v[sec][day][slot].elective == -1) {
+                    out << v[sec][day][slot].s_sub[0] + " " << v[sec][day][slot].s_teacher[0];
+                } else if (v[sec][day][slot].elective > 0) {
+                    int k = v[sec][day][slot].elective;
+
+                    for (int q = 0; q < k; q++) {
+                        out << v[sec][day][slot].s_sub[q] + " (" << v[sec][day][slot].s_teacher[q] << " )";
+                        out << "!";
+                    }
+
+                }
+
+
+                out << ";";
+
+
+            }
+
+            out << "\n";
+
+        }
+
+
+    }
+
+}
+
+int find_s(int ts, int t){
+    sec_subj a = v[find_sec(ts)][find_day(ts)][find_slot(ts)];
+    for( int i = 0; i < 3; i++){
+        if ( a.teacher[i] == t)
+            return i;
+    }
+    return 0;
+}
+
+string getName(int i){
+    sec_subj a;
+    int ts = 0;
+    for ( int j = 0; j < 5; j++){
+        for ( int k = 0; k < 4; k++){
+            if (avail_teacher[i][j][k] != -1 ){
+                ts = avail_teacher[i][j][k];
+                break;
+            }
+        }
+        if (ts != 0) break;
+    }
+    a=v[find_sec(ts)][find_day(ts)][find_slot(ts)];
+    int indexx = find_s(ts, i);
+    return a.s_teacher[indexx];
+}
+
+string find_batch(int num){
+    switch(num){
+    case 0:
+        return "B.Tech(I.T)1st Year SEC 1!";
+    case 1:
+        return "B.Tech(I.T)1st Year SEC 2!";
+    case 2:
+        return "B.Tech (ECE)1st Year!";
+    case 3:
+        return "B.Tech(I.T)2nd Year SEC 1!";
+    case 4:
+        return "B.Tech(I.T)2nd Year SEC 2!";
+    case 5:
+        return "B.Tech(ECE) 2nd Year!";
+    case 6:
+        return "B.Tech(I.T) 4th Year!";
+    default:
+        return "";
+    }
+
+}
+
+void prinf_teacher()
+{
+
+map<int, string>m_day;
+    m_day[0] = "MONDAY";
+    m_day[1] = "TUESDAY";
+    m_day[2] = "WEDNESDAY";
+    m_day[3] = "THURSDAY";
+    m_day[4] = "FRIDAY";
+ /*   int sec = find_sec(ts);
+    int day = find_day(ts);avail_teacher
+    int slot = find_slot(ts);*/
+    		ofstream outfile("teacher.txt");
+	  ofstream out;
+    out.open("teacher.txt");
+
+    for(int i=0;i<36;i++)
+    {   	out<<"Teacher: "<<getName(i)<<";"<<endl;
+
+    	//avail_teacher[35][5][4];
+    	for(int j=0;j<5;j++)
+    	{
+    		out<<m_day[j]<<";";
+    		for(int k=0;k<4;k++)
+    		{
+
+    		    //cout << i <<" "<<j<<" "<<k<<" "<<avail_teacher[i][j][k]<<endl;
+    			if(avail_teacher[i][j][k]== -1)
+    			{
+    				out<<"F"<<";";
+    				continue;
+    			}
+    			int indexx = find_s(avail_teacher[i][j][k], i);
+    			int ts = avail_teacher[i][j][k];
+    			sec_subj pp = v[find_sec(ts)][find_day(ts)][find_slot(ts)];
+    			out<<find_batch(find_sec(ts))<<"("<<pp.s_sub[indexx]<<")"<<";";
+
+    		}
+    		out<<"\n";
 
     	}
-    //	cout<<"count hai ye "<< count_hr(sub,ts)<<" "<<sub<<sec<<endl;
-		if ( count_hr(sub,ts) == 0 ) {
 
 
 
-
-            if (avail_teacher[/*find techer*/sec_teacher[sec][sub]][day][slot] == -1) {
-			//	cout <<"yahan se";
-                return 1;
-        	}
-		}
-	}
-
-	return 0;
-}
-
-int algo(int ts){
-	//base case
-
-	/**/
-    /*if(ts == 115){
-        return 1;
-    }*/
-	if(all_hrs_finished()){
-		//cout<<" bhakjsbd"<<endl;
-		return 1;
-	}
-
-
-	for(int sub=0;sub<7;sub=sub+1){
-
-	if (is_Safe(sub,ts)){
-
-
-		int b = sec_teacher[find_sec(ts)][sub];
-        pair<int, int> p = make_pair(sub, b);
-        hours_left[find_sec(ts)][sub]--;
-		v[find_sec(ts)][find_day(ts)].push_back(make_pair(find_slot(ts), p));
-		avail_teacher[b][find_day(ts)][find_slot(ts)]=ts;
-
-		if(algo(ts+1)){
-
-			return 1;
-		}
-			avail_teacher[b][find_day(ts)][find_slot(ts)]=-1;
-			pair< int,pair<int,int> > p1=make_pair(find_slot(ts),p);
-			v[find_sec(ts)][find_day(ts)].erase(remove( v[find_sec(ts)][find_day(ts)].begin(),v[find_sec(ts)][find_day(ts)].end(), p1 ), v[find_sec(ts)][find_day(ts)].end());  ///sth missing here
-			hours_left[find_sec(ts)][sub]++;
-
-	}
-	}
-
-	return 0;
+    }
 }
 
 
+int main(int argc, char** argv) {
+    int la = 200;
+    string s;
+    waste.s_sub[0] = "faltu";
+    waste.elective = -2;
+    for (int l = 0; l < 7; l++) {
+        for (int m = 0; m < 7; m++) {
+            sec_teacher[l][m].elective = -2;
+            for (int z = 0; z < 3; z++) {
+                stringstream ss;
+                ss << (100 * l + 10 * m + z);
+                s = ss.str();
+                sec_teacher[l][m].s_sub[z] = "null" + s;
+                sec_teacher[l][m].teacher[z] = la++;
 
-int main() {
-    for (int i = 0; i < 6; i++) {
+                sec_teacher[l][m].s_teacher[z] = "  ";
+
+            }
+        }
+    }
+    string sss="";
+    for(int i=1;i<argc;i++){
+    	string xxx(argv[i]);
+    	if(i==1)
+    		sss=sss+xxx;
+    		else
+    	sss=sss+" "+xxx;
+	}
+	cout<<sss<<endl;
+	char * S = new char[sss.length() + 1];
+	strcpy(S,sss.c_str());
+	cout<<S;
+
+    	
+    	
+    ifstream inp_file;
+    inp_file.open(S);
+  
+    int c;
+    int sec;
+    int no_subj;
+    int j;
+    for (int i = 0; i < 7; i++) {
+        inp_file >> sec >> no_subj;
+
+        j = 0;
+        if (no_subj == 5) {
+            sec_teacher[i][0].elective = 0;
+            sec_teacher[i][6].elective = 0;
+            j++;
+            no_subj++;
+        } else if (no_subj == 6) {
+            sec_teacher[i][6].elective = 0;
+        }
+        for (; j < no_subj; j++) {
+            inp_file >> c >> sec_teacher[i][j].elective;
+
+            if (sec_teacher[i][j].elective == -1) {
+                inp_file >> sec_teacher[i][j].s_sub[0];
+                inp_file >> sec_teacher[i][j].teacher[0];
+                inp_file >> sec_teacher[i][j].s_teacher[0];
+            } else {
+                for (int k = 0; k < sec_teacher[i][j].elective; k++) {
+                    inp_file >> sec_teacher[i][j].s_sub[k];
+                    inp_file >> sec_teacher[i][j].teacher[k];
+                    inp_file >> sec_teacher[i][j].s_teacher[k];
+                }
+            }
+        }
+
+    }
+    for (int i = 0; i < 7; i++) {
         for (int j = 0; j < 6; j++) {
             hours_left[i][j] = 3;
         }
     }
-    for(int i = 0 ; i < 6 ; i++){
-        hours_left[i][6]=2;
+    for (int i = 0; i < 7; i++) {
+        hours_left[i][6] = 2;
     }
-    hours_left[3][6] = 3;
-    hours_left[4][6] = 3;
-    hours_left[5][6] = 3;
-    hours_left[3][0] = 2;
-    hours_left[4][0] = 2;
-    hours_left[5][0] = 2;
-    for (int i = 0; i < 35; i++) {
+    for (int i = 0; i < 400; i++) {
         for (int j = 0; j < 5; j++) {
-           for(int k = 0 ; k < 4 ; k++)
-           			avail_teacher[i][j][k]=-1;
+            for (int k = 0; k < 4; k++)
+                avail_teacher[i][j][k] = -1;
         }
     }
-    m[0]="(sku)";
-    m[1]="(ps)";
-    m[2]="(aks)";
-    m[3]="(at)";
-    m[4]="(vkc)";
-    m[5]="(sanjay)";
-    m[6]="(pk)";
-    m[7]="(abab)";
-    m[8]="(sb)";
-    m[9]="(tp)";
-    m[10]="(akt)";
-    m[11]="(sanjai)";
-    m[12]="(js)";
-    m[13]="(sbh)";
-    m[14]="(vrv)";
-    m[15]="(vmk)";
-    m[16]="(mg)";
-    m[17]="(bhibhas)";
-    m[18]="(rekha)";
-    m[19]="(rajat)";
-    m[20]="(s.maity)";
-    m[21]="(np)";
-    m[22]="(ashutosh)";
-    m[23]="(sm)";
-    m[24]="(sr)";
-    map_subject[0][0]="SMAT130C";
-    map_subject[0][1]="MLCS102C";
-    map_subject[0][2]="ECAS130C";
-    map_subject[0][3]="SEGP132C";
-    map_subject[0][4]="IITP132C";
-    map_subject[0][5]="EEDC132C";
-    map_subject[1][0]="SMAT130C";
-    map_subject[1][1]="MLCS102C";
-    map_subject[1][2]="ECAS130C";
-    map_subject[1][3]="SEGP132C";
-    map_subject[1][4]="IITP132C";
-    map_subject[1][5]="EEDC132C";
-    map_subject[2][6]="SMAT130C";
-    map_subject[2][0]="MLCS102C";
-    map_subject[2][2]="ECAS130C";
-    map_subject[2][3]="SEGP132C";
-    map_subject[2][4]="IITP132C";
-    map_subject[2][5]="EEDC132C";
-    map_subject[3][6]="SMAT330C";
-    map_subject[3][1]="IOOM332C";
-    map_subject[3][2]="ITOC330C";
-    map_subject[3][3]="EMIP33C";
-    map_subject[3][4]="IOPS332C";
-    map_subject[4][6]="SMAT330C";
-    map_subject[4][1]="IOOM332C";
-    map_subject[4][2]="ITOC330C";
-    map_subject[4][3]="EMIP33C";
-    map_subject[4][4]="IOPS332C";
-    map_subject[5][6]="EAES3332C";
-    map_subject[5][1]="EEFW330C";
-    map_subject[5][2]="IOPS332C";
-    map_subject[5][3]="EACN332C";
-    map_subject[5][4]="EBEE332C";
 
 
-    m_day[0]="MONDAY";
-    m_day[1]="TUESDAY";
-    m_day[2]="WEDNESDAY";
-    m_day[3]="THURSDAY";
-    m_day[4]="FRIDAY";
-    
+    clock_t start = clock();
+    int a = algo(0);
+    clock_t stop = clock();
 
 
-  clock_t start=clock();
-int a=algo(0);//ts not present here see for correction
-clock_t stop=clock();
-//cout<<"final : "<<a<<endl;
+    print_timetable();
+ prinf_teacher();
 
 
 
-
-    for (int sec = 0; sec < 6; sec++) {
-
-    	    	string tmp="test"+IntToString(sec)+".txt";
-
-    	char *q = const_cast<char*>(tmp.c_str());
-    	 ofstream outfile(q);
-	  ofstream out;
-    out.open(q);
-           // out << "Year: " << sec/3 << "\n";
-      //  out << "SECTION: " << sec-(3*(sec/3)) <<"\t";
-    //   out<<"    9-10"<<"\t"<<"\t"<<"\t"<<"\t     "<<"\t"<<"\t"<<"10-11"<<"\t"<<"\t"<<"\t"<<"\t        \t  "<<"11:15-12:15"<<"\t  \t \t"<<"\t"<<"       "<<"12:15-1:15"<<endl;
-        for (int day = 0; day < 5; day++) {
-        out<<m_day[day]+";";
-
-            int flag=0;
-            sort(v[sec][day].begin(), v[sec][day].end());
-            for (vector < pair <int, pair<int, int> > >::iterator it = v[sec][day].begin(); it != v[sec][day].end(); it++) {
-                
-                pair<int, int>p = it->second;
-                if(sec>2) //0,5 is space in batch 2
-                {
-                    if(p.first==0){
-					out<<"$;";//printf("     \t");
-
-
-					continue;
-
-				}
-				if(p.first==5){
-					out<<"$;";//printf("     \t");
-                   
-
-					continue;
-
-				}
-                }
-                if(sec<3){ //else
-				
-				if(p.first==6){ // 6 is space
-					out<<"$;";//printf("     \t");
-                  
-
-					continue;
-
-				}}
-				out<<map_subject[sec][p.first]<<m[p.second]<<";";
-				                
-
-
-
-            }
-            out<<"\n";
-           
-
-
-        }
-       
-    }
-
-
-
-
-   /* for (int j = 0; j < 6; j++) {
-        out << "SECTION :" << j << endl;
-        for (int i = 0; i < 7; i++)
-            out << i << " " << hours_left[j][i] << endl;
-        out << endl;
-    }
-
-out<<"Time: "<<(stop-start)/double(CLOCKS_PER_SEC)<<endl;*/
+    //cout << "Time: " << (stop - start) / double(CLOCKS_PER_SEC) << endl;
 
     return 0;
 }

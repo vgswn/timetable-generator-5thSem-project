@@ -6,12 +6,15 @@
 package timetable;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXComboBox;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -19,6 +22,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -39,11 +43,20 @@ public class SelectionController implements Initializable {
     private JFXButton generate;
 
     public static   File selected_file;
+    
+    @FXML
+    private ComboBox<String> os;
+        ObservableList<String> list = FXCollections.observableArrayList("Linux","Windows");
+public static String a;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+            os.setItems (list);
+            
+            a=os.getValue();
+
         
         select_btn.setOnAction(new EventHandler<ActionEvent>() {
 
@@ -75,7 +88,7 @@ public class SelectionController implements Initializable {
             public void handle(ActionEvent event) {
                 
                     try {
-                        runbat q=new runbat();
+                        runbat q=new runbat(os.getValue());
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
                         
                         System.out.println("dssff");

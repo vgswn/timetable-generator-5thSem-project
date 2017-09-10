@@ -99,7 +99,7 @@ public class Sec1Controller implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    runbat q = new runbat();
+                    
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
 
                     System.out.println("dssff");
@@ -164,7 +164,7 @@ public class Sec1Controller implements Initializable {
 
                 } else {
                     try {
-                        runbat q = new runbat();
+                        
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));
 
                         System.out.println("dssff");

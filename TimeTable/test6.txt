@@ -1,0 +1,5 @@
+MONDAY;ISIM732C(SEC_A) (vs )!ISIM732C(SEC_B) (at )!;ISIM732C(SEC_A) (vs )!ISIM732C(SEC_B) (at )!;MORB720C(SEC_A) (raka )!MORB720C(SEC_B) (vips )!;MORB720C(SEC_A) (raka )!MORB720C(SEC_B) (vips )!;
+TUESDAY;ISIM732C(SEC_A) (vs )!ISIM732C(SEC_B) (at )!;MORB720C(SEC_A) (raka )!MORB720C(SEC_B) (vips )!;IINR730E (ust )!ICIS730E (sv )!IHUR730E (pc )!;IINR730E (ust )!ICIS730E (sv )!IHUR730E (pc )!;
+WEDNESDAY;IINR730E (ust )!ICIS730E (sv )!IHUR730E (pc )!;IMOC730E (sirv )!IEMB730E (bibhas )!IMTGT730E (rrs )!;IIWP730E (sirv )!IVIR730E (ag )!SMNF730E (venkat )!;IIWP730E (sirv )!IVIR730E (ag )!SMNF730E (venkat )!;
+THURSDAY;IMOC730E (sirv )!IEMB730E (bibhas )!IMTGT730E (rrs )!;IMOC730E (sirv )!IEMB730E (bibhas )!IMTGT730E (rrs )!;IIWP730E (sirv )!IVIR730E (ag )!SMNF730E (venkat )!;ICCS730E (ust )!IADA730E (mk )!IDCO730E (sks )!;
+FRIDAY;ICCS730E (ust )!IADA730E (mk )!IDCO730E (sks )!;ICCS730E (ust )!IADA730E (mk )!IDCO730E (sks )!;$;$;

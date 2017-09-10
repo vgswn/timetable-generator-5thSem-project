@@ -38,6 +38,18 @@ import javafx.scene.transform.Scale;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import static timetable.SelectionController.selected_file;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.pdf.PdfPTable;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import javafx.util.Duration;
+import tray.notification.NotificationType;
+import tray.notification.TrayNotification;
 
 /**
  * FXML Controller class
@@ -99,7 +111,7 @@ public class Sec1Controller implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    
+                    runbat q = new runbat();
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
 
                     System.out.println("dssff");
@@ -164,7 +176,7 @@ public class Sec1Controller implements Initializable {
 
                 } else {
                     try {
-                        
+                       
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));
 
                         System.out.println("dssff");
@@ -190,9 +202,16 @@ public class Sec1Controller implements Initializable {
 
             @Override
             public void handle(ActionEvent event) {
-
+                File file = new File("routine.pdf");
+               
+                createPdf(sec.getText()+".pdf");
+                
+                            TrayNotification tray=new TrayNotification();
+                        tray.setTitle("Success");
+                        tray.setMessage("saved as "+sec.getText()+".pdf");
+                        tray.setNotificationType(NotificationType.SUCCESS);
+                        tray.showAndDismiss(Duration.millis(2000));
             }
-
         });
 
     }
@@ -353,4 +372,48 @@ public class Sec1Controller implements Initializable {
             }
         }
     }
+
+    public void createPdf(String dest) {
+        try {
+            Document document = new Document();
+            PdfWriter.getInstance(document, new FileOutputStream(dest));
+            document.open();
+            PdfPTable table = new PdfPTable(6);
+            table.setWidthPercentage(100);
+            String[] tableTitleList = {" DAYS", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+
+            for (String field : tableTitleList) {
+                table.addCell(field);
+            }
+            list.stream().forEach((item) -> {
+                table.addCell(item.getA());
+                table.addCell(item.getB());
+                table.addCell(item.getC());
+                table.addCell(item.getD());
+                table.addCell(item.getE());
+                table.addCell(item.getF());    
+            });
+            document.add(table);
+            document.close();
+        } catch (Exception ex) {
+            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public List<List<String>> getData() {
+        List<List<String>> data = new ArrayList<List<String>>();
+        String[] tableTitleList = {" DAYS", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+        data.add(Arrays.asList(tableTitleList));
+        for (int i = 0; i < 5;) {
+            List<String> dataLine = new ArrayList<String>();
+            i++;
+            list.stream().forEach((_item) -> {
+                System.out.println(_item);
+            });
+            data.add(dataLine);
+        }
+
+        return data;
+    }
+
 }

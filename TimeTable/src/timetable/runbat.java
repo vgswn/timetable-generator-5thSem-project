@@ -14,11 +14,22 @@ import java.io.PrintWriter;
  * @author Vika$h
  */
 public class runbat {
+    	private static String OS = System.getProperty("os.name").toLowerCase();
+        public static boolean isWindows() {
 
-    runbat(String st) {
+		return (OS.indexOf("win") >= 0);
+
+	}
+        public static boolean isUnix() {
+
+		return (OS.indexOf("nix") >= 0 || OS.indexOf("nux") >= 0 || OS.indexOf("aix") > 0 );
+
+	}
+
+    runbat() {
         try {
             String s = SelectionController.selected_file.getAbsolutePath();
-            if (st.endsWith("Linux")) {
+            if (isWindows())  {
 
                 //Runtime.getRuntime().exec("/bin/bash -c g++ new.cpp");
                 //Runtime.getRuntime().exec("/bin/bash -c ./a.out "+s);
@@ -33,7 +44,7 @@ public class runbat {
                 Process procs = new ProcessBuilder(argss).start();
              
 
-            } else {
+            } else if (isUnix()) {
                 //for windows
                 PrintWriter writer = new PrintWriter("new.bat", "UTF-8");
 

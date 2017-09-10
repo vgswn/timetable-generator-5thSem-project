@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -23,7 +22,7 @@
          <font>
             <Font name="Andalus" size="22.0" />
          </font></JFXButton>
-      <Text fx:id="file_name" fill="#175e90" layoutX="216.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Input File" textAlignment="CENTER" wrappingWidth="228.99999877810478" AnchorPane.bottomAnchor="131.7548828125" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="201.00000122189522" AnchorPane.topAnchor="247.2919921875">
+      <Text fx:id="file_name" fill="#175e90" layoutX="417.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Input File" textAlignment="CENTER" wrappingWidth="228.99999877810478" AnchorPane.bottomAnchor="124.8896484375" AnchorPane.leftAnchor="417.0" AnchorPane.rightAnchor="1.2218952178955078E-6" AnchorPane.topAnchor="248.1103515625">
          <font>
             <Font name="Andalus" size="18.0" />
          </font></Text>
@@ -41,6 +40,5 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Text>
-      <ComboBox fx:id="os" layoutX="458.0" layoutY="245.0" prefHeight="26.0" prefWidth="117.0" />
    </children>
 </AnchorPane>

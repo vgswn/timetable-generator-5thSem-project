@@ -27,14 +27,16 @@ public class runbat {
 	}
 
     runbat() {
+        
         try {
             String s = SelectionController.selected_file.getAbsolutePath();
-            if (isWindows())  {
+            if (isUnix())  {
 
                 //Runtime.getRuntime().exec("/bin/bash -c g++ new.cpp");
                 //Runtime.getRuntime().exec("/bin/bash -c ./a.out "+s);
                 PrintWriter writer = new PrintWriter("new.sh", "UTF-8");
-                writer.println("g++ new.cpp");
+                System.out.println("tdsgyhfugi");
+               // writer.println("g++ new.cpp");
                 writer.println("./a.out " + s);
                 writer.close();
                 File f = new File("new.sh");
@@ -42,9 +44,10 @@ public class runbat {
 
                      String[] argss = new String[]{"/bin/bash", "-c", "bash -f new.sh"};
                 Process procs = new ProcessBuilder(argss).start();
+                
              
 
-            } else if (isUnix()) {
+            } else if (isWindows()) {
                 //for windows
                 PrintWriter writer = new PrintWriter("new.bat", "UTF-8");
 

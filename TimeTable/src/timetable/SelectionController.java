@@ -76,6 +76,7 @@ public class SelectionController implements Initializable {
                 
                     try {
                      
+                        runbat a=new runbat();
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
                         
                         System.out.println("dssff");

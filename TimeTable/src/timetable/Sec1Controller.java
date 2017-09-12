@@ -176,7 +176,7 @@ public class Sec1Controller implements Initializable {
 
                 } else {
                     try {
-                       
+
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));
 
                         System.out.println("dssff");
@@ -203,14 +203,14 @@ public class Sec1Controller implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 File file = new File("routine.pdf");
-               
-                createPdf(sec.getText()+".pdf");
-                
-                            TrayNotification tray=new TrayNotification();
-                        tray.setTitle("Success");
-                        tray.setMessage("saved as "+sec.getText()+".pdf");
-                        tray.setNotificationType(NotificationType.SUCCESS);
-                        tray.showAndDismiss(Duration.millis(2000));
+
+                createPdf(sec.getText() + ".pdf");
+
+                TrayNotification tray = new TrayNotification();
+                tray.setTitle("Success");
+                tray.setMessage("saved as " + sec.getText() + ".pdf");
+                tray.setNotificationType(NotificationType.SUCCESS);
+                tray.showAndDismiss(Duration.millis(2000));
             }
         });
 
@@ -221,7 +221,7 @@ public class Sec1Controller implements Initializable {
         if (FirstController.batch == -1) {
 
             String fileName = "teacher.txt";
-            sec.setText("Teachers");
+            sec.setText("Teacher : " + Teacher_selectionController.teacher);
             String line = "null";
 
             try {
@@ -229,6 +229,7 @@ public class Sec1Controller implements Initializable {
                 FileReader fileReader = new FileReader(fileName);
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
                 StringTokenizer st = new StringTokenizer(line);
+                int flag = 0;
                 while ((line = bufferedReader.readLine()) != null) {
                     String[] a = new String[6];
                     int i;
@@ -236,13 +237,15 @@ public class Sec1Controller implements Initializable {
                         a[i] = "";
                     }
                     int count = 0;
-                    int flag = 0;
+
                     st = new StringTokenizer(line, ";");
                     while (st.hasMoreTokens()) {
 
                         String s = st.nextToken();
-                        if (s.startsWith("Teacher")) {
+                        if (s.equals("Teacher: " + Teacher_selectionController.teacher)) {
+                            System.out.println("sbfgvdc");
                             flag = 1;
+                            break;
                         }
                         StringTokenizer stt = new StringTokenizer(s, "!");
                         if (s.equals("$")) {
@@ -262,24 +265,22 @@ public class Sec1Controller implements Initializable {
 
                         //  System.out.println(s);
                     }
-                    if (flag == 1) {
-                        if (f != 0) {
-                            list.add(new Data("", "", "", "", "", ""));
-                            list.add(new Data("", "", "", "", "", ""));
-                            list.add(new Data("", "", "", "", "", ""));
-                        }
-                        list.add(new Data(" ", a[1], "", a[0], "", ""));
+                    if (flag > 0 && flag < 7) {
 
-                    } else {
+                        if(a[0]!=""){
+                            
                         list.add(new Data(a[0], a[1], a[2], "TB", a[3], a[4]));
+                        flag++;
+                        }
                     }
-                    f++;
 
                 }
+
             } catch (Exception e) {
 
             }
-        } else if (FirstController.batch == 100) {
+        } else if (FirstController.batch
+                == 100) {
 
             String fileName = "test6.txt";
             String line = "null";
@@ -391,12 +392,14 @@ public class Sec1Controller implements Initializable {
                 table.addCell(item.getC());
                 table.addCell(item.getD());
                 table.addCell(item.getE());
-                table.addCell(item.getF());    
+                table.addCell(item.getF());
             });
             document.add(table);
             document.close();
+
         } catch (Exception ex) {
-            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Sec1Controller.class
+                    .getName()).log(Level.SEVERE, null, ex);
         }
     }
 

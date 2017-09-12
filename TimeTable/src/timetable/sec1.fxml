@@ -57,7 +57,7 @@
             <Font name="Andalus" size="36.0" />
          </font>
       </Text>
-      <Text fx:id="sec" layoutX="380.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="354.419921875">
+      <Text fx:id="sec" layoutX="425.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="354.419921875">
          <font>
             <Font name="Andalus" size="20.0" />
          </font>

@@ -39,7 +39,10 @@ public class Teacher_selectionController implements Initializable {
     
     @FXML
     private JFXButton teachr_btn;
+        @FXML
+    private JFXButton back;
     public static String teacher;
+    
     ObservableList<String> list = FXCollections.observableArrayList("sku","ps","aks","at","vkc","sanjay","abab","sm","sb","tp","pk","akt","sr","sanjai","js","sbh","rv","mk","mg","bibhas","sku","rekha","rajat","maity","np","ashutosh","vs","raka",
 "vips","ust","sv","pc","sirv","rrs","sks","ag","venkat");
     
@@ -52,6 +55,31 @@ public class Teacher_selectionController implements Initializable {
        teacher_combo.setItems(list);
        
        
+        back.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
+
+                    System.out.println("dssff");
+
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    Stage stage = new Stage();
+                    System.out.println(root1);
+                    stage.setScene(new Scene(root1));
+                    System.out.println("dsf");
+                    stage.show();
+                    Stage stage5;
+                    stage5 = (Stage) back.getScene().getWindow();
+                    stage5.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        });
+
        teachr_btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override

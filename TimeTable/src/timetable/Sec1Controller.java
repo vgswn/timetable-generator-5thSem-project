@@ -138,7 +138,7 @@ public class Sec1Controller implements Initializable {
             public void handle(ActionEvent event) {
                 if (FirstController.batch == -1) {
                     try {
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("teacher_selection.fxml"));
 
                         System.out.println("dssff");
 
@@ -267,11 +267,12 @@ public class Sec1Controller implements Initializable {
                     }
                     if (flag > 0 && flag < 7) {
 
-                        if(a[0]!=""){
+                        if(a[0]!="" && !a[0].startsWith("Teacher")){
                             
                         list.add(new Data(a[0], a[1], a[2], "TB", a[3], a[4]));
-                        flag++;
+                        
                         }
+                        flag++;
                     }
 
                 }

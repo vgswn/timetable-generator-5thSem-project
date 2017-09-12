@@ -41,5 +41,13 @@
             <Bloom />
          </effect>
       </JFXButton>
+      <JFXButton fx:id="back" layoutX="373.0" layoutY="291.0" style="-fx-background-color: Cream;" text="BACK" textAlignment="RIGHT" textFill="#236f8d" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </JFXButton>
    </children>
 </AnchorPane>

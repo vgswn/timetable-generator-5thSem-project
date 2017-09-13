@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  *
@@ -29,11 +30,21 @@ public class TimeTable extends Application {
     public void start(Stage primaryStage) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("selection.fxml"));
-            
+
             //System.out.println("dssff");
-            
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
+            stage.resizableProperty().setValue(Boolean.FALSE);
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                public void handle(WindowEvent we) {
+                    try {
+                        delete_txt a = new delete_txt();
+                    } catch (IOException ex) {
+                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            });
+
             System.out.println(root1);
             stage.setScene(new Scene(root1));
             //System.out.println("dsf");

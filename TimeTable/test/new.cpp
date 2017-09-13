@@ -13,19 +13,10 @@ typedef struct subj_struct {
 sec_subj waste;
 
 
-sec_subj v[7][5][4];
-sec_subj sec_teacher[7][7];
+sec_subj v[10][5][4];
+sec_subj sec_teacher[10][7];
 int avail_teacher[400][5][4];
-int hours_left[7][7];
-
-
-void print_t(){
-    for ( int t  =0; t <= 40; t++){
-
-    }
-}
-
-
+int hours_left[10][7];
 
 string IntToString(int a) {
     ostringstream temp;
@@ -34,54 +25,40 @@ string IntToString(int a) {
 }
 
 int find_sec(int ts) {
-    return (ts % 7);
+    return (ts % 10);
 }
 
 int find_day(int ts) {
     int x = find_sec(ts);
-    return (ts - x) / 28;
+    return (ts - x) / 40;
 }
 
 int find_slot(int ts) {
     int x = find_sec(ts);
-    x = (ts - x) % 28;
-    return x / 7;
+    x = (ts - x) % 40;
+    return x / 10;
 }
 
 int all_hrs_finished() {
     int flag = 1;
-    for (int j = 0; j < 7; j++) {
-
+    for (int j = 0; j < 10; j++) {
         for (int i = 0; i < 7; i++) {
             if (hours_left[j][i] > 0) {
-
                 flag = 0;
                 break;
             }
-
         }
-
-
     }
     return flag;
-
-
 }
 
 void all_hrs_finished_print() {
     int flag = 1;
-    for (int j = 0; j < 7; j++) {
-
+    for (int j = 0; j < 10; j++) {
         for (int i = 0; i < 7; i++) {
             cout << hours_left[j][i] << endl;
-
         }
-
-
     }
-
-
-
 }
 
 int free_or_not(int sec, int sub, int slot, int day) {
@@ -94,7 +71,6 @@ int free_or_not(int sec, int sub, int slot, int day) {
         }
         if (flag == 0)
             return 1;
-
     } else {
         if (avail_teacher[sec_teacher[sec][sub].teacher[0]][day][slot] == -1)
             return 1;
@@ -113,44 +89,31 @@ int count_hr(int sub, int ts) {
         }
     }
     return c;
-
-
 }
 
 int is_Safe(int sub, int ts) {
     int slot = find_slot(ts);
     int day = find_day(ts);
     int sec = find_sec(ts);
-
     if (hours_left[sec][sub] == 3) {
-
         int a = free_or_not(sec, sub, slot, day);
-
         return a;
-
     } else if (hours_left[sec][sub] == 2) {
-
         if (v[sec][day][find_slot(ts) - 1].s_sub[0] == sec_teacher[sec][sub].s_sub[0] && find_slot(ts) != 2) {
-
             return free_or_not(sec, sub, slot, day);
         } else if (count_hr(sub, ts) == 0) {
             return free_or_not(sec, sub, slot, day);
         }
     } else if (hours_left[sec][sub] == 1) {
-
-
         if (v[sec][day][find_slot(ts) - 1].s_sub[0] == sec_teacher[sec][sub].s_sub[0] && find_slot(ts) != 2) {
             if (count_hr(sub, ts) == 1) {
                 return free_or_not(sec, sub, slot, day);
             }
-
         }
         if (count_hr(sub, ts) == 0) {
-
             return free_or_not(sec, sub, slot, day);
         }
     }
-
     return 0;
 }
 
@@ -158,15 +121,12 @@ int algo(int ts) {
     if (all_hrs_finished()) {
         return 1;
     }
-
+    //printf("%d\n",ts);
     int day = find_day(ts);
     int sec = find_sec(ts);
     int slot = find_slot(ts);
     for (int sub = 0; sub < 7; sub = sub + 1) {
-
         if (is_Safe(sub, ts)) {
-
-
             sec_subj p = sec_teacher[sec][sub];
             hours_left[find_sec(ts)][sub]--;
             v[sec][day][find_slot(ts)] = p;
@@ -175,13 +135,11 @@ int algo(int ts) {
                 int flag = 0;
                 for (int i = 0; i < k; i++) {
                     avail_teacher[sec_teacher[sec][sub].teacher[i]][day][slot] = ts;
-
                 }
 
             } else {
                 avail_teacher[sec_teacher[sec][sub].teacher[0]][day][slot] = ts;
             }
-
 
             if (algo(ts + 1)) {
 
@@ -192,19 +150,14 @@ int algo(int ts) {
                 int flag = 0;
                 for (int i = 0; i < k; i++) {
                     avail_teacher[sec_teacher[sec][sub].teacher[i]][day][slot] = -1;
-
                 }
             } else {
                 avail_teacher[sec_teacher[sec][sub].teacher[0]][day][slot] = -1;
             }
-
-
             v[sec][day][find_slot(ts)] = waste;
             hours_left[find_sec(ts)][sub]++;
-
         }
     }
-
     return 0;
 }
 
@@ -217,15 +170,12 @@ void print_timetable() {
     m_day[3] = "THURSDAY";
     m_day[4] = "FRIDAY";
 
-    for (int sec = 0; sec < 7; sec++) {
-
+    for (int sec = 0; sec < 10; sec++) {
         string tmp = "test" + IntToString(sec) + ".txt";
-
         char *q = const_cast<char*> (tmp.c_str());
         ofstream outfile(q);
         ofstream out;
         out.open(q);
-
         for (int day = 0; day < 5; day++) {
             out << m_day[day] << ";";
 
@@ -236,7 +186,6 @@ map<int, string>m_day;
     m_day[3] = "THURSDAY";
     m_day[4] = "FRIDAY";
             for (int slot = 0; slot < 4; slot++) {
-
                 if (v[sec][day][slot].elective == 0)
                     out << "$";
                 else if (v[sec][day][slot].elective == -1) {
@@ -248,20 +197,11 @@ map<int, string>m_day;
                         out << v[sec][day][slot].s_sub[q] + " (" << v[sec][day][slot].s_teacher[q] << " )";
                         out << "!";
                     }
-
                 }
-
-
                 out << ";";
-
-
             }
-
             out << "\n";
-
         }
-
-
     }
 
 }
@@ -307,6 +247,12 @@ string find_batch(int num){
     case 5:
         return "B.Tech(ECE) 2nd Year!";
     case 6:
+        return "B.Tech(I.T) 3rd Year SEC 1!";
+    case 7:
+        return "B.Tech(I.T) 3rd Year SEC 2!";
+    case 8:
+        return "B.Tech(ECE) 3rd Year!";
+    case 9:
         return "B.Tech(I.T) 4th Year!";
     default:
         return "";
@@ -323,24 +269,19 @@ map<int, string>m_day;
     m_day[2] = "WEDNESDAY";
     m_day[3] = "THURSDAY";
     m_day[4] = "FRIDAY";
- /*   int sec = find_sec(ts);
-    int day = find_day(ts);avail_teacher
-    int slot = find_slot(ts);*/
+
     		ofstream outfile("teacher.txt");
 	  ofstream out;
     out.open("teacher.txt");
 
-    for(int i=0;i<36;i++)
+    for(int i=0;i<43;i++)
     {   	out<<"Teacher: "<<getName(i)<<";"<<endl;
 
-    	//avail_teacher[35][5][4];
     	for(int j=0;j<5;j++)
     	{
     		out<<m_day[j]<<";";
     		for(int k=0;k<4;k++)
     		{
-
-    		    //cout << i <<" "<<j<<" "<<k<<" "<<avail_teacher[i][j][k]<<endl;
     			if(avail_teacher[i][j][k]== -1)
     			{
     				out<<"F"<<";";
@@ -350,24 +291,19 @@ map<int, string>m_day;
     			int ts = avail_teacher[i][j][k];
     			sec_subj pp = v[find_sec(ts)][find_day(ts)][find_slot(ts)];
     			out<<find_batch(find_sec(ts))<<"("<<pp.s_sub[indexx]<<")"<<";";
-
     		}
     		out<<"\n";
-
     	}
-
-
-
     }
 }
 
 
 int main(int argc, char** argv) {
-    int la = 200;
+    int la = 50;
     string s;
     waste.s_sub[0] = "faltu";
     waste.elective = -2;
-    for (int l = 0; l < 7; l++) {
+    for (int l = 0; l < 10; l++) {
         for (int m = 0; m < 7; m++) {
             sec_teacher[l][m].elective = -2;
             for (int z = 0; z < 3; z++) {
@@ -376,9 +312,7 @@ int main(int argc, char** argv) {
                 s = ss.str();
                 sec_teacher[l][m].s_sub[z] = "null" + s;
                 sec_teacher[l][m].teacher[z] = la++;
-
                 sec_teacher[l][m].s_teacher[z] = "  ";
-
             }
         }
     }
@@ -395,16 +329,13 @@ int main(int argc, char** argv) {
 	strcpy(S,sss.c_str());
 	cout<<S;
 
-    	
-    	
     ifstream inp_file;
     inp_file.open(S);
-  
     int c;
     int sec;
     int no_subj;
     int j;
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 10; i++) {
         inp_file >> sec >> no_subj;
 
         j = 0;
@@ -433,12 +364,15 @@ int main(int argc, char** argv) {
         }
 
     }
-    for (int i = 0; i < 7; i++) {
+    /*cout << sec_teacher[0][0].s_sub[0]<<endl;
+    cout << sec_teacher[0][0].elective<<endl;
+*/
+    for (int i = 0; i < 10; i++) {
         for (int j = 0; j < 6; j++) {
             hours_left[i][j] = 3;
         }
     }
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 10; i++) {
         hours_left[i][6] = 2;
     }
     for (int i = 0; i < 400; i++) {
@@ -448,18 +382,11 @@ int main(int argc, char** argv) {
         }
     }
 
-
     clock_t start = clock();
     int a = algo(0);
     clock_t stop = clock();
-
-
     print_timetable();
  prinf_teacher();
-
-
-
-    //cout << "Time: " << (stop - start) / double(CLOCKS_PER_SEC) << endl;
 
     return 0;
 }

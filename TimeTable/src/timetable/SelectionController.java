@@ -22,6 +22,7 @@ import javafx.scene.Scene;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  * FXML Controller class
@@ -32,78 +33,70 @@ public class SelectionController implements Initializable {
 
     @FXML
     private JFXButton select_btn;
-        @FXML
+    @FXML
     private Text file_name;
 
     @FXML
     private JFXButton generate;
 
-    public static   File selected_file;
+    public static File selected_file;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         select_btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-                FileChooser fc=new FileChooser();
-              selected_file=fc.showOpenDialog(new Stage());
-                if(selected_file!=null)
-                {
-
+                FileChooser fc = new FileChooser();
+                selected_file = fc.showOpenDialog(new Stage());
+                if (selected_file != null) {
                     file_name.setText(selected_file.getName());
-                    
-
-                   
-                    
                 }
-                
-
-                
             }
-
         });
-        
-        
-        
-                generate.setOnAction(new EventHandler<ActionEvent>() {
+        generate.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-                
-                    try {
-                     
-                        runbat a=new runbat();
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
-                        
-                        System.out.println("dssff");
-                        
-                        Parent root1 = (Parent) fxmlLoader.load();
-                        Stage stage = new Stage();
-                        System.out.println(root1);
-                        stage.setScene(new Scene(root1));
-                        System.out.println("dsf");
-                        stage.show();
-                        Stage stage5;
-                        stage5 = (Stage)generate.getScene().getWindow();
-                        stage5.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(SelectionController.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    
-                }
-                
 
-                
-            
+                try {
+
+                    runbat a = new runbat();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
+
+                    System.out.println("dssff");
+
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
+                    System.out.println(root1);
+                    stage.setScene(new Scene(root1));
+                    System.out.println("dsf");
+                    stage.show();
+                    Stage stage5;
+                    stage5 = (Stage) generate.getScene().getWindow();
+                    stage5.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(SelectionController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
 
         });
 
         // TODO
-      
-    
-}
+    }
 }

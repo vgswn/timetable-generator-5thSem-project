@@ -47,6 +47,7 @@ import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import javafx.stage.WindowEvent;
 import javafx.util.Duration;
 import tray.notification.NotificationType;
 import tray.notification.TrayNotification;
@@ -118,6 +119,16 @@ public class Sec1Controller implements Initializable {
 
                     Parent root1 = (Parent) fxmlLoader.load();
                     Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
                     System.out.println(root1);
                     stage.setScene(new Scene(root1));
                     System.out.println("dsf");
@@ -144,6 +155,16 @@ public class Sec1Controller implements Initializable {
 
                         Parent root1 = (Parent) fxmlLoader.load();
                         Stage stage = new Stage();
+                        stage.resizableProperty().setValue(Boolean.FALSE);
+                        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                            public void handle(WindowEvent we) {
+                                try {
+                                    delete_txt a = new delete_txt();
+                                } catch (IOException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        });
                         System.out.println(root1);
                         stage.setScene(new Scene(root1));
                         System.out.println("dsf");
@@ -163,6 +184,16 @@ public class Sec1Controller implements Initializable {
 
                         Parent root1 = (Parent) fxmlLoader.load();
                         Stage stage = new Stage();
+                        stage.resizableProperty().setValue(Boolean.FALSE);
+                        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                            public void handle(WindowEvent we) {
+                                try {
+                                    delete_txt a = new delete_txt();
+                                } catch (IOException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        });
                         System.out.println(root1);
                         stage.setScene(new Scene(root1));
                         System.out.println("dsf");
@@ -183,6 +214,16 @@ public class Sec1Controller implements Initializable {
 
                         Parent root1 = (Parent) fxmlLoader.load();
                         Stage stage = new Stage();
+                        stage.resizableProperty().setValue(Boolean.FALSE);
+                        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                            public void handle(WindowEvent we) {
+                                try {
+                                    delete_txt a = new delete_txt();
+                                } catch (IOException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        });
                         System.out.println(root1);
                         stage.setScene(new Scene(root1));
                         System.out.println("dsf");
@@ -267,10 +308,10 @@ public class Sec1Controller implements Initializable {
                     }
                     if (flag > 0 && flag < 7) {
 
-                        if(a[0]!="" && !a[0].startsWith("Teacher")){
-                            
-                        list.add(new Data(a[0], a[1], a[2], "TB", a[3], a[4]));
-                        
+                        if (a[0] != "" && !a[0].startsWith("Teacher")) {
+
+                            list.add(new Data(a[0], a[1], a[2], "TB", a[3], a[4]));
+
                         }
                         flag++;
                     }
@@ -283,7 +324,7 @@ public class Sec1Controller implements Initializable {
         } else if (FirstController.batch
                 == 100) {
 
-            String fileName = "test6.txt";
+            String fileName = "test9.txt";
             String line = "null";
             sec.setText("B.Tech IT 7th Sem Sec A + Sec B");
             try {

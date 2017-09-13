@@ -22,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 /**
  * FXML Controller class
@@ -64,6 +65,16 @@ public class SecondController implements Initializable {
 
                     Parent root1 = (Parent) fxmlLoader.load();
                     Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
                     System.out.println(root1);
                     stage.setScene(new Scene(root1));
                     System.out.println("dsf");
@@ -77,72 +88,97 @@ public class SecondController implements Initializable {
             }
         });
 
-    
+        section.setItems(list);
 
-    section.setItems (list);
+        sectionbtn.setOnAction(new EventHandler<ActionEvent>() {
 
-    sectionbtn.setOnAction ( new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent event) {
 
-           
-            
+                if (section.getValue() == "Section_1") {
+                    sec = 0;
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
+                    Parent root1 = null;
+                    try {
+                        root1 = (Parent) fxmlLoader.load();
+                    } catch (IOException ex) {
+                        Logger.getLogger(TimeTable.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
+                    stage.setScene(new Scene(root1));
+                    stage.show();
+                    stage.setTitle((String) section.getValue());
 
-    public void handle(ActionEvent event) {
+                    Stage stage5;
+                    stage5 = (Stage) sectionbtn.getScene().getWindow();
+                    stage5.close();
+                } else if (section.getValue() == "Section_2") {
+                    sec = 1;
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
+                    Parent root1 = null;
+                    try {
+                        root1 = (Parent) fxmlLoader.load();
+                    } catch (IOException ex) {
+                        Logger.getLogger(TimeTable.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
+                    stage.setScene(new Scene(root1));
+                    stage.show();
+                    stage.setTitle((String) section.getValue());
 
-        if (section.getValue() == "Section_1") {
-            sec = 0;
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
-            Parent root1 = null;
-            try {
-                root1 = (Parent) fxmlLoader.load();
-            } catch (IOException ex) {
-                Logger.getLogger(TimeTable.class.getName()).log(Level.SEVERE, null, ex);
+                    Stage stage5;
+                    stage5 = (Stage) sectionbtn.getScene().getWindow();
+                    stage5.close();
+                } else if (section.getValue() == "Section_3") {
+                    sec = 2;
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
+                    Parent root1 = null;
+                    try {
+                        root1 = (Parent) fxmlLoader.load();
+                    } catch (IOException ex) {
+                        Logger.getLogger(TimeTable.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
+                    stage.setScene(new Scene(root1));
+                    stage.show();
+                    stage.setTitle((String) section.getValue());
+                    Stage stage5;
+                    stage5 = (Stage) sectionbtn.getScene().getWindow();
+                    stage5.close();
+                } else {
+
+                }
             }
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-            stage.setTitle((String) section.getValue());
-
-            Stage stage5;
-            stage5 = (Stage) sectionbtn.getScene().getWindow();
-            stage5.close();
-        } else if (section.getValue() == "Section_2") {
-            sec = 1;
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
-            Parent root1 = null;
-            try {
-                root1 = (Parent) fxmlLoader.load();
-            } catch (IOException ex) {
-                Logger.getLogger(TimeTable.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-            stage.setTitle((String) section.getValue());
-
-            Stage stage5;
-            stage5 = (Stage) sectionbtn.getScene().getWindow();
-            stage5.close();
-        } else if (section.getValue() == "Section_3") {
-            sec = 2;
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
-            Parent root1 = null;
-            try {
-                root1 = (Parent) fxmlLoader.load();
-            } catch (IOException ex) {
-                Logger.getLogger(TimeTable.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-            stage.setTitle((String) section.getValue());
-            Stage stage5;
-            stage5 = (Stage) sectionbtn.getScene().getWindow();
-            stage5.close();
-        } else {
-
         }
-    }
-}
-);
+        );
     }
 }

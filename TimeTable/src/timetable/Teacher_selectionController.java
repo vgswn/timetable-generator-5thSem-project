@@ -22,6 +22,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import static timetable.FirstController.batch;
 
 /**
@@ -36,25 +37,22 @@ public class Teacher_selectionController implements Initializable {
      */
     @FXML
     private ComboBox<String> teacher_combo;
-    
+
     @FXML
     private JFXButton teachr_btn;
-        @FXML
+    @FXML
     private JFXButton back;
     public static String teacher;
-    
-    ObservableList<String> list = FXCollections.observableArrayList("sku","ps","aks","at","vkc","sanjay","abab","sm","sb","tp","pk","akt","sr","sanjai","js","sbh","rv","mk","mg","bibhas","sku","rekha","rajat","maity","np","ashutosh","vs","raka",
-"vips","ust","sv","pc","sirv","rrs","sks","ag","venkat");
-    
+
+    ObservableList<String> list = FXCollections.observableArrayList("sku", "ps", "aks", "at", "vkc", "sanjay", "abab", "sm", "sb", "tp", "pk", "akt", "sr", "sanjai", "js", "sbh", "rv", "mk", "mg", "bibhas", "sku", "rekha", "rajat", "maity", "np", "ashutosh", "vs", "raka",
+            "vips", "ust", "sv", "pc", "sirv", "rrs", "sks", "ag", "venkat", "pawank", "sa", "sd", "kps", "ca", "gf2", "sk");
 
     @Override
-    
+
     public void initialize(URL url, ResourceBundle rb) {
 
-        
-       teacher_combo.setItems(list);
-       
-       
+        teacher_combo.setItems(list);
+
         back.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
@@ -67,6 +65,16 @@ public class Teacher_selectionController implements Initializable {
 
                     Parent root1 = (Parent) fxmlLoader.load();
                     Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
                     System.out.println(root1);
                     stage.setScene(new Scene(root1));
                     System.out.println("dsf");
@@ -80,38 +88,43 @@ public class Teacher_selectionController implements Initializable {
             }
         });
 
-       teachr_btn.setOnAction(new EventHandler<ActionEvent>() {
+        teachr_btn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
 
-                
-                    try {
-                       teacher=teacher_combo.getValue();
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
-                        
+                try {
+                    teacher = teacher_combo.getValue();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sec1.fxml"));
+
                     //    System.out.println("dssff");
-                        
-                        Parent root1 = (Parent) fxmlLoader.load();
-                        Stage stage = new Stage();
-                        System.out.println(root1);
-                        stage.setScene(new Scene(root1));
-                        System.out.println("dsf");
-                        stage.show();
-                        
-                        Stage stage5;
-                        stage5 = (Stage)teachr_btn.getScene().getWindow();
-                        stage5.close();
-                    } catch (IOException ex) {
-                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                } 
-               
-            
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
+                    System.out.println(root1);
+                    stage.setScene(new Scene(root1));
+                    System.out.println("dsf");
+                    stage.show();
+
+                    Stage stage5;
+                    stage5 = (Stage) teachr_btn.getScene().getWindow();
+                    stage5.close();
+                } catch (IOException ex) {
+                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
 
         });
-       
 
-        }
+    }
 
 }

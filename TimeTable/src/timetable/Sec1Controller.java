@@ -41,7 +41,6 @@ import static timetable.SelectionController.selected_file;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.PageSize;
-import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
@@ -418,16 +417,13 @@ public class Sec1Controller implements Initializable {
         }
     }
 
-    public  void createPdf(String dest) {
+    public void createPdf(String dest) {
         try {
-            //Document document = new Document();
             Document document = new Document(PageSize.A4.rotate());
-
             PdfWriter.getInstance(document, new FileOutputStream(dest));
             document.open();
             PdfPTable table = new PdfPTable(6);
             table.setWidthPercentage(100);
-            document.add(new Paragraph("\n \t \t"+dest.substring(0, dest.length()-1-3)+  "\n \n \n "));
             String[] tableTitleList = {" DAYS", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
 
             for (String field : tableTitleList) {

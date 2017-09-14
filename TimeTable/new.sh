@@ -1,1 +1,1 @@
-./a.out /home/vips/Documents/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/inp.txt
+./a.out /home/vips/timetable_generator_5thSem_project/TimeTable/inp.txt

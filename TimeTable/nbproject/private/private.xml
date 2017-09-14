@@ -3,13 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/FirstController.java</file>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/SelectionController.java</file>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/Teacher_selectionController.java</file>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/delete_txt.java</file>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/Sec1Controller.java</file>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/SecondController.java</file>
-            <file>file:/C:/Users/Rakalicious/Downloads/timetable_generator_5thSem_project-master/timetable_generator_5thSem_project-master/TimeTable/src/timetable/TimeTable.java</file>
+            <file>file:/home/vips/timetable_generator_5thSem_project/TimeTable/src/timetable/createPdfAll.java</file>
+            <file>file:/home/vips/timetable_generator_5thSem_project/TimeTable/src/timetable/Sec1Controller.java</file>
+            <file>file:/home/vips/timetable_generator_5thSem_project/TimeTable/src/timetable/runbat.java</file>
         </group>
     </open-files>
 </project-private>

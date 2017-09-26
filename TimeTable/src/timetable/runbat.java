@@ -33,6 +33,7 @@ public class runbat {
 
         try {
             if (isUnix()) {
+                
                 String s = SelectionController.selected_file.getAbsolutePath();
 
                 //Runtime.getRuntime().exec("/bin/bash -c g++ new.cpp");

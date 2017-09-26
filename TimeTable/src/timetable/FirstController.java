@@ -5,7 +5,9 @@
  */
 package timetable;
 
+import com.itextpdf.text.DocumentException;
 import com.jfoenix.controls.JFXButton;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -67,7 +69,14 @@ public class FirstController implements Initializable {
                         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                             public void handle(WindowEvent we) {
                                 try {
-                                    delete_txt a = new delete_txt();
+                                    try {
+                                        pdfAll x=new pdfAll("allBtechBatches.pdf");
+                                    } catch (FileNotFoundException ex) {
+                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                    } catch (DocumentException ex) {
+                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                     delete_txt a = new delete_txt();
                                 } catch (IOException ex) {
                                     Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
                                 }
@@ -96,7 +105,14 @@ public class FirstController implements Initializable {
                         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                             public void handle(WindowEvent we) {
                                 try {
-                                    delete_txt a = new delete_txt();
+                                    try {
+                                        pdfAll x=new pdfAll("allBtechBatches.pdf");
+                                    } catch (FileNotFoundException ex) {
+                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                    } catch (DocumentException ex) {
+                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+delete_txt a = new delete_txt();
                                 } catch (IOException ex) {
                                     Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
                                 }
@@ -128,7 +144,14 @@ public class FirstController implements Initializable {
                     stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
                         public void handle(WindowEvent we) {
                             try {
-                                delete_txt a = new delete_txt();
+                                try {
+                                    pdfAll x=new pdfAll("allBtechBatches.pdf");
+                                } catch (FileNotFoundException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                } catch (DocumentException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+delete_txt a = new delete_txt();
                             } catch (IOException ex) {
                                 Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
                             }

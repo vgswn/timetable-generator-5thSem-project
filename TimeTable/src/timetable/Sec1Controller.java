@@ -5,6 +5,7 @@
  */
 package timetable;
 
+import com.itextpdf.text.BaseColor;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -40,7 +41,11 @@ import javafx.stage.Stage;
 import static timetable.SelectionController.selected_file;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfPCell;
+import com.itextpdf.text.pdf.PdfPRow;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import java.io.File;
@@ -95,27 +100,105 @@ public class Sec1Controller implements Initializable {
     //   public static ObservableList<Data> lst = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
- 
-            
-            list.clear();
-            Day.setCellValueFactory(new PropertyValueFactory<Data, String>("a"));
-            slot1.setCellValueFactory(new PropertyValueFactory<Data, String>("b"));
-            
-            slot2.setCellValueFactory(new PropertyValueFactory<Data, String>("c"));
-            slot3.setCellValueFactory(new PropertyValueFactory<Data, String>("d"));
-            slot4.setCellValueFactory(new PropertyValueFactory<Data, String>("e"));
-            lab.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
-            
-            Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "lab");
-            this.go();
-            TimeTable.setItems(list);
-            
-            home.setOnAction(new EventHandler<ActionEvent>() {
-                
-                @Override
-                public void handle(ActionEvent event) {
+
+        list.clear();
+        Day.setCellValueFactory(new PropertyValueFactory<Data, String>("a"));
+        slot1.setCellValueFactory(new PropertyValueFactory<Data, String>("b"));
+
+        slot2.setCellValueFactory(new PropertyValueFactory<Data, String>("c"));
+        slot3.setCellValueFactory(new PropertyValueFactory<Data, String>("d"));
+        slot4.setCellValueFactory(new PropertyValueFactory<Data, String>("e"));
+        lab.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
+
+        Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "lab");
+        this.go();
+        TimeTable.setItems(list);
+
+        home.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    runbat q = new runbat();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
+
+                    System.out.println("dssff");
+
+                    Parent root1 = (Parent) fxmlLoader.load();
+                    Stage stage = new Stage();
+                    stage.resizableProperty().setValue(Boolean.FALSE);
+                    stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                        public void handle(WindowEvent we) {
+                            try {
+                                try {
+                                    pdfAll x = new pdfAll("allBtechBatches.pdf");
+                                } catch (FileNotFoundException ex) {
+                                    Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                                } catch (DocumentException ex) {
+                                    Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                                delete_txt a = new delete_txt();
+                            } catch (IOException ex) {
+                                Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                            }
+                        }
+                    });
+                    System.out.println(root1);
+                    stage.setScene(new Scene(root1));
+                    System.out.println("dsf");
+                    stage.show();
+                    Stage stage5;
+                    stage5 = (Stage) home.getScene().getWindow();
+                    stage5.close();
+                } catch (IOException ex) {
+                }
+
+            }
+
+        });
+
+        back.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                if (FirstController.batch == -1) {
                     try {
-                        runbat q = new runbat();
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("teacher_selection.fxml"));
+
+                        System.out.println("dssff");
+
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.resizableProperty().setValue(Boolean.FALSE);
+                        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                            public void handle(WindowEvent we) {
+                                try {
+                                    try {
+                                        pdfAll x = new pdfAll("allBtechBatches.pdf");
+                                    } catch (FileNotFoundException ex) {
+                                        Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                                    } catch (DocumentException ex) {
+                                        Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                    delete_txt a = new delete_txt();
+                                } catch (IOException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        });
+                        System.out.println(root1);
+                        stage.setScene(new Scene(root1));
+                        System.out.println("dsf");
+                        stage.show();
+                        Stage stage5;
+                        stage5 = (Stage) back.getScene().getWindow();
+                        stage5.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                } else if (FirstController.batch == 100) {
+                    try {
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
 
                         System.out.println("dssff");
@@ -127,13 +210,13 @@ public class Sec1Controller implements Initializable {
                             public void handle(WindowEvent we) {
                                 try {
                                     try {
-                                        pdfAll x=new pdfAll("allBtechBatches.pdf");
+                                        pdfAll x = new pdfAll("allBtechBatches.pdf");
                                     } catch (FileNotFoundException ex) {
                                         Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
                                     } catch (DocumentException ex) {
                                         Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
                                     }
-delete_txt a = new delete_txt();
+                                    delete_txt a = new delete_txt();
                                 } catch (IOException ex) {
                                     Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
                                 }
@@ -144,150 +227,69 @@ delete_txt a = new delete_txt();
                         System.out.println("dsf");
                         stage.show();
                         Stage stage5;
-                        stage5 = (Stage) home.getScene().getWindow();
+                        stage5 = (Stage) back.getScene().getWindow();
+                        stage5.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                } else {
+                    try {
+
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));
+
+                        System.out.println("dssff");
+
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        stage.resizableProperty().setValue(Boolean.FALSE);
+                        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                            public void handle(WindowEvent we) {
+                                try {
+                                    try {
+                                        pdfAll x = new pdfAll("allBtechBatches.pdf");
+                                    } catch (FileNotFoundException ex) {
+                                        Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                                    } catch (DocumentException ex) {
+                                        Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+                                    }
+                                    delete_txt a = new delete_txt();
+                                } catch (IOException ex) {
+                                    Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                                }
+                            }
+                        });
+                        System.out.println(root1);
+                        stage.setScene(new Scene(root1));
+                        System.out.println("dsf");
+                        stage.show();
+                        Stage stage5;
+                        stage5 = (Stage) back.getScene().getWindow();
                         stage5.close();
                     } catch (IOException ex) {
                     }
-                    
                 }
-                
-            });
-            
-            back.setOnAction(new EventHandler<ActionEvent>() {
-                
-                @Override
-                public void handle(ActionEvent event) {
-                    if (FirstController.batch == -1) {
-                        try {
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("teacher_selection.fxml"));
-                            
-                            System.out.println("dssff");
-                            
-                            Parent root1 = (Parent) fxmlLoader.load();
-                            Stage stage = new Stage();
-                            stage.resizableProperty().setValue(Boolean.FALSE);
-                            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                                public void handle(WindowEvent we) {
-                                    try {
-                                        try {
-                                            pdfAll x=new pdfAll("allBtechBatches.pdf");
-                                        } catch (FileNotFoundException ex) {
-                                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                                        } catch (DocumentException ex) {
-                                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                                        }
-delete_txt a = new delete_txt();
-                                    } catch (IOException ex) {
-                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
-                                    }
-                                }
-                            });
-                            System.out.println(root1);
-                            stage.setScene(new Scene(root1));
-                            System.out.println("dsf");
-                            stage.show();
-                            Stage stage5;
-                            stage5 = (Stage) back.getScene().getWindow();
-                            stage5.close();
-                        } catch (IOException ex) {
-                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                        
-                    } else if (FirstController.batch == 100) {
-                        try {
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("first.fxml"));
-                            
-                            System.out.println("dssff");
-                            
-                            Parent root1 = (Parent) fxmlLoader.load();
-                            Stage stage = new Stage();
-                            stage.resizableProperty().setValue(Boolean.FALSE);
-                            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                                public void handle(WindowEvent we) {
-                                    try {
-                                        try {
-                                            pdfAll x=new pdfAll("allBtechBatches.pdf");
-                                        } catch (FileNotFoundException ex) {
-                                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                                        } catch (DocumentException ex) {
-                                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                                        }
-delete_txt a = new delete_txt();
-                                    } catch (IOException ex) {
-                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
-                                    }
-                                }
-                            });
-                            System.out.println(root1);
-                            stage.setScene(new Scene(root1));
-                            System.out.println("dsf");
-                            stage.show();
-                            Stage stage5;
-                            stage5 = (Stage) back.getScene().getWindow();
-                            stage5.close();
-                        } catch (IOException ex) {
-                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                        }
-                        
-                    } else {
-                        try {
-                            
-                            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));
-                            
-                            System.out.println("dssff");
-                            
-                            Parent root1 = (Parent) fxmlLoader.load();
-                            Stage stage = new Stage();
-                            stage.resizableProperty().setValue(Boolean.FALSE);
-                            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                                public void handle(WindowEvent we) {
-                                    try {
-                                        try {
-                                            pdfAll x=new pdfAll("allBtechBatches.pdf");
-                                        } catch (FileNotFoundException ex) {
-                                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                                        } catch (DocumentException ex) {
-                                            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
-                                        }
-delete_txt a = new delete_txt();
-                                    } catch (IOException ex) {
-                                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
-                                    }
-                                }
-                            });
-                            System.out.println(root1);
-                            stage.setScene(new Scene(root1));
-                            System.out.println("dsf");
-                            stage.show();
-                            Stage stage5;
-                            stage5 = (Stage) back.getScene().getWindow();
-                            stage5.close();
-                        } catch (IOException ex) {
-                        }
-                    }
-                    
-                }
-                
-            });
-            
-            print.setOnAction(new EventHandler<ActionEvent>() {
-                
-                @Override
-                public void handle(ActionEvent event) {
-                    File file = new File("routine.pdf");
-                    
-                    createPdf(sec.getText() + ".pdf");
-                    
-                    TrayNotification tray = new TrayNotification();
-                    tray.setTitle("Success");
-                    tray.setMessage("saved as " + sec.getText() + ".pdf");
-                    tray.setNotificationType(NotificationType.SUCCESS);
-                    tray.showAndDismiss(Duration.millis(2000));
-                }
-            });
-        } 
 
-    
+            }
+
+        });
+
+        print.setOnAction(new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent event) {
+                File file = new File("routine.pdf");
+
+                createPdf(sec.getText() + ".pdf");
+
+                TrayNotification tray = new TrayNotification();
+                tray.setTitle("Success");
+                tray.setMessage("saved as " + sec.getText() + ".pdf");
+                tray.setNotificationType(NotificationType.SUCCESS);
+                tray.showAndDismiss(Duration.millis(2000));
+            }
+        });
+    }
 
     public void go() {
 
@@ -342,7 +344,7 @@ delete_txt a = new delete_txt();
 
                         if (a[0] != "" && !a[0].startsWith("Teacher")) {
 
-                            list.add(new Data(a[0], a[1], a[2], "TB", a[3], a[4]));
+                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4]));
 
                         }
                         flag++;
@@ -394,7 +396,7 @@ delete_txt a = new delete_txt();
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK", a[3], a[4]));
+                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+" \n"+"\n", a[3], a[4]));
                 }
             } catch (Exception e) {
 
@@ -440,7 +442,7 @@ delete_txt a = new delete_txt();
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK", a[3], a[4]));
+                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+"\n"+" \n", a[3], a[4]));
                 }
             } catch (Exception e) {
 
@@ -450,16 +452,26 @@ delete_txt a = new delete_txt();
 
     public void createPdf(String dest) {
         try {
-           // Document document = new Document(PageSize.A4.rotate());
-            Document document = new Document();
+            Document document = new Document(PageSize.A4.rotate());
 
-           PdfWriter.getInstance(document, new FileOutputStream(dest));
+            PdfWriter.getInstance(document, new FileOutputStream(dest));
             document.open();
+            String sss = "Indian Institute of Information Technology, Allahabad" + "\n" + "Time Table" + "\n" + "Academic Semester: July-December 2017";
+            Paragraph ssss = new Paragraph(sss + "\n \n \n");
+            ssss.setAlignment(Element.ALIGN_CENTER);
+
+            document.add(ssss);
+            Paragraph sssss = new Paragraph(dest.substring(0, dest.length() - 3) + "\n \n");
+            sssss.setAlignment(Element.ALIGN_CENTER);
+
+            document.add(sssss);
+
             PdfPTable table = new PdfPTable(6);
             table.setWidthPercentage(100);
-            String[] tableTitleList = {" DAYS", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+            String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
 
             for (String field : tableTitleList) {
+
                 table.addCell(field);
             }
             list.stream().forEach((item) -> {
@@ -470,6 +482,23 @@ delete_txt a = new delete_txt();
                 table.addCell(item.getE());
                 table.addCell(item.getF());
             });
+            boolean b = true;
+            int ii = 0;
+            for (PdfPRow r : table.getRows()) {
+                if (ii == 0) {
+                    PdfPCell[] c = r.getCells();
+                    for (int jj = 0; jj < 6; jj++) {
+                        c[jj].setBackgroundColor(new BaseColor(50, 255, 50));
+                    }
+
+                } else {
+                    PdfPCell[] c = r.getCells();
+                    c[0].setBackgroundColor(new BaseColor(50, 255, 50));
+
+                }
+                ii++;
+
+            }
             document.add(table);
             document.close();
 
@@ -479,20 +508,5 @@ delete_txt a = new delete_txt();
         }
     }
 
-    public List<List<String>> getData() {
-        List<List<String>> data = new ArrayList<List<String>>();
-        String[] tableTitleList = {" DAYS", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
-        data.add(Arrays.asList(tableTitleList));
-        for (int i = 0; i < 5;) {
-            List<String> dataLine = new ArrayList<String>();
-            i++;
-            list.stream().forEach((_item) -> {
-                System.out.println(_item);
-            });
-            data.add(dataLine);
-        }
-
-        return data;
-    }
 
 }

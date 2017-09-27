@@ -488,12 +488,12 @@ public class Sec1Controller implements Initializable {
                 if (ii == 0) {
                     PdfPCell[] c = r.getCells();
                     for (int jj = 0; jj < 6; jj++) {
-                        c[jj].setBackgroundColor(new BaseColor(50, 255, 50));
+                        c[jj].setBackgroundColor(new BaseColor(147, 220, 105));
                     }
 
                 } else {
                     PdfPCell[] c = r.getCells();
-                    c[0].setBackgroundColor(new BaseColor(50, 255, 50));
+                    c[0].setBackgroundColor(new BaseColor(147, 220, 105));
 
                 }
                 ii++;

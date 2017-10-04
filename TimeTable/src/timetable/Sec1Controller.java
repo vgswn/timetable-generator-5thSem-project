@@ -110,7 +110,7 @@ public class Sec1Controller implements Initializable {
         slot4.setCellValueFactory(new PropertyValueFactory<Data, String>("e"));
         lab.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
 
-        Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "lab");
+        //Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "lab");
         this.go();
         TimeTable.setItems(list);
 
@@ -344,7 +344,7 @@ public class Sec1Controller implements Initializable {
 
                         if (a[0] != "" && !a[0].startsWith("Teacher")) {
 
-                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4]));
+                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],a[5]));
 
                         }
                         flag++;
@@ -396,7 +396,7 @@ public class Sec1Controller implements Initializable {
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+" \n"+"\n", a[3], a[4]));
+                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+" \n"+"\n", a[3], a[4],a[5]));
                 }
             } catch (Exception e) {
 
@@ -442,7 +442,7 @@ public class Sec1Controller implements Initializable {
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+"\n"+" \n", a[3], a[4]));
+                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+"\n"+" \n", a[3], a[4],a[5]));
                 }
             } catch (Exception e) {
 

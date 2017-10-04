@@ -97,17 +97,20 @@ public class pdfAll {
                         if (s.equals("$")) {
                             s = " ";
                         }
+                        if(s.startsWith("null"))
+                            s = " ";
+                            
 
                         a[count++] = s;
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK" + "\n \n \n \n", a[3], a[4]));
+                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK" + "\n \n \n \n", a[3], a[4],a[5]));
                 }
 
-                PdfPTable table = new PdfPTable(6);
+                PdfPTable table = new PdfPTable(7);
                 table.setWidthPercentage(100);
-                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM","LAB",};
 
                 for (String field : tableTitleList) {
 
@@ -120,6 +123,9 @@ public class pdfAll {
                     table.addCell(item.getD());
                     table.addCell(item.getE());
                     table.addCell(item.getF());
+                    table.addCell(item.getG());
+                    
+                    
                 });
                 boolean b = true;
                 int ii = 0;
@@ -185,7 +191,7 @@ public class pdfAll {
                         line = bufferedReader.readLine();
 
                         int i;
-                        for (i = 0; i < 5; i++) {
+                        for (i = 0; i < 6; i++) {
                             a[i] = "";
                         }
                         int count = 0;
@@ -221,7 +227,7 @@ public class pdfAll {
 
                             
 
-                                list.add(new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4]));
+                                list.add(new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4],a[5]));
 
                             
                            
@@ -244,9 +250,9 @@ public class pdfAll {
 
                 
 
-                PdfPTable table = new PdfPTable(6);
+                PdfPTable table = new PdfPTable(7);
                 table.setWidthPercentage(100);
-                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM","LAB"};
 
                 for (String field : tableTitleList) {
 
@@ -259,13 +265,14 @@ public class pdfAll {
                     table.addCell(item.getD());
                     table.addCell(item.getE());
                     table.addCell(item.getF());
+                    table.addCell(item.getG());
                 });
                 boolean b = true;
                 int ii = 0;
                 for (PdfPRow r : table.getRows()) {
                     if (ii == 0) {
                         PdfPCell[] c = r.getCells();
-                        for (int jj = 0; jj < 6; jj++) {
+                        for (int jj = 0; jj < 7; jj++) {
                             c[jj].setBackgroundColor(new BaseColor(50, 255, 50));
                         }
 

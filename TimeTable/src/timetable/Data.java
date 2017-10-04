@@ -20,14 +20,18 @@ public class Data {
     public final SimpleStringProperty d;
     public final SimpleStringProperty e;
     public final SimpleStringProperty f;
+        public final SimpleStringProperty g;
 
-    public Data(String a, String b, String c, String d, String e, String f) {
+
+    public Data(String a, String b, String c, String d, String e, String f,String g) {
         this.a = new SimpleStringProperty(a);
         this.b = new SimpleStringProperty(b);
         this.c = new SimpleStringProperty(c);
         this.d = new SimpleStringProperty(d);
         this.e = new SimpleStringProperty(e);
         this.f = new SimpleStringProperty(f);
+                this.g = new SimpleStringProperty(g);
+
     }
 
    
@@ -80,5 +84,12 @@ public class Data {
         f.set(fName);
     }
     
+    public String getG() {
+        return g.get();
+    }
+
+    public void setG(String fName) {
+        g.set(fName);
+    }
 }
    

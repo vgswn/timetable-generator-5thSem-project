@@ -79,7 +79,11 @@ public class Sec1Controller implements Initializable {
     @FXML
     private TableColumn<Data, String> slot4;
     @FXML
-    private TableColumn<Data, String> lab;
+    private TableColumn<Data, String> slot5;
+        @FXML
+    private TableColumn<Data, String> slot6;
+            @FXML
+    private TableColumn<Data, String> slot7;
     @FXML
     private Button home;
 
@@ -108,9 +112,11 @@ public class Sec1Controller implements Initializable {
         slot2.setCellValueFactory(new PropertyValueFactory<Data, String>("c"));
         slot3.setCellValueFactory(new PropertyValueFactory<Data, String>("d"));
         slot4.setCellValueFactory(new PropertyValueFactory<Data, String>("e"));
-        lab.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
+        slot5.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
+        slot6.setCellValueFactory(new PropertyValueFactory<Data, String>("g"));
+        slot7.setCellValueFactory(new PropertyValueFactory<Data, String>("h"));
 
-        //Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "lab");
+        //Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "slot5");
         this.go();
         TimeTable.setItems(list);
 
@@ -327,7 +333,13 @@ public class Sec1Controller implements Initializable {
 
                             s = " ";
                             a[count] = s;
-                        } else {
+                        }
+                        else if (s.startsWith("null")) {
+
+                            s = " ";
+                            a[count] = s;
+                        }
+                        else {
                             while (stt.hasMoreTokens()) {
                                 String ss = stt.nextToken();
                                 a[count] += ss;
@@ -343,8 +355,10 @@ public class Sec1Controller implements Initializable {
                     if (flag > 0 && flag < 7) {
 
                         if (a[0] != "" && !a[0].startsWith("Teacher")) {
+                            if(a[5].startsWith("null"))
+                                a[5]=" ";
 
-                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],a[5]));
+                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5]));
 
                         }
                         flag++;
@@ -382,7 +396,13 @@ public class Sec1Controller implements Initializable {
 
                             s = " ";
                             a[count] = s;
-                        } else {
+                        }
+                        else if (s.startsWith("nul")) {
+
+                            s = " ";
+                            a[count] = s;
+                        }
+                        else {
                             while (stt.hasMoreTokens()) {
                                 String ss = stt.nextToken();
                                 a[count] += ss;
@@ -396,7 +416,7 @@ public class Sec1Controller implements Initializable {
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+" \n"+"\n", a[3], a[4],a[5]));
+                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5]));
                 }
             } catch (Exception e) {
 
@@ -437,12 +457,16 @@ public class Sec1Controller implements Initializable {
                         if (s.equals("$")) {
                             s = " ";
                         }
+                        else if (s.startsWith("null")) {
 
+                            s = " ";
+                            a[count] = s;
+                        }
                         a[count++] = s;
                         //  System.out.println(s);
                     }
 
-                    list.add(new Data(a[0], a[1], a[2], "TEA BREAK"+"\n"+" \n", a[3], a[4],a[5]));
+                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5]));
                 }
             } catch (Exception e) {
 
@@ -466,9 +490,9 @@ public class Sec1Controller implements Initializable {
 
             document.add(sssss);
 
-            PdfPTable table = new PdfPTable(6);
+            PdfPTable table = new PdfPTable(8);
             table.setWidthPercentage(100);
-            String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM","LUNCH BREAK","LAB 3:00 PM-6:00 PM"};
 
             for (String field : tableTitleList) {
 
@@ -481,13 +505,18 @@ public class Sec1Controller implements Initializable {
                 table.addCell(item.getD());
                 table.addCell(item.getE());
                 table.addCell(item.getF());
+                                table.addCell(item.getG());
+                                                table.addCell(item.getH());
+
+                                
+
             });
             boolean b = true;
             int ii = 0;
             for (PdfPRow r : table.getRows()) {
                 if (ii == 0) {
                     PdfPCell[] c = r.getCells();
-                    for (int jj = 0; jj < 6; jj++) {
+                    for (int jj = 0; jj < 8; jj++) {
                         c[jj].setBackgroundColor(new BaseColor(147, 220, 105));
                     }
 

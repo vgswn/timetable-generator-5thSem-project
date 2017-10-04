@@ -127,12 +127,12 @@ public class pdfAll {
                     if (ii == 0) {
                         PdfPCell[] c = r.getCells();
                         for (int jj = 0; jj < 6; jj++) {
-                            c[jj].setBackgroundColor(new BaseColor(147, 220, 105));
+                            c[jj].setBackgroundColor(new BaseColor(50, 255, 50));
                         }
 
                     } else {
                         PdfPCell[] c = r.getCells();
-                        c[0].setBackgroundColor(new BaseColor(147, 220, 105));
+                        c[0].setBackgroundColor(new BaseColor(50, 255, 50));
 
                     }
                     ii++;
@@ -154,6 +154,145 @@ public class pdfAll {
         }
 
         document.close();
+
+        Rectangle pageSized = new Rectangle(PageSize.A4.rotate());
+//pageSize.setBackgroundColor(new BaseColor(84, 141, 212));
+        Document documents = new Document(pageSize);
+
+        PdfWriter writers = PdfWriter.getInstance(documents, new FileOutputStream("AllTeachers.pdf"));
+        documents.open();
+        String fileName = "teacher.txt";
+        FileReader fileReader = new FileReader(fileName);
+        BufferedReader bufferedReader = new BufferedReader(fileReader);
+        for (int k = 0; k < 42; k++) {
+
+            try {
+
+                
+                String fs = "Teacher:";
+                String line = "null";
+
+                try {
+                    int f = 0;
+                    
+                    
+                    StringTokenizer st = new StringTokenizer(line);
+                    int flag = 0;
+                    line = bufferedReader.readLine();
+                    fs = fs + " " + line;
+                    for (int j = 0; j < 5; j++) {
+                        String[] a = new String[6];
+                        line = bufferedReader.readLine();
+
+                        int i;
+                        for (i = 0; i < 5; i++) {
+                            a[i] = "";
+                        }
+                        int count = 0;
+
+                        st = new StringTokenizer(line, ";");
+                        while (st.hasMoreTokens()) {
+
+                            String s = st.nextToken();
+                            if (s.equals("Teacher: " + Teacher_selectionController.teacher)) {
+                                System.out.println("sbfgvdc");
+                                flag = 1;
+                                break;
+                            }
+                            StringTokenizer stt = new StringTokenizer(s, "!");
+                            if (s.equals("$")) {
+
+                                s = " ";
+                                a[count] = s;
+                            } else {
+                                while (stt.hasMoreTokens()) {
+                                    String ss = stt.nextToken();
+                                    a[count] += ss;
+                                    a[count] += "\n";
+
+                                }
+
+                            }
+                            count++;
+
+                            //  System.out.println(s);
+                        }
+                        
+
+                            
+
+                                list.add(new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4]));
+
+                            
+                           
+                        }
+
+                    }
+
+                 catch (Exception e) {
+
+                }
+                String sss = "Indian Institute of Information Technology, Allahabad" + "\n" + "Time Table" + "\n" + "Academic Semester: July-December 2017";
+                Paragraph ssss = new Paragraph(sss + "\n \n \n");
+                ssss.setAlignment(Element.ALIGN_CENTER);
+
+                documents.add(ssss);
+                Paragraph sssss = new Paragraph(fs + "\n \n");
+                sssss.setAlignment(Element.ALIGN_CENTER);
+
+                documents.add(sssss);
+
+                
+
+                PdfPTable table = new PdfPTable(6);
+                table.setWidthPercentage(100);
+                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM",};
+
+                for (String field : tableTitleList) {
+
+                    table.addCell(field);
+                }
+                list.stream().forEach((item) -> {
+                    table.addCell(item.getA());
+                    table.addCell(item.getB());
+                    table.addCell(item.getC());
+                    table.addCell(item.getD());
+                    table.addCell(item.getE());
+                    table.addCell(item.getF());
+                });
+                boolean b = true;
+                int ii = 0;
+                for (PdfPRow r : table.getRows()) {
+                    if (ii == 0) {
+                        PdfPCell[] c = r.getCells();
+                        for (int jj = 0; jj < 6; jj++) {
+                            c[jj].setBackgroundColor(new BaseColor(50, 255, 50));
+                        }
+
+                    } else {
+                        PdfPCell[] c = r.getCells();
+                        c[0].setBackgroundColor(new BaseColor(50, 255, 50));
+
+                    }
+                    ii++;
+
+                }
+                documents.add(table);
+                list.clear();
+                documents.newPage();
+
+            } catch (Exception e) {
+
+            }
+        }
+        try {
+
+        } catch (Exception ex) {
+            Logger.getLogger(Sec1Controller.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        }
+
+        documents.close();
 
     }
 }

@@ -1,0 +1,6 @@
+SEC : 33
+MONDAY;IBCP340E mm;IBCP340E mm;;;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;
+TUESDAY;IBCP340E mm;;;;;
+WEDNESDAY;;ICCS730E (ust )!IDBS730E (venkat )!IIWP730E (srv )!;;;;
+THURSDAY;ICCS730E (ust )!IDBS730E (venkat )!IIWP730E (srv )!;ICCS730E (ust )!IDBS730E (venkat )!IIWP730E (srv )!;;;;
+FRIDAY;;;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;

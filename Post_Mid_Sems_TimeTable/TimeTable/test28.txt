@@ -1,0 +1,6 @@
+SEC : 28
+MONDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;
+TUESDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;;;;
+WEDNESDAY;;;;;;
+THURSDAY;;;;;;
+FRIDAY;;;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;

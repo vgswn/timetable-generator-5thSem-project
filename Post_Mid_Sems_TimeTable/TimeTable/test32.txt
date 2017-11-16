@@ -1,0 +1,6 @@
+SEC : 32
+MONDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;;
+TUESDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;ICCS730E (ust )!EODC730E (sbh )!;ICCS730E (ust )!EODC730E (sbh )!;;
+WEDNESDAY;ICCS730E (ust )!EODC730E (sbh )!;EMSD730E (rekha )!EMIM730E (suneel )!;;;;
+THURSDAY;EMSD730E (rekha )!EMIM730E (suneel )!;EMSD730E (rekha )!EMIM730E (suneel )!;;IHUR340E (pavan )!IMOC730E (srv )!ERSC730E (rajat )!;;
+FRIDAY;IHUR340E (pavan )!IMOC730E (srv )!ERSC730E (rajat )!;IHUR340E (pavan )!IMOC730E (srv )!ERSC730E (rajat )!;;;;

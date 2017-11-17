@@ -1,6 +1,0 @@
-SEC : 10
-MONDAY;;;;EESD732C prasanna;;
-TUESDAY;EESD732C prasanna;EESD732C prasanna;ICCS730E (ust )!EODC730E (sbh )!;ICCS730E (ust )!EODC730E (sbh )!;;
-WEDNESDAY;ICCS730E (ust )!EODC730E (sbh )!;EMSD730E (rekha )!EMIM730E (suneel )!;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;;
-THURSDAY;EMSD730E (rekha )!EMIM730E (suneel )!;EMSD730E (rekha )!EMIM730E (suneel )!;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;IHUR340E (pavan )!IMOC730E (srv )!ERSC730E (rajat )!;;
-FRIDAY;IHUR340E (pavan )!IMOC730E (srv )!ERSC730E (rajat )!;IHUR340E (pavan )!IMOC730E (srv )!ERSC730E (rajat )!;;;;

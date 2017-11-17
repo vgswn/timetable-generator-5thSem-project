@@ -1,6 +1,0 @@
-SEC : 13
-MONDAY;;;;EODC703E sbh;;
-TUESDAY;EODC703E sbh;EODC703E sbh;;;;
-WEDNESDAY;;;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;;
-THURSDAY;;;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;;;
-FRIDAY;;;;;;

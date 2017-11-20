@@ -1,6 +1,6 @@
 SEC : 30
-MONDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;
-TUESDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )!;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )!;IRMP340E rk;IRMP340E rk;;
-WEDNESDAY;IRMP340E rk;;;;;
+MONDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )! Room No : 13;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )! Room No : 13;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )! Room No : 13;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )! Room No : 13;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )! Room No : 13;
+TUESDAY;INRX730E (ust )!ICIS730E (sv )!IEMB730E (bibhas )! Room No : 13;IDCO730E (sks )!IADA730E (mk )!IVIRX730E (aa )!SBNF730E (pv )! Room No : 13;IRMP340E rk Room No : 40;IRMP340E rk Room No : 40;;
+WEDNESDAY;IRMP340E rk Room No : 40;;;;;
 THURSDAY;;;;;;
-FRIDAY;;;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )!;
+FRIDAY;;;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )! Room No : 13;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )! Room No : 13;ITGT730E (rrs )!IHUR340E (pc )!IMOC730E (srv )! Room No : 13;

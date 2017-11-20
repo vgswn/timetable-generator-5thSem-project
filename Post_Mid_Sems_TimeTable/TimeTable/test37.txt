@@ -1,6 +1,6 @@
 SEC : 37
-MONDAY;MFAC120C sk;MFAC120C sk;;EESD732C prasanna;;
-TUESDAY;EESD732C prasanna;EESD732C prasanna;;;;
-WEDNESDAY;;;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;;
-THURSDAY;MBUL120C ps;MBUL120C ps;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )!;MORB720C-SECA (av )!MORB720C-SECB (vnt )!;;
-FRIDAY;MORB720C-SECA (av )!MORB720C-SECB (vnt )!;MORB720C-SECA (av )!MORB720C-SECB (vnt )!;MFAC120C sk;MBUL120C ps;;
+MONDAY;MFAC120C sk Room No : 23;MFAC120C sk Room No : 23;;EESD732C prasanna Room No : 33;;
+TUESDAY;EESD732C prasanna Room No : 33;EESD732C prasanna Room No : 33;;;;
+WEDNESDAY;;;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )! Room No : 13;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )! Room No : 13;;
+THURSDAY;MBUL120C ps Room No : 92;MBUL120C ps Room No : 92;EWCN732C (suneel )!EMES730E (sunny )!IECO730E (sks )! Room No : 13;MORB720C-SECA (av )!MORB720C-SECB (vnt )! Room No : 13;;
+FRIDAY;MORB720C-SECA (av )!MORB720C-SECB (vnt )! Room No : 13;MORB720C-SECA (av )!MORB720C-SECB (vnt )! Room No : 13;MFAC120C sk Room No : 92;MBUL120C ps Room No : 92;;

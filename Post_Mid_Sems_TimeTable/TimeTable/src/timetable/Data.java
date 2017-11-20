@@ -22,9 +22,10 @@ public class Data {
     public final SimpleStringProperty f;
         public final SimpleStringProperty g;
         public final SimpleStringProperty h;
+           public final SimpleStringProperty i;
 
 
-    public Data(String a, String b, String c, String d, String e, String f,String g,String h) {
+    public Data(String a, String b, String c, String d, String e, String f,String g,String h,String i) {
         this.a = new SimpleStringProperty(a);
         this.b = new SimpleStringProperty(b);
         this.c = new SimpleStringProperty(c);
@@ -33,6 +34,7 @@ public class Data {
         this.f = new SimpleStringProperty(f);
                 this.g = new SimpleStringProperty(g);
                 this.h = new SimpleStringProperty(h);
+                this.i = new SimpleStringProperty(i);
 
     }
 
@@ -100,5 +102,16 @@ public class Data {
     public void setH(String fName) {
         h.set(fName);
     }
+    
+    
+    
+           public String getI() {
+        return i.get();
+    }
+
+    public void setI(String fName) {
+        i.set(fName);
+    }
+    
 }
    

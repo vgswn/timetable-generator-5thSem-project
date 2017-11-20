@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="1360.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.Sec1Controller">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="1524.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.Sec1Controller">
    <children>
       <ImageView fitHeight="104.0" fitWidth="99.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -27,7 +27,8 @@
             <TableColumn fx:id="slot4" minWidth="0.0" prefWidth="208.0" text="11:15-12:15 PM" />
             <TableColumn fx:id="slot5" minWidth="0.0" prefWidth="151.0" text="12:15-1:15 PM" />
             <TableColumn fx:id="slot6" minWidth="0.0" prefWidth="124.0" text="LUNCH BREAK" />
-            <TableColumn fx:id="slot7" minWidth="0.0" prefWidth="200.0" text="6:00 PM-7:00 PM" />
+            <TableColumn fx:id="slot8" minWidth="0.0" prefWidth="167.0" text="LAB 3:00-6:00PM" />
+            <TableColumn fx:id="slot7" minWidth="0.0" prefWidth="241.0" text="6:00 PM-7:00 PM" />
         </columns>
          <effect>
             <InnerShadow />

@@ -86,6 +86,8 @@ public class Sec1Controller implements Initializable {
     private TableColumn<Data, String> slot6;
             @FXML
     private TableColumn<Data, String> slot7;
+                @FXML
+    private TableColumn<Data, String>  slot8;
     @FXML
     private Button home;
 
@@ -152,6 +154,7 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
         slot5.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
         slot6.setCellValueFactory(new PropertyValueFactory<Data, String>("g"));
         slot7.setCellValueFactory(new PropertyValueFactory<Data, String>("h"));
+         slot8.setCellValueFactory(new PropertyValueFactory<Data, String>("i"));
 
         //Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "slot5");
         this.go();
@@ -390,8 +393,8 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
                         if (a[0] != "" && !a[0].startsWith("Teacher")) {
                             if(a[5].startsWith("null"))
                                 a[5]=" ";
-
-                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5]));
+                               Data d=new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK"," ",a[5]);
+                            //list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n"," ", a[3], a[4],"LUNCH BREAK"," ",a[5]));
 
                         }
                         flag++;
@@ -466,7 +469,7 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
             no = map.get(fs);
               fileName = "test" + no + ".txt";
               line = "null";
-                          sec.setText(trim(fs));
+              sec.setText(trim(fs));
 
         }
     
@@ -476,13 +479,32 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
         
 
            try {
-
+               //System.out.println("new:::"+no);
+               FileReader f;
+               BufferedReader b = null;
+               if(no<11)
+               {
+                   f=new FileReader("lab"+no+".txt");
+                   b=new BufferedReader(f);
+               }
+                String lab=" ";
                 FileReader fileReader = new FileReader(fileName);
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
                 StringTokenizer st = new StringTokenizer(line);
+                int c=0;
                 while ((line = bufferedReader.readLine()) != null) {
+                    lab=" ";
+                    
+                   
                     if (line.startsWith("SEC"))
                         continue;
+                    if(no<11)
+                    {
+                        lab=b.readLine();
+                        if(lab.startsWith("nul"))
+                            lab=" ";
+                    }
+                    c++;
                     String[] a = new String[6];
                     int count = 0;
                     st = new StringTokenizer(line, ";");
@@ -497,10 +519,10 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
                             a[count] = s;
                         }
                         a[count++] = s;
-                        //  System.out.println(s);
+                       
                     }
 
-                            list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5]));
+                    list.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5],lab));
                 }
             } catch (Exception e) {
 

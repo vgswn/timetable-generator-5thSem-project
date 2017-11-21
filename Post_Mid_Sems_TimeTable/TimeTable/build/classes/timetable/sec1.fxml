@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -57,13 +58,19 @@
          </effect></Button>
       <Text fill="#1e4a80" layoutX="206.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indian Institute of Information Technology, Allahabad" textAlignment="JUSTIFY" wrappingWidth="796.0000014603138">
          <font>
-            <Font name="Andalus" size="36.0" />
+            <Font size="24.0" />
          </font>
+         <effect>
+            <DropShadow />
+         </effect>
       </Text>
-      <Text fx:id="sec" layoutX="362.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="639.419921875">
+      <Text fx:id="sec" layoutX="377.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="639.419921875">
          <font>
             <Font name="Andalus" size="20.0" />
          </font>
+         <effect>
+            <InnerShadow />
+         </effect>
       </Text>
    </children>
    <opaqueInsets>

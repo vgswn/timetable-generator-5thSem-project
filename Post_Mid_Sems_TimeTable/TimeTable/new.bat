@@ -1,2 +1,2 @@
-new.exe C:\Users\Rakalicious\Desktop\inp.txt
+new.exe C:\Users\vips\Desktop\inp.txt
 exit

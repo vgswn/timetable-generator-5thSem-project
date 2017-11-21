@@ -1,3 +1,73 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -341,7 +411,7 @@ public class Sec1Controller implements Initializable {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    runbat q = new runbat();
+                 //   runbat q = new runbat();
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student_teacher.fxml"));
 
                     System.out.println("dssff");
@@ -415,7 +485,7 @@ public class Sec1Controller implements Initializable {
 
                 } else if (Student_teacherController.batch == 100) {
                     try {
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bm.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student_teacher.fxml"));
 
                         System.out.println("dssff");
 
@@ -452,7 +522,7 @@ public class Sec1Controller implements Initializable {
                 } else {
                     try {
 
-                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("second.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student_teacher.fxml"));
 
                         System.out.println("dssff");
 
@@ -616,6 +686,7 @@ public class Sec1Controller implements Initializable {
                                 st = new StringTokenizer(line2, ";");
                                 while (st.hasMoreTokens()) {
                                     String s = st.nextToken();
+                                    s=s.trim();
                                     int daysign = s.indexOf("(");
                                     if (daysign == -1) {
                                         a[count] = s;
@@ -623,14 +694,18 @@ public class Sec1Controller implements Initializable {
 
                                         continue;
                                     }
-                                    if (s.equals("$")) {
+                                    if (s.equals('F')) {
                                         s = " ";
+                                        a[count++]= s;
+                                        System.out.println("fnsdjuhnfuksdhfusfkskfsbksdbf"+s);
                                     } else if (s.startsWith("null")) {
 
                                         s = " ";
                                         a[count++] = s;
 
-                                    } else {
+                                    }
+                                   
+                                    else {
                                         //System.out.println("Inside2");
                                         StringTokenizer openparen = new StringTokenizer(s, "(");
                                         //System.out.println(s);
@@ -717,6 +792,8 @@ public class Sec1Controller implements Initializable {
             String roomName = room_selectionController.room;
             System.out.println(roomName);
             FileReader roomFreader = new FileReader("room" + rmap.get(roomName) + ".txt");
+                            sec.setText(" Room No : " + roomName);
+
             BufferedReader roombuffer = new BufferedReader(roomFreader);
             //StringTokenizer roomst = new StringTokenizer(line);
             String roomline;

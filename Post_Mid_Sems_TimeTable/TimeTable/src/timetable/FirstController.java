@@ -57,7 +57,7 @@ public class FirstController implements Initializable {
             public void handle(ActionEvent event) {
 
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bm.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student_teacher.fxml"));
 
                     System.out.println("dssff");
 

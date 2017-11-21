@@ -43,7 +43,7 @@ public class OtherlistController implements Initializable {
     @FXML
 
     private ComboBox otherlist;
-    ObservableList<String> list = FXCollections.observableArrayList("MBA_1ST_SEM","MBA_3RD_SEM","BME –IX Sem (Integrated)  ");
+    ObservableList<String> list = FXCollections.observableArrayList("BME –IX Sem (Integrated)  ");
 
     @FXML
     private JFXButton otherlistbtn;
@@ -62,7 +62,7 @@ public class OtherlistController implements Initializable {
             public void handle(ActionEvent event) {
 
                 try {
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bm.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("student_teacher.fxml"));
 
                     System.out.println("dssff");
 

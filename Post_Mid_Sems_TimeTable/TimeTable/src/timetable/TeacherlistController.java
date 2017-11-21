@@ -10,6 +10,7 @@ import com.jfoenix.controls.JFXButton;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -48,11 +49,11 @@ public class TeacherlistController implements Initializable {
 
     ObservableList<String> list = FXCollections.observableArrayList("sku","aks","at","vkc","sanjay","pk","abab","sb","tp","akt","sanjai","js","sbh","rv","mk","mg","bibhas","rekha","rajat","maity","np","ashutosh","sm","sr","vs","raka","ust","sv","pc","sks","srv","ag","venkat","rrs","vips","pawank","sa","sd","kps","ca","gf2","sk","gcn","vt","rs","ap","am","sangita","km","nm","suneel","bss","ss","prasanna","brs","aa","rk","mm","sintu","pv","tl","av","vnt","ug","seema","pooja","ad","ac","rks");
     @Override
-
+    
     public void initialize(URL url, ResourceBundle rb) {
-
+        Collections.sort(list);
         teacherlist.setItems(list);
-
+        //Collections.sort(list, cmprtr);
         backbtn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override

@@ -39,7 +39,7 @@ public class Student_teacherController implements Initializable {
     @FXML
 
     private ComboBox student_teacher;
-    ObservableList<String> list = FXCollections.observableArrayList("Student","Teacher");
+    ObservableList<String> list = FXCollections.observableArrayList("Student","Teacher","Room");
 
     @FXML
     private JFXButton student_teacher_btn;
@@ -107,7 +107,6 @@ public class Student_teacherController implements Initializable {
                         batch=100;
                         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("bm.fxml"));
                         
-                    //    System.out.println("dssff");
                         
                         Parent root1 = (Parent) fxmlLoader.load();
                         Stage stage = new Stage();
@@ -127,6 +126,26 @@ public class Student_teacherController implements Initializable {
                 
                 
                else {
+                    batch=200;
+                    try {
+                        
+                        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("room_class.fxml"));
+                        
+                        
+                        Parent root1 = (Parent) fxmlLoader.load();
+                        Stage stage = new Stage();
+                        System.out.println(root1);
+                        stage.setScene(new Scene(root1));
+                        System.out.println("dsf");
+                        stage.show();
+                        stage.setTitle((String) student_teacher.getValue());
+                        Stage stage5;
+                        stage5 = (Stage)student_teacher_btn.getScene().getWindow();
+                        stage5.close();
+                    } catch (IOException ex) {
+                        Logger.getLogger(FirstController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
                 }
             }
 

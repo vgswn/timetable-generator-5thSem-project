@@ -82,12 +82,12 @@ public class Sec1Controller implements Initializable {
     private TableColumn<Data, String> slot4;
     @FXML
     private TableColumn<Data, String> slot5;
-        @FXML
+    @FXML
     private TableColumn<Data, String> slot6;
-            @FXML
+    @FXML
     private TableColumn<Data, String> slot7;
-                @FXML
-    private TableColumn<Data, String>  slot8;
+    @FXML
+    private TableColumn<Data, String> slot8;
     @FXML
     private Button home;
 
@@ -99,27 +99,83 @@ public class Sec1Controller implements Initializable {
 
     @FXML
     private Text sec;
-    
 
     /**
      * Initializes the controller class.
      */
     ObservableList<Data> list = FXCollections.observableArrayList();
     ObservableList<Data> list2 = FXCollections.observableArrayList();
-     HashMap<String,Integer> map = new HashMap<String, Integer>();   
-      HashMap<Integer, String> smap = new HashMap<Integer, String>();
-          HashMap<String, Integer> tmap = new HashMap<String, Integer>();
+    HashMap<String, Integer> map = new HashMap<String, Integer>();
+    HashMap<Integer, String> smap = new HashMap<Integer, String>();
+    HashMap<String, Integer> tmap = new HashMap<String, Integer>();
+    HashMap<String, String> roommap = new HashMap<String, String>();
+    HashMap<String, String> rmap = new HashMap<String, String>();
 
-                     int no =0;
-                     String line;
-                     String fileName;
-
+    int no = 0;
+    String line;
+    String fileName;
 
     //   public static ObservableList<Data> lst = FXCollections.observableArrayList();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-    tmap.put("sku", 0);
+
+        rmap.put("5006", "10");
+        rmap.put("5007", "11");
+        rmap.put("5054", "12");
+        rmap.put("5106", "20");
+        rmap.put("5107", "21");
+        rmap.put("5154", "22");
+        rmap.put("5206", "30");
+        rmap.put("5207", "31");
+        rmap.put("5254", "32");
+        rmap.put("5055", "13");
+        rmap.put("5155", "23");
+        rmap.put("5255", "33");
+        rmap.put("2121", "42");
+        rmap.put("2205", "43");
+        rmap.put("2223", "41");
+        rmap.put("4223", "80");
+        rmap.put("4105", "81");
+        rmap.put("4122", "82");
+        rmap.put("3013", "90");
+        rmap.put("3113", "91");
+        rmap.put("3112", "92");
+        rmap.put("4133", "83");
+        rmap.put("4205", "84");
+        rmap.put("3222", "97");
+        rmap.put("4123", "85");
+        rmap.put("3202", "93");
+        rmap.put("2311", "43");
+
+        roommap.put("10", "5006");
+        roommap.put("11", "5007");
+        roommap.put("12", "5054");
+        roommap.put("20", "5106");
+        roommap.put("21", "5107");
+        roommap.put("22", "5154");
+        roommap.put("30", "5206");
+        roommap.put("31", "5207");
+        roommap.put("32", "5254");
+        roommap.put("13", "5055");
+        roommap.put("23", "5155");
+        roommap.put("33", "5255");
+        roommap.put("42", "2121");
+        roommap.put("40", "2205");
+        roommap.put("41", "2223");
+        roommap.put("80", "4223");
+        roommap.put("81", "4105");
+        roommap.put("82", "4122");
+        roommap.put("90", "3013");
+        roommap.put("91", "3113");
+        roommap.put("92", "3112");
+        roommap.put("83", "4133");
+        roommap.put("84", "4205");
+        roommap.put("92", "3222");
+        roommap.put("85", "4123");
+        roommap.put("93", "3202");
+        roommap.put("43", "2311");
+
+        tmap.put("sku", 0);
         tmap.put("ps", 1);
         tmap.put("aks", 2);
         tmap.put("at", 3);
@@ -230,42 +286,36 @@ public class Sec1Controller implements Initializable {
         smap.put(35, "BIľIII Semester (MTech)  ");
         smap.put(36, "B. Tech.DUAL(IT) ľVII MBA  ");
         smap.put(37, "B. Tech.DUAL(ECE) ľVII MBA  ");
-    
-        
-        
-        
-        
-        
 
-map.put("BTech(IT) –VII Semester  ",9);
-map.put("BTech(ECE) –VII Semester  ",10);
-map.put("Dual Degree B.Tech.(ECE) MTech(MI)  ",11);
-map.put("M.Tech.(MI) – I Semester  ",12);
-map.put("M.Tech.(MI) – III Semester  ",13);
-map.put("BME –VII Sem (Dual degree) I Sem (MTech)  ",14);
-map.put("BME –IX Sem (Integrated)  ",15);
-map.put("B.Tech. DUAL(IT) –VII WCE-  ",16);
-map.put("M.Tech. (WCE) –I Semester  ",17);
-map.put("B.Tech. DUAL(IT) – VII CLIS-  ",18);
-map.put("M.Tech.(CLIS) –I Semester  ",19);
-map.put("B. Tech.DUAL(IT) –VII SE-  ",20);
-map.put("M.Tech.(SE) –I Semester  ",21);
-map.put("B.Tech.DUAL (IT) –VII HCI-  ",22);
-map.put("M.Tech.(HCI) –I Semester  ",23);
-map.put("B.Tech.DUAL(IT) – VII IS-  ",24);
-map.put("M.Tech.(IS) –I Semester  ",25);
-map.put("B.Tech. DUAL (IT) –VII RO-  ",26);
-map.put("M.Tech.(RO) – I Semester  ",27);
-map.put("M.Tech.(IS) – III Semester  ",28);
-map.put("M.Tech.(HCI)– III Semester  ",29);
-map.put("M.Tech.(RO)– III Semester  ",30);
-map.put("M.Tech.(SE)– III Semester  ",31);
-map.put("M.Tech.(WCE)– III Semester  ",32);
-map.put("M.Tech.(CLIS)– III Semester  ",33);
-map.put("BI–VII Semester (Dual degree)I Semester (MTech)  ",34);
-map.put("BI–III Semester (MTech)  ",35);
-map.put("B. Tech.DUAL(IT) –VII MBA  ",36);
-map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
+        map.put("BTech(IT) –VII Semester  ", 9);
+        map.put("BTech(ECE) –VII Semester  ", 10);
+        map.put("Dual Degree B.Tech.(ECE) MTech(MI)  ", 11);
+        map.put("M.Tech.(MI) – I Semester  ", 12);
+        map.put("M.Tech.(MI) – III Semester  ", 13);
+        map.put("BME –VII Sem (Dual degree) I Sem (MTech)  ", 14);
+        map.put("BME –IX Sem (Integrated)  ", 15);
+        map.put("B.Tech. DUAL(IT) –VII WCE-  ", 16);
+        map.put("M.Tech. (WCE) –I Semester  ", 17);
+        map.put("B.Tech. DUAL(IT) – VII CLIS-  ", 18);
+        map.put("M.Tech.(CLIS) –I Semester  ", 19);
+        map.put("B. Tech.DUAL(IT) –VII SE-  ", 20);
+        map.put("M.Tech.(SE) –I Semester  ", 21);
+        map.put("B.Tech.DUAL (IT) –VII HCI-  ", 22);
+        map.put("M.Tech.(HCI) –I Semester  ", 23);
+        map.put("B.Tech.DUAL(IT) – VII IS-  ", 24);
+        map.put("M.Tech.(IS) –I Semester  ", 25);
+        map.put("B.Tech. DUAL (IT) –VII RO-  ", 26);
+        map.put("M.Tech.(RO) – I Semester  ", 27);
+        map.put("M.Tech.(IS) – III Semester  ", 28);
+        map.put("M.Tech.(HCI)– III Semester  ", 29);
+        map.put("M.Tech.(RO)– III Semester  ", 30);
+        map.put("M.Tech.(SE)– III Semester  ", 31);
+        map.put("M.Tech.(WCE)– III Semester  ", 32);
+        map.put("M.Tech.(CLIS)– III Semester  ", 33);
+        map.put("BI–VII Semester (Dual degree)I Semester (MTech)  ", 34);
+        map.put("BI–III Semester (MTech)  ", 35);
+        map.put("B. Tech.DUAL(IT) –VII MBA  ", 36);
+        map.put("B. Tech.DUAL(ECE) –VII MBA  ", 37);
         list.clear();
         Day.setCellValueFactory(new PropertyValueFactory<Data, String>("a"));
         slot1.setCellValueFactory(new PropertyValueFactory<Data, String>("b"));
@@ -276,10 +326,14 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
         slot5.setCellValueFactory(new PropertyValueFactory<Data, String>("f"));
         slot6.setCellValueFactory(new PropertyValueFactory<Data, String>("g"));
         slot7.setCellValueFactory(new PropertyValueFactory<Data, String>("h"));
-         slot8.setCellValueFactory(new PropertyValueFactory<Data, String>("i"));
+        slot8.setCellValueFactory(new PropertyValueFactory<Data, String>("i"));
 
-        //Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "slot5");
-        this.go();
+        try {
+            //Data qq = new Data("Monday", "sub1", "sub2", "sub3", "sub4", "slot5");
+            this.go();
+        } catch (IOException ex) {
+            Logger.getLogger(Sec1Controller.class.getName()).log(Level.SEVERE, null, ex);
+        }
         TimeTable.setItems(list2);
 
         home.setOnAction(new EventHandler<ActionEvent>() {
@@ -451,11 +505,11 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
                 tray.showAndDismiss(Duration.millis(2000));
             }
 
-           
         });
-    
+
     }
-    public void go() {
+
+    public void go() throws FileNotFoundException, IOException {
 
         /*if (Student_teacherController.batch == -1) {
 
@@ -527,7 +581,6 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
 
             }
         } */
-        
         if (Student_teacherController.batch == -1) {
             System.out.println("dumtaradumtara");
             String fileName = "teacher.txt";
@@ -564,10 +617,10 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
                                 while (st.hasMoreTokens()) {
                                     String s = st.nextToken();
                                     int daysign = s.indexOf("(");
-                                    if(daysign == -1){
+                                    if (daysign == -1) {
                                         a[count] = s;
                                         count++;
-                                        
+
                                         continue;
                                     }
                                     if (s.equals("$")) {
@@ -576,7 +629,7 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
 
                                         s = " ";
                                         a[count++] = s;
-                                        
+
                                     } else {
                                         //System.out.println("Inside2");
                                         StringTokenizer openparen = new StringTokenizer(s, "(");
@@ -585,16 +638,15 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
                                         int secc = Integer.valueOf(x);
                                         //System.out.println(secc);
                                         String secname = smap.get(secc);
-                                          //System.out.println(secname);
+                                        //System.out.println(secname);
                                         s = secname + "\n(" + openparen.nextToken();
                                         a[count++] = s;
                                     }
 
-                                    
                                     //  System.out.println(s);
                                 }
-                                Data d=new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5]," ");
-                            list2.add(d);
+                                Data d = new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4], "LUNCH BREAK", a[5], " ");
+                                list2.add(d);
                                 //System.out.println(a[0] + a[1] + a[2] + a[3] + a[4] + a[5]);
                                 //list.add(new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4], "LUNCH BREAK", a[5]));
 
@@ -661,130 +713,157 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
             } catch (Exception e) {
 
             }
-        }
-    
-    else  {
+        } else if (Student_teacherController.batch == 200) {
+            String roomName = room_selectionController.room;
+            System.out.println(roomName);
+            FileReader roomFreader = new FileReader("room" + rmap.get(roomName) + ".txt");
+            BufferedReader roombuffer = new BufferedReader(roomFreader);
+            //StringTokenizer roomst = new StringTokenizer(line);
+            String roomline;
+            roomline = roombuffer.readLine();
+            while ((roomline = roombuffer.readLine()) != null) {
+                StringTokenizer roomtoken = new StringTokenizer(roomline, ";");
+                int count = 0;
+                String[] a = new String[6];
+                //while (roomtoken.hasMoreTokens()) {
+                    String roomfound = roomtoken.nextToken();
+                                System.out.println(roomfound);
 
-           
+                    a[0] = roomfound;
+                    count++;
+                    for (int i = 0; i < 5; i++) {
+                        roomfound = roomtoken.nextToken();
+                        if (roomfound.equals("-1")) {
+                            a[count] = " ";
+                            count++;
+                        } else {
+                            a[count] = smap.get(Integer.parseInt(roomfound));
+                                        System.out.println("room   "+a[count]);
 
-         
-        if (BmController.batch
-                == 10) {
-
-          
-        
-       
-            //sec.setText(Integer.toString(SecondController.sec + 1));
-            //year.setText(Integer.toString(FirstController.batch + 1));
-            String fs = "B.Tech ";
-            if (SecondController.sec + 1 < 3 && !"4th_Year".equals(FirstController.year)) {
-                fs = fs + " IT ";
-                fs = fs + " Sem : " + Integer.toString(2 * FirstController.batch + 1);
-                fs = fs + " Sec : " + Integer.toString(SecondController.sec + 1);
-                no = (SecondController.sec) + FirstController.batch * 3;
-
-            } else if(SecondController.sec + 1 ==3 && !"4th_Year".equals(FirstController.year)) {
-                fs = fs + " ECE ";
-                fs = fs + " Sem : " + Integer.toString(2 * FirstController.batch + 1);
-                no = (SecondController.sec) + FirstController.batch * 3;
-            }
-            
-            else if (FoursecController.sec == 0 && "4th_Year".equals(FirstController.year))
-            {
-                fs= fs + " IT Sem :7 "; 
-                 no = 9;
-            }
-             else if (FoursecController.sec == 1 && "4th_Year".equals(FirstController.year))
-            {
-                fs= fs + " ECE Sem :7 "; 
-                 no = 10;
-                
-            }
-            sec.setText(fs);
-             
-            
-            
-              fileName = "test" + no + ".txt";
-              line = "null";
-            System.out.println("In Sec1");
-        }
-        else if 
-           (BmController.batch==20)
-        {
-            String fs = MtechlistController.course;
-            no = map.get(fs);
-              fileName = "test" + no + ".txt";
-              line = "null";
-                          sec.setText(trim(fs));
-
-        }
-      
-            else if (BmController.batch==30)
-        {
-             String fs = OtherlistController.course;
-            no = map.get(fs);
-              fileName = "test" + no + ".txt";
-              line = "null";
-              sec.setText(trim(fs));
-
-        }
-    
-       
-        
-        }
-        
-
-           try {
-               //System.out.println("new:::"+no);
-               FileReader f;
-               BufferedReader b = null;
-               if(no<11)
-               {
-                   f=new FileReader("lab"+no+".txt");
-                   b=new BufferedReader(f);
-               }
-                String lab=" ";
-                FileReader fileReader = new FileReader(fileName);
-                BufferedReader bufferedReader = new BufferedReader(fileReader);
-                StringTokenizer st = new StringTokenizer(line);
-                int c=0;
-                while ((line = bufferedReader.readLine()) != null) {
-                    lab=" ";
-                    
-                   
-                    if (line.startsWith("SEC"))
-                        continue;
-                    if(no<11)
-                    {
-                        lab=b.readLine();
-                        if(lab.startsWith("nul"))
-                            lab=" ";
-                    }
-                    c++;
-                    String[] a = new String[6];
-                    int count = 0;
-                    st = new StringTokenizer(line, ";");
-                    while (st.hasMoreTokens()) {
-                        String s = st.nextToken();
-                        if (s.equals("$")) {
-                            s = " ";
+                            count++;
                         }
-                        else if (s.startsWith("null")) {
 
-                            s = " ";
-                            a[count] = s;
-                        }
-                        a[count++] = s;
-                       
                     }
 
-                    list2.add(new Data(a[0], a[1], a[2], "TB \n "+"\n", a[3], a[4],"LUNCH BREAK",a[5],lab));
+                //}
+                Data d = new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4], "LUNCH BREAK", a[5], " ");
+                list2.add(d);
+            }
+
+        } else {
+
+            if (BmController.batch == 10) {
+
+                //sec.setText(Integer.toString(SecondController.sec + 1));
+                //year.setText(Integer.toString(FirstController.batch + 1));
+                String fs = "B.Tech ";
+                if (SecondController.sec + 1 < 3 && !"4th_Year".equals(FirstController.year)) {
+                    fs = fs + " IT ";
+                    fs = fs + " Sem : " + Integer.toString(2 * FirstController.batch + 1);
+                    fs = fs + " Sec : " + Integer.toString(SecondController.sec + 1);
+                    no = (SecondController.sec) + FirstController.batch * 3;
+
+                } else if (SecondController.sec + 1 == 3 && !"4th_Year".equals(FirstController.year)) {
+                    fs = fs + " ECE ";
+                    fs = fs + " Sem : " + Integer.toString(2 * FirstController.batch + 1);
+                    no = (SecondController.sec) + FirstController.batch * 3;
+                } else if (FoursecController.sec == 0 && "4th_Year".equals(FirstController.year)) {
+                    fs = fs + " IT Sem :7 ";
+                    no = 9;
+                } else if (FoursecController.sec == 1 && "4th_Year".equals(FirstController.year)) {
+                    fs = fs + " ECE Sem :7 ";
+                    no = 10;
+
                 }
-            } catch (Exception e) {
+                sec.setText(fs);
+
+                fileName = "test" + no + ".txt";
+                line = "null";
+                System.out.println("In Sec1");
+            } else if (BmController.batch == 20) {
+                String fs = MtechlistController.course;
+                no = map.get(fs);
+                fileName = "test" + no + ".txt";
+                line = "null";
+                sec.setText(trim(fs));
+
+            } else if (BmController.batch == 30) {
+                String fs = OtherlistController.course;
+                no = map.get(fs);
+                fileName = "test" + no + ".txt";
+                line = "null";
+                sec.setText(trim(fs));
 
             }
+
         }
-    
+
+        try {
+            //System.out.println("new:::"+no);
+            FileReader f;
+            BufferedReader b = null;
+            if (no < 11) {
+                f = new FileReader("lab" + no + ".txt");
+                b = new BufferedReader(f);
+            }
+            String lab = " ";
+            FileReader fileReader = new FileReader(fileName);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            StringTokenizer st = new StringTokenizer(line);
+            int c = 0;
+            while ((line = bufferedReader.readLine()) != null) {
+                lab = " ";
+
+                if (line.startsWith("SEC")) {
+                    continue;
+                }
+                if (no < 11) {
+                    lab = b.readLine();
+                    if (lab.startsWith("nul")) {
+                        lab = " ";
+                    }
+                }
+                c++;
+                String[] a = new String[6];
+                int count = 0;
+                st = new StringTokenizer(line, ";");
+                while (st.hasMoreTokens()) {
+                    String s = st.nextToken();
+                    if (s.equals("")) {
+                        s = " ";
+
+                    } else if (s.startsWith("null")) {
+
+                        s = " ";
+                        a[count++] = s;
+                    } else {
+                        //s=s.replaceAll("Room no", line);
+
+                        if (s.contains(":")) {
+                            StringTokenizer newcolon = new StringTokenizer(s, ":");
+                            String vips = newcolon.nextToken();
+                            String vipsno = newcolon.nextToken();
+                            //System.out.println(vips+"hgvytvythu "+vipsno);
+
+                            vipsno = vipsno.trim();
+                            //System.out.println(vipsno);
+
+                            s = vips + ":" + roommap.get(vipsno);
+                        }
+                        s = s.replaceAll("!", "\n");
+                        System.out.println(s);
+                        a[count++] = s;
+                    }
+
+                }
+
+                list2.add(new Data(a[0], a[1], a[2], "TB \n " + "\n", a[3], a[4], "LUNCH BREAK", a[5], lab));
+            }
+        } catch (Exception e) {
+
+        }
+    }
+
     public void createPdf(String dest) {
         try {
             Document document = new Document(PageSize.A4.rotate());
@@ -803,7 +882,7 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
 
             PdfPTable table = new PdfPTable(8);
             table.setWidthPercentage(100);
-                String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM","LUNCH BREAK","6:00 PM-7:00 PM"};
+            String[] tableTitleList = {" " + "\n \n \n", "9-10 AM", "10-11 AM", "11-11:15 AM", "11:15-12:15 PM", "12:15-1:15 PM", "LUNCH BREAK", "6:00 PM-7:00 PM"};
 
             for (String field : tableTitleList) {
 
@@ -816,10 +895,8 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
                 table.addCell(item.getD());
                 table.addCell(item.getE());
                 table.addCell(item.getF());
-                                table.addCell(item.getG());
-                                                table.addCell(item.getH());
-
-                                
+                table.addCell(item.getG());
+                table.addCell(item.getH());
 
             });
             boolean b = true;
@@ -848,6 +925,4 @@ map.put("B. Tech.DUAL(ECE) –VII MBA  ",37);
         }
     }
 
-
 }
-

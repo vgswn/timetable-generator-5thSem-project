@@ -20,7 +20,8 @@
 
 	sec_subj waste;
 
-
+int is_room_fake(int ll);
+void print_room();
 	int sec_room[50][10];
 	int avail_room[400][6][4];
 	int rooms_alloted[38][6][4];
@@ -32,7 +33,7 @@
 	//sec_subj sec_teacher[10][7];
 	sec_subj mtech_sub[40][8];
 	sec_subj lab_btech[11][5];
-	
+
 	sec_subj tt_lab[11][5];
 	int lab_hr[11][5];
 
@@ -280,7 +281,7 @@
 
 	}
 
-	
+
 
 	string getName(int i){
 	    sec_subj a;
@@ -330,22 +331,22 @@
 void print_lab()
 {
 	 for (int sec = 0; sec < 11; sec++) {
-	 	
+
 	 		string tmp = "lab" + IntToString(sec) + ".txt";
 	        char *q = const_cast<char*> (tmp.c_str());
 	        ofstream outfile(q);
 	        ofstream out;
 	        out.open(q);
 	        for (int day = 0; day < 5; day++) {
-	        	
+
 	        	out<<lab_btech[sec][day].s_sub[0]<<endl;
 	        }
-	        
-	        
-	 	
+
+
+
 	 }
-	 
-	
+
+
 }
 	void print_timetable_mtech() {
 
@@ -384,15 +385,15 @@ void print_lab()
 	            	if (mtech[sec][5][day].elective == 0)
 	                out << "$";
 	                else if (mtech[sec][5][day].elective == -1) {
-	                    out << mtech[sec][5][day].s_sub[0] + " " <<mtech[sec][5][day].s_teacher[0]<<" Room No : "<<rooms_alloted[sec][5][day];
+	                    out << mtech[sec][5][day].s_sub[0] + " " <<mtech[sec][5][day].s_teacher[0]<<"!Room No : "<<rooms_alloted[sec][5][day];
 	                } else if (mtech[sec][5][day].elective > 0) {
 	                    int k = mtech[sec][5][day].elective;
 
 	                    for (int q = 0; q < k; q++) {
-	                        out << mtech[sec][5][day].s_sub[q] + " (" << mtech[sec][5][day].s_teacher[q] << " )";
+	                        out << mtech[sec][5][day].s_sub[q] + "(" << mtech[sec][5][day].s_teacher[q] << ")";
 	                        out << "!";
 	                    }
-	                    out<<" Room No : "<<rooms_alloted[sec][5][day];
+	                    out<<"Room No : "<<rooms_alloted[sec][5][day];
 	                }
 	                out << ";";
 
@@ -401,15 +402,15 @@ void print_lab()
 	                if (mtech[sec][day][slot].elective == 0)
 	                    out << "$";
 	                else if (mtech[sec][day][slot].elective == -1) {
-	                    out << mtech[sec][day][slot].s_sub[0] + " " << mtech[sec][day][slot].s_teacher[0]<<" Room No : "<<rooms_alloted[sec][day][slot];
+	                    out << mtech[sec][day][slot].s_sub[0] + " " << mtech[sec][day][slot].s_teacher[0]<<"!Room No : "<<rooms_alloted[sec][day][slot];
 	                } else if (mtech[sec][day][slot].elective > 0) {
 	                    int k = mtech[sec][day][slot].elective;
 
 	                    for (int q = 0; q < k; q++) {
-	                        out << mtech[sec][day][slot].s_sub[q] + " (" << mtech[sec][day][slot].s_teacher[q] << " )";
+	                        out << mtech[sec][day][slot].s_sub[q] + "(" << mtech[sec][day][slot].s_teacher[q] << ")";
 	                        out << "!";
 	                    }
-	                    out<<" Room No : "<<rooms_alloted[sec][day][slot];
+	                    out<<"Room No : "<<rooms_alloted[sec][day][slot];
 	                }
 	                out << ";";
 	            }
@@ -454,9 +455,9 @@ int algo_lab(int ts)
 		}
 	}
 	return 0;
-	
-	
-	
+
+
+
 }
 
 int find_s(int ts, int t){
@@ -468,7 +469,7 @@ int find_s(int ts, int t){
 	    return -1;
 	}
 /*
-	
+
 */
 
 
@@ -494,7 +495,7 @@ int find_s(int ts, int t){
 	    		out<<m_day[j]<<";";
 	    		for(int k=0;k<5;k++)
 	    		{
-	    			
+
 					if(k == 4 && j!= 4){
 	    				if(avail_teacher[i][5][j]== -1)
 	    				{
@@ -507,7 +508,7 @@ int find_s(int ts, int t){
 	    				out<<find_sec_mtech(ts)<<"("<<pp.s_sub[indexx]<<")"<<";";
 						continue;
 	    			}
-					
+
 	    			if(avail_teacher[i][j][k]== -1)
 	    			{
 	    				out<<"F"<<";";
@@ -522,7 +523,7 @@ int find_s(int ts, int t){
 	    	}
 	    }
 	}
-	
+
 	/*found_sub_btech search_btech(string sub ,int sec)
 	{
 		int j=0;
@@ -898,27 +899,27 @@ int find_s(int ts, int t){
 	        for (int j = 0; j < 6; j++) {
 	            for (int k = 0; k < 5; k++)
 	                avail_teacher[i][j][k] = -1;
-	                
+
 	        }
 	    }
-	    
+
 	    for (int i = 0; i < 38; i++) {
 	        for (int j = 0; j < 6; j++) {
 	            for (int k = 0; k < 4; k++)
 	                rooms_alloted[i][j][k] = -1;
-	                
+
 	        }
 	    }
 	    for (int i = 0; i < 400; i++) {
 	        for (int j = 0; j < 6; j++) {
 	            for (int k = 0; k < 4; k++)
 	                avail_room[i][j][k] = -1;
-	                
+
 	        }
 	    }
-	    	    
-	    
-	    
+
+
+
 
 	    clock_t start = clock();
 	    //int a = algo(0);
@@ -1083,8 +1084,8 @@ int find_s(int ts, int t){
 		}*/
 		//slot_busy[858] = slot_busy[897] = 1;
 		algo_mtech(0);
-		
-	
+
+
 		/*for(int j = 0 ; j < 38 ; j++){
 			printf("%d   :  ",j);
 			for(int i=0 ; i < 8 ; i++){
@@ -1092,12 +1093,12 @@ int find_s(int ts, int t){
 			}
 			printf("\n");
 		}*/
-		
+
 for(int i=0;i<11;i++)
 {
 	for(int j=0;j<5;j++)
 		lab_hr[i][j]=1;
-}	
+}
 for(int l=0;l<11;l++)
 		{
 			for(int m=0;m<5;m++)
@@ -1126,17 +1127,17 @@ for(int i=0;i<11;i++)
 	 	if( mtech_sub[i][j].s_sub[0][8]=='-' )
 	 			n=6;
 	 if ( mtech_sub[i][j].s_sub[0][n]=='2' ){
-	 
-		 
+
+
 		 lab_btech[i][k]=mtech_sub[i][j];
 		 lab_hr[i][k]=1;
 		 k++;
-		 
-		 
+
+
 		}
-	 
+
 	/* else
-	 {	
+	 {
 	 	sec_teacher[i][j].elective = -2;
 
 
@@ -1148,7 +1149,7 @@ for(int i=0;i<11;i++)
          sec_teacher[i][j].s_sub[z] = "null" + s;
          sec_teacher[i][j].teacher[z] = p++;
          sec_teacher[i][j].s_teacher[z] = "  ";
-         
+
 	 }
 	 }*/
 	 }
@@ -1159,8 +1160,8 @@ for(int i=0;i<11;i++)
 		{
 			falg=0;
 			if (sec_room[i][0]==1)
-				falg=1;	
-			cout<<"SEC "<<i<<" "<<falg<<endl;		
+				falg=1;
+			cout<<"SEC "<<i<<" "<<falg<<endl;
 			for ( int j=0;j<6;j++ )
 			{
 				for(int k=0;k<4;k++)
@@ -1169,10 +1170,10 @@ for(int i=0;i<11;i++)
 								continue;
 						if(rooms_alloted[i][j][k]==-1)
 						{
-							
+
 							if (falg==1)
 								{
-								
+
 								rooms_alloted[i][j][k]=sec_room[i][1];
 								avail_room[sec_room[i][1]][j][k]=i;
 								if( i==9 )
@@ -1180,14 +1181,14 @@ for(int i=0;i<11;i++)
 										avail_room[23][j][k]=i;
 											avail_room[33][j][k]=i;
 								}
-								
+
 								if (mtech[i][j][k].linked_or_not>0)
 								{
-								
+
 									for(int q=0;q<mtech[i][j][k].linked_or_not;q++)
 									{
 										rooms_alloted[mtech[i][j][k].linked_sec[q]][j][k]=sec_room[i][1];
-										
+
 									}
 								}
 							}
@@ -1198,71 +1199,122 @@ for(int i=0;i<11;i++)
 								{
 									if(avail_room[sec_room[i][q]][j][k]==-1)
 									{
-										
+
 										f=1;
 										rooms_alloted[i][j][k]=sec_room[i][q];
 										avail_room[sec_room[i][q]][j][k]=i;
 										if (mtech[i][j][k].linked_or_not>0)
 											{
-									
+
 												for(int qq=0;qq<mtech[i][j][k].linked_or_not;qq++)
 												{
 													rooms_alloted[mtech[i][j][k].linked_sec[qq]][j][k]=sec_room[i][q];
 												}
-												
-												
+
+
 											}
-										break;	
+										break;
 										}
 									}
-								
+
 									if(f==0)
 									{
 										rooms_alloted[i][j][k]=350;
 										//avail_room[350][j][k]=i;
 										if (mtech[i][j][k].linked_or_not>0)
 										{
-									
+
 											for(int q=0;q<mtech[i][j][k].linked_or_not;q++)
 											{
 												rooms_alloted[mtech[i][j][k].linked_sec[q]][j][k]=350;
 											}
-												
-												
+
+
 										}
-									
-									
-									
+
+
+
 									}
-								
-								
-								}	
+
+
+								}
 						}
-					
+
 					}
-			
+
 				}
 		}
-	
+
 	/*for(int i=0;i<38;i++)
 	{
 		cout<<"SEC : "<<i<<endl;
 		for(int j=0;j<6;j++)
 		{
-			
+
 			for(int k=0;k<4;k++)
 			{
 				cout<<rooms_alloted[i][j][k]<<" ";
 			}
-			cout<<endl; 
+			cout<<endl;
 		}
 	cout<<endl;
 	cout<<endl;
 	}
-	
+
 	*/
 		print_timetable_mtech();
 		prinf_teacher();
 		print_lab();
+		print_room();
+		
+		
 	    return 0;
+	}
+	
+	void print_room() 
+	{
+		map<int, string>m_day;
+	    m_day[0] = "MONDAY";
+	    m_day[1] = "TUESDAY";
+	    m_day[2] = "WEDNESDAY";
+	    m_day[3] = "THURSDAY";
+	    m_day[4] = "FRIDAY";
+
+	    for (int room = 0; room < 400; room++) {
+	    	if (is_room_fake(room) )continue;
+	    	int cnt = 0;
+	        string tmp = "room" + IntToString(room) + ".txt";
+	        char *q = const_cast<char*> (tmp.c_str());
+	        ofstream outfile(q);
+	        ofstream out;
+	        out.open(q);
+	        out<<"ROOM : "<<room<<endl;
+	        int day;
+	        for (day = 0; day < 5; day++) {
+	        	out << m_day[day] << ";";
+	        	for (int slot = 0 ; slot < 4; slot++){
+	        		out << avail_room[room][day][slot] <<";";
+				}
+				if ( cnt == 4)
+					 out << "-1" <<endl;
+				else{
+					out << avail_room[room][5][cnt]<<endl;
+					cnt++;
+				}
+			}
+		}
+
+	}
+	
+	int is_room_fake(int ll)
+	{
+		int mm, nn;
+		for ( mm = 0; mm < 6; mm ++){
+			for ( nn = 0; nn < 4; nn++){
+				if(avail_room[ll][mm][nn] != -1){
+					return 0;
+				}
+			}
+		}
+		return 1;
 	}

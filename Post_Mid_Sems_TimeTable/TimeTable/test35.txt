@@ -1,6 +1,6 @@
 SEC : 35
-MONDAY;SBAN331E (nm )!SMMD331E (km )! Room No : 84;SBAN331E (nm )!SMMD331E (km )! Room No : 84;SMLB331E tl Room No : 84;SMLB331E tl Room No : 84;;
-TUESDAY;SBAN331E (nm )!SMMD331E (km )! Room No : 84;SMLB331E tl Room No : 84;;;;
+MONDAY;SBAN331E(nm)!SMMD331E(km)!Room No : 84;SBAN331E(nm)!SMMD331E(km)!Room No : 84;SMLB331E tl!Room No : 84;SMLB331E tl!Room No : 84;;
+TUESDAY;SBAN331E(nm)!SMMD331E(km)!Room No : 84;SMLB331E tl!Room No : 84;;;;
 WEDNESDAY;;;;;;
 THURSDAY;;;;;;
 FRIDAY;;;;;;

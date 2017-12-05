@@ -1,0 +1,6 @@
+SEC : 1
+MONDAY;SMAT130C abab!Room No : 11;SMAT130C abab!Room No : 11;MLCS102C sm!Room No : 11;MLCS102C sm!Room No : 11;;
+TUESDAY;SMAT130C abab!Room No : 11;MLCS102C sm!Room No : 11;SEGP132C sb!Room No : 11;SEGP132C sb!Room No : 11;;
+WEDNESDAY;SEGP132C sb!Room No : 11;ECAS130C aks!Room No : 11;IITP132C tp!Room No : 11;IITP132C tp!Room No : 11;;
+THURSDAY;ECAS130C aks!Room No : 11;ECAS130C aks!Room No : 11;IITP132C tp!Room No : 11;EEDC132C pk!Room No : 11;;
+FRIDAY;EEDC132C pk!Room No : 11;EEDC132C pk!Room No : 11;;;;

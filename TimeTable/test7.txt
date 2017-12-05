@@ -1,0 +1,6 @@
+SEC : 7
+MONDAY;;;;MPOE530C sd!Room No : 31;;
+TUESDAY;MPOE530C sd!Room No : 31;MPOE530C sd!Room No : 31;ICNW532C venkat!Room No : 31;ICNW532C venkat!Room No : 31;;
+WEDNESDAY;ICNW532C venkat!Room No : 31;IAIN532C kps!Room No : 31;IGVC532C pc!Room No : 31;IGVC532C pc!Room No : 31;;
+THURSDAY;IAIN532C kps!Room No : 31;IAIN532C kps!Room No : 31;IGVC532C pc!Room No : 31;ISOE532C ca!Room No : 31;;
+FRIDAY;ISOE532C ca!Room No : 31;ISOE532C ca!Room No : 31;;;;

@@ -1,0 +1,39 @@
+0-BTech(IT) :I Semester Section 1
+1-BTech(IT) :I Semester Section 2
+2-BTech(ECE) :I Semester Section 3
+3-BTech(IT) :III Semester Section 1
+4-BTech(IT) :III Semester Section 2
+5-BTech(ECE) :III Semester Section 3
+6-BTech(IT) :V Semester Section 1
+7-BTech(IT) :V Semester Section 2
+8-BTech(ECE) :V Semester Section 3
+9-BTech(IT) :VII Semester
+10-BTech(ECE) :VII Semester
+11-Dual Degree B.Tech.(ECE) MTech(MI)
+12-M.Tech.(MI) : I Semester
+13-M.Tech.(MI) : III Semester
+14-BME :VII Sem (Dual degree) I Sem (MTech)
+15-BME :IX Sem (Integrated)
+16-B.Tech. DUAL(IT) :VII WCE
+17-M.Tech. (WCE) :I Semester
+18-B.Tech. DUAL(IT) : VII CLIS
+19-M.Tech.(CLIS) :I Semester
+20-B. Tech.DUAL(IT) :VII - SE
+21-M.Tech.(SE) :I Semester
+22-B.Tech.DUAL (IT) :VII HCI
+23-M.Tech.(HCI) :I Semester
+24-B.Tech.DUAL(IT) :VII IS
+25-M.Tech.(IS) :I Semester
+26-B.Tech. DUAL (IT) :VII RO
+27-M.Tech.(RO) : I Semester
+28-M.Tech.(IS) : III Semester
+29-M.Tech.(HCI): III Semester
+30-M.Tech.(RO): III Semester
+31-M.Tech.(SE):III Semester
+32-M.Tech.(WCE): III Semester
+33-M.Tech.(CLIS): III Semester
+34-BI-VII Semester (Dual degree)I Semester (MTech)
+35-BI-III Semester (MTech)
+36-B. Tech.DUAL(IT) :VII MBA
+37-B. Tech.DUAL(ECE) :VII MBA
+38-Test Class

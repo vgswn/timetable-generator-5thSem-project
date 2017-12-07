@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="1524.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.Sec1Controller">
+   <children>
+      <ImageView fitHeight="104.0" fitWidth="99.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@IIIT_logo.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="TimeTable" editable="true" fixedCellSize="75.0" layoutX="12.0" layoutY="130.0" prefHeight="338.0" prefWidth="1374.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="130.0">
+        <columns>
+          <TableColumn fx:id="Day" prefWidth="140.0" text="Day" />
+          <TableColumn fx:id="slot1" prefWidth="206.0" text="9-10 AM" />
+            <TableColumn fx:id="slot2" prefWidth="199.0" text="10-11 AM" />
+            <TableColumn fx:id="slot3" minWidth="0.0" prefWidth="104.0" text="11-11:15 AM" />
+            <TableColumn fx:id="slot4" minWidth="0.0" prefWidth="208.0" text="11:15-12:15 PM" />
+            <TableColumn fx:id="slot5" minWidth="0.0" prefWidth="151.0" text="12:15-1:15 PM" />
+            <TableColumn fx:id="slot6" minWidth="0.0" prefWidth="124.0" text="LUNCH BREAK" />
+            <TableColumn fx:id="slot8" minWidth="0.0" prefWidth="167.0" text="LAB 3:00-6:00PM" />
+            <TableColumn fx:id="slot7" minWidth="0.0" prefWidth="241.0" text="6:00 PM-7:00 PM" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="home" layoutX="885.0" layoutY="481.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="81.0" text="Home" textFill="#2b8eb5">
+         <font>
+            <Font name="AR JULIAN" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="back" layoutX="523.0" layoutY="481.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="81.0" text="Back" textFill="#2576a4">
+         <font>
+            <Font name="AR JULIAN" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Button fx:id="print" layoutX="206.0" layoutY="481.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="87.0" text="Print" textFill="#1a6cb9">
+         <font>
+            <Font name="AR JULIAN" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect></Button>
+      <Text fill="#1e4a80" layoutX="206.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indian Institute of Information Technology, Allahabad" textAlignment="JUSTIFY" wrappingWidth="796.0000014603138">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Text>
+      <Text fx:id="sec" layoutX="377.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="639.419921875">
+         <font>
+            <Font name="Andalus" size="20.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Text>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

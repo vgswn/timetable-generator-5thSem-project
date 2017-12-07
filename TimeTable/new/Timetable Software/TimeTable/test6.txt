@@ -1,0 +1,6 @@
+SEC : 6
+MONDAY;;;;MPOE530C pawank!Room No : 30;;
+TUESDAY;MPOE530C pawank!Room No : 30;MPOE530C pawank!Room No : 30;ICNW532C sv!Room No : 30;ICNW532C sv!Room No : 30;;
+WEDNESDAY;ICNW532C sv!Room No : 30;IGVC532C sks!Room No : 30;IAIN532C maity!Room No : 30;IAIN532C maity!Room No : 30;;
+THURSDAY;IGVC532C sks!Room No : 30;IGVC532C sks!Room No : 30;IAIN532C maity!Room No : 30;ISOE532C sa!Room No : 30;;
+FRIDAY;ISOE532C sa!Room No : 30;ISOE532C sa!Room No : 30;;;;

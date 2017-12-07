@@ -1,0 +1,6 @@
+SEC : 10
+MONDAY;;;;EESD732C prasanna!Room No : 33;;
+TUESDAY;EESD732C prasanna!Room No : 33;EESD732C prasanna!Room No : 33;ICCS730E(ust)!EODC730E(sbh)!Room No : 33;ICCS730E(ust)!EODC730E(sbh)!Room No : 33;;
+WEDNESDAY;ICCS730E(ust)!EODC730E(sbh)!Room No : 33;EMSD730E(rekha)!EMIM730E(suneel)!Room No : 33;EWCN732C(suneel)!EMES730E(sunny)!IECO730E(sks)!Room No : 13;EWCN732C(suneel)!EMES730E(sunny)!IECO730E(sks)!Room No : 13;;
+THURSDAY;EMSD730E(rekha)!EMIM730E(suneel)!Room No : 33;EMSD730E(rekha)!EMIM730E(suneel)!Room No : 33;EWCN732C(suneel)!EMES730E(sunny)!IECO730E(sks)!Room No : 13;IHUR340E(pc)!IMOC730E(srv)!ERSC730E(rajat)!Room No : 33;;
+FRIDAY;IHUR340E(pc)!IMOC730E(srv)!ERSC730E(rajat)!Room No : 33;IHUR340E(pc)!IMOC730E(srv)!ERSC730E(rajat)!Room No : 33;;;;

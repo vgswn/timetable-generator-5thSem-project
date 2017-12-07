@@ -1,0 +1,1375 @@
+39
+Section No.-0
+No. of subjects-6
+No. of rooms-1
+#room 10
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SMAT130C
+Teacher Code-0
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-MLCS102C
+Teacher Code-1
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ECAS130C
+Teacher Code-2
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-SEGP132C
+Teacher Code-3
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-IITP132C
+Teacher Code-4
+linked or not-NO
+
+Subject No.-5
+No. of subjects in basket-1
+Subject Code-EEDC132C
+Teacher Code-5
+linked or not-NO
+
+Section No.-1
+No. of subjects-6
+No. of rooms-1
+#room 11
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SMAT130C
+Teacher Code-7
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-MLCS102C
+Teacher Code-23
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ECAS130C
+Teacher Code-2
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-SEGP132C
+Teacher Code-8
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-IITP132C
+Teacher Code-9
+linked or not-NO
+
+Subject No.-5
+No. of subjects in basket-1
+Subject Code-EEDC132C
+Teacher Code-6
+linked or not-NO
+
+Section No.-2
+No. of subjects-6
+No. of rooms-1
+#room 12
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SMAT130C
+Teacher Code-10
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-MLCS102C
+Teacher Code-24
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ECAS130C
+Teacher Code-2
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-SEGP132C
+Teacher Code-11
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-IITP132C
+Teacher Code-12
+linked or not-NO
+
+Subject No.-5
+No. of subjects in basket-1
+Subject Code-EEDC132C
+Teacher Code-13
+linked or not-NO
+
+Section No.-3
+No. of subjects-5
+No. of rooms-1
+#room 20
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SMAT130C
+Teacher Code-10
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-IOOM332C
+Teacher Code-14
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ITOC330C
+Teacher Code-15
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-EMIP332C
+Teacher Code-11
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-IOPS332C
+Teacher Code-17
+linked or not-NO
+
+Section No.-4
+No. of subjects-5
+No. of rooms-1
+#room 21
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SMAT130C
+Teacher Code-0
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-IOOM332C
+Teacher Code-9
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ITOC330C
+Teacher Code-15
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-EMIP332C
+Teacher Code-16
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-IOPS332C
+Teacher Code-12
+linked or not-NO
+
+Section No.-5
+No. of subjects-5
+No. of rooms-1
+#room 22
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EAES332C
+Teacher Code-18
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-EEFW330C
+Teacher Code-19
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IOPS332C
+Teacher Code-20
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-EACN332C
+Teacher Code-21
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-EBEE332C
+Teacher Code-22
+linked or not-NO
+
+Section No.-6
+No. of subjects-5
+No. of rooms-1
+#room 30
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-MPOE530C
+Teacher Code-36
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ICNW532C
+Teacher Code-28
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IAIN532C
+Teacher Code-20
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IGVC532C
+Teacher Code-30
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ISOE532C
+Teacher Code-37
+linked or not-NO
+
+Section No.-7
+No. of subjects-5
+No. of rooms-1
+#room 31
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-MPOE530C
+Teacher Code-38
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ICNW532C
+Teacher Code-33
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IAIN532C
+Teacher Code-39
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IGVC532C
+Teacher Code-29
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ISOE532C
+Teacher Code-40
+linked or not-NO
+
+Section No.-8
+No. of subjects-5
+No. of rooms-1
+#room 32
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EAWP532C
+Teacher Code-41
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ICNW532C
+Teacher Code-4
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-MPOE530C
+Teacher Code-42
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IDCN532C
+Teacher Code-21
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ECSY532C
+Teacher Code-22
+linked or not-NO
+
+Section No.-9
+No. of subjects-6
+No. of rooms-3
+#room 13
+#room 23
+#room 33
+
+Subject No.-0
+No. of subjects in basket-3
+Subject Code-INRX730E
+Teacher Code-27
+Subject Code-ICIS730E
+Teacher Code-28
+Subject Code-IEMB730E
+Teacher Code-17
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-4
+Subject Code-IDCO730E
+Teacher Code-30
+Subject Code-IADA730E
+Teacher Code-15
+Subject Code-IVIRX730E
+Teacher Code-56
+Subject Code-SBNF730E
+Teacher Code-60
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-3
+Subject Code-ICCS730E
+Teacher Code-27
+Subject Code-IDBS730E
+Teacher Code-33
+Subject Code-IIWP730E
+Teacher Code-31
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-2
+Subject Code-ISIM732C-SECA
+Teacher Code-3
+Subject Code-ISIM732C-SECB
+Teacher Code-25
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-2
+Subject Code-MORB720C-SECA
+Teacher Code-62
+Subject Code-MORB720C-SECB
+Teacher Code-63
+linked or not-NO
+
+Subject No.-5
+No. of subjects in basket-3
+Subject Code-ITGT730E
+Teacher Code-34
+Subject Code-IHUR340E
+Teacher Code-29
+Subject Code-IMOC730E
+Teacher Code-31
+linked or not-NO
+
+Section No.-10
+No. of subjects-5
+No. of rooms-7
+#room 20
+#room 32
+#room 13
+#room 33
+#room 23
+#room 41
+#room 42
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EESD732C
+Teacher Code-54
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-ICCS730E
+Teacher Code-27
+Subject Code-EODC730E
+Teacher Code-13
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-3
+Subject Code-EWCN732C
+Teacher Code-51
+Subject Code-EMES730E
+Teacher Code-68
+Subject Code-IECO730E
+Teacher Code-30
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-2
+Subject Code-EMSD730E
+Teacher Code-18
+Subject Code-EMIM730E
+Teacher Code-51
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-3
+Subject Code-IHUR340E
+Teacher Code-29
+Subject Code-IMOC730E
+Teacher Code-31
+Subject Code-ERSC730E
+Teacher Code-19
+linked or not-NO
+
+Section No.-11
+No. of subjects-5
+No. of rooms-7
+#room 13
+#room 23
+#room 33
+#room 32
+#room 41
+#room 43
+#room 20
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EESD732C
+Teacher Code-54
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-EWCN732C
+Teacher Code-51
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-EMSD730E
+Teacher Code-18
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-EODC730E
+Teacher Code-13
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-EVLT-140C
+Teacher Code-68
+linked or not-NO
+
+Section No.-12
+No. of subjects-5
+No. of rooms-4
+#room 41
+#room 33
+#room 32
+#room 43
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EESD732C
+Teacher Code-54
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-EODC703E
+Teacher Code-13
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-EDVD140
+Teacher Code-54
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-EMSD730E
+Teacher Code-18
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-EVLT-140C
+Teacher Code-68
+linked or not-NO
+
+Section No.-13
+No. of subjects-2
+No. of rooms-1
+#room 41
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EODC703E
+Teacher Code-13
+linked or not-YES,12
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-EMES730E
+Teacher Code-68
+linked or not-YES,10
+
+Section No.-14
+No. of subjects-4
+No. of rooms-1
+#room 91
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SANP131C/731C
+Teacher Code-53
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-SMSA131C/731C
+Teacher Code-2
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-SBCI131C/731C
+Teacher Code-46
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-SRTS131C/731C
+Teacher Code-45
+linked or not-NO
+
+Section No.-15
+No. of subjects-4
+No. of rooms-1
+#room 92
+
+Subject No.-0
+No. of subjects in basket-2
+Subject Code-SMFL930E
+Teacher Code-46
+Subject Code-SBEL930E
+Teacher Code-47
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-SHCS931C
+Teacher Code-50
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-SNEU931C
+Teacher Code-45
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-SRSS931
+Teacher Code-2
+linked or not-NO
+
+Section No.-16
+No. of subjects-5
+No. of rooms-4
+#room 33
+#room 23
+#room 13
+#room 42
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-IINP140C
+Teacher Code-31
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-EWCS140C
+Teacher Code-51
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-25
+linked or not-YES,9
+
+Subject No.-4
+No. of subjects in basket-2
+Subject Code-MORB720C_SECA
+Teacher Code-45
+Subject Code-MORB720C_SECB
+Teacher Code-63
+linked or not-YES,9
+
+Section No.-17
+No. of subjects-4
+No. of rooms-3
+#room 33
+#room 42
+#room 81
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-IINP140C
+Teacher Code-31
+linked or not-YES,16
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-EWCS140C
+Teacher Code-51
+linked or not-YES,16
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IMIT140C
+Teacher Code-39
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IAAP113C
+Teacher Code-52
+linked or not-NO
+
+Section No.-18
+No. of subjects-5
+No. of rooms-3
+#room 13
+#room 23
+#room 33
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ICIS140C
+Teacher Code-28
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-IINP140C
+Teacher Code-31
+linked or not-YES,16
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-25
+linked or not-YES,9
+
+Subject No.-3
+No. of subjects in basket-2
+Subject Code-MORB720C_SECA
+Teacher Code-45
+Subject Code-MORB720_SECB
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-YES,16
+
+Section No.-19
+No. of subjects-4
+No. of rooms-3
+#room 23
+#room 33
+#room 81
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ICIS140C
+Teacher Code-28
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-IMIT140C
+Teacher Code-39
+linked or not-YES,17
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IINP140C
+Teacher Code-31
+linked or not-YES,16
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IAAP113C
+Teacher Code-52
+linked or not-YES,17
+
+Section No.-20
+No. of subjects-5
+No. of rooms-3
+#room 80
+#room 13
+#room 23
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ISOM740C
+Teacher Code-37
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ISRE740C
+Teacher Code-40
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-25
+linked or not-YES,9
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-MORB720C_SECB
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-YES,16
+
+Section No.-21
+No. of subjects-4
+No. of rooms-2
+#room 80
+#room 81
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ISOM140C
+Teacher Code-37
+linked or not-YES,20
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ISRE140C
+Teacher Code-40
+linked or not-YES,20
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IMIT140C
+Teacher Code-39
+linked or not-YES,17
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IAAP113C
+Teacher Code-52
+linked or not-YES,17
+
+Section No.-22
+No. of subjects-5
+No. of rooms-3
+#room 13
+#room 23
+#room 81
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-25
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-MORB720C_SECA
+Teacher Code-45
+Subject Code-MORB720C_SECB
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ICCP140C
+Teacher Code-27
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-YES,16
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ICOI140C
+Teacher Code-57
+linked or not-NO
+
+Section No.-23
+No. of subjects-4
+No. of rooms-2
+#room 81
+#room 13
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ICCP140C
+Teacher Code-27
+linked or not-YES,22
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ICOI140C
+Teacher Code-57
+linked or not-YES,22
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IMIT140C
+Teacher Code-39
+linked or not-YES,17
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IAAP113C
+Teacher Code-52
+linked or not-YES,17
+
+Section No.-24
+No. of subjects-5
+No. of rooms-3
+#room 81
+#room 13
+#room 23
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-25
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-MORB720C_SECA
+Teacher Code-45
+Subject Code-MORB720C_SECB
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ICCP140C
+Teacher Code-27
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-YES,16
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ICOI140C
+Teacher Code-57
+linked or not-YES,22
+
+Section No.-25
+No. of subjects-4
+No. of rooms-2
+#room 81
+#room 13
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ICCP140C
+Teacher Code-27
+linked or not-YES,22
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ICOI140C
+Teacher Code-57
+linked or not-YES,22
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IMIT140C
+Teacher Code-39
+linked or not-YES,17
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IAAP113C
+Teacher Code-52
+linked or not-YES,17
+
+Section No.-26
+No. of subjects-5
+No. of rooms-4
+#room 40
+#room 32
+#room 13
+#room 23
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-IMFR140C
+Teacher Code-43
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ECSY140C
+Teacher Code-22
+linked or not-YES,8
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-25
+linked or not-YES,9
+
+Subject No.-3
+No. of subjects in basket-2
+Subject Code-MORB720C_SECA
+Teacher Code-45
+Subject Code-MORB720C_SECB
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-YES,16
+
+
+Section No.-27
+No. of subjects-4
+No. of rooms-3
+#room 40
+#room 81
+#room 32
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-IMFR140C
+Teacher Code-43
+linked or not-YES,26
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ECSY140C
+Teacher Code-22
+linked or not-YES,8
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IMIT140C
+Teacher Code-39
+linked or not-YES,17
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IAAP113C
+Teacher Code-52
+linked or not-YES,17
+
+Section No.-28
+No. of subjects-3
+No. of rooms-2
+#room 13
+#room 23
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-INRX340E
+Teacher Code-27
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-IDCO340E
+Teacher Code-30
+Subject Code-IVIRX340E
+Teacher Code-56
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-2
+Subject Code-IMOC730E
+Teacher Code-31
+Subject Code-IHUR340E
+Teacher Code-29
+linked or not-YES,9
+
+Section No.-29
+No. of subjects-3
+No. of rooms-3
+#room 13
+#room 23
+#room 33
+
+Subject No.-0
+No. of subjects in basket-2
+Subject Code-INRX340E
+Teacher Code-27
+Subject Code-IEMB340E
+Teacher Code-17
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-IDCO340E
+Teacher Code-30
+Subject Code-IVIRX340E
+Teacher Code-56
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-2
+Subject Code-IMOC730E
+Teacher Code-31
+Subject Code-IHUR340E
+Teacher Code-29
+linked or not-YES,9
+
+Section No.-30
+No. of subjects-4
+No. of rooms-4
+#room 13
+#room 23
+#room 33
+#room 40
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-IEMB340E
+Teacher Code-17
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-IDCO340E
+Teacher Code-30
+Subject Code-IVIRX340E
+Teacher Code-56
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-2
+Subject Code-IMOC730E
+Teacher Code-31
+Subject Code-IHUR340E
+Teacher Code-29
+linked or not-YES,9
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-IRMP340E
+Teacher Code-57
+linked or not-NO
+
+Section No.-31
+No. of subjects-4
+No. of rooms-3
+#room 13
+#room 23
+#room 33
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-IMOC730E
+Teacher Code-31
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ICCP340E
+Teacher Code-27
+linked or not-YES,22
+
+Subject No.-2
+No. of subjects in basket-3
+Subject Code-IDCO340E
+Teacher Code-30
+Subject Code-IVIRX340E
+Teacher Code-56
+Subject Code-IADA340E
+Teacher Code-15
+linked or not-YES,9
+
+Subject No.-3
+No. of subjects in basket-3
+Subject Code-INRX730E
+Teacher Code-27
+Subject Code-ICIS730E
+Teacher Code-28
+Subject Code-IEMB730E
+Teacher Code-29
+linked or not-YES,9
+
+Section No.-32
+No. of subjects-5
+No. of rooms-5
+#room 23
+#room 33
+#room 13
+#room 43
+#room 41
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-ICIS340E
+Teacher Code-28
+linked or not-YES,9
+
+Subject No.-1
+No. of subjects in basket-2
+Subject Code-IDCO340E
+Teacher Code-30
+Subject Code-IADA340E
+Teacher Code-15
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-EODC703E
+Teacher Code-13
+linked or not-YES,10
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-EMIM730E
+Teacher Code-51
+linked or not-YES,10
+
+Subject No.-4
+No. of subjects in basket-2
+Subject Code-IMOC730E
+Teacher Code-31
+Subject Code-ERSC730E
+Teacher Code-19
+linked or not-YES,10
+
+Section No.-33
+No. of subjects-3
+No. of rooms-3
+#room 82
+#room 23
+#room 33
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-IBCP340E
+Teacher Code-58
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-IDBS340E
+Teacher Code-33
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-IMOC730E
+Teacher Code-31
+linked or not-YES,9
+
+Section No.-34
+No. of subjects-4
+No. of rooms-1
+#room 85
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-SOMI131C/731C
+Teacher Code-30
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-SBDA131C
+Teacher Code-8
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-SBIS131C/731C
+Teacher Code-60
+linked or not-NO
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-SSCE131C/731C
+Teacher Code-52
+linked or not-NO
+
+Section No.-35
+No. of subjects-2
+No. of rooms-1
+#room 84
+
+Subject No.-0
+No. of subjects in basket-2
+Subject Code-SBAN331E
+Teacher Code-50
+Subject Code-SMMD331E
+Teacher Code-49
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-SMLB331E
+Teacher Code-61
+linked or not-NO
+
+Section No.-36
+No. of subjects-6
+No. of rooms-3
+#room 92
+#room 23
+#room 13
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-MFAC120C
+Teacher Code-42
+linked or not-NO
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-ISIM732C
+Teacher Code-3
+linked or not-YES,9
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-MORB720C
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-MBUE120C
+Teacher Code-64
+linked or not-NO
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-ITGT730E
+Teacher Code-34
+linked or not-YES,16
+
+Subject No.-5
+No. of subjects in basket-1
+Subject Code-MBUL120C
+Teacher Code-1
+linked or not-NO
+
+Section No.-37
+No. of subjects-5
+No. of rooms-6
+#room 13
+#room 23
+#room 33
+#room 92
+#room 20
+#room 32
+
+Subject No.-0
+No. of subjects in basket-1
+Subject Code-EESD732C
+Teacher Code-54
+linked or not-YES,10
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-MFAC120C
+Teacher Code-42
+linked or not-YES,36
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-EWCN732C
+Teacher Code-51
+linked or not-YES,10
+
+Subject No.-3
+No. of subjects in basket-1
+Subject Code-MORB720C
+Teacher Code-63
+linked or not-YES,9
+
+Subject No.-4
+No. of subjects in basket-1
+Subject Code-MBUL120C
+Teacher Code-1
+linked or not-YES,36
+
+Section No.-38
+No. of subjects-2
+No. of rooms-1
+#room 100
+
+Subject No.-1
+No. of subjects in basket-1
+Subject Code-sub1120C
+Teacher Code-72
+linked or not-NO
+
+Subject No.-2
+No. of subjects in basket-1
+Subject Code-sub2120C
+Teacher Code-73
+linked or not-NO

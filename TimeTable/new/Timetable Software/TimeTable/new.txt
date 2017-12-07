@@ -1,0 +1,1271 @@
+39
+0 6
+1
+10
+0 -1
+SMAT130C
+0
+sku
+0
+1 -1
+MLCS102C
+1
+ps
+0
+2 -1
+ECAS130C
+2
+aks
+0
+3 -1
+SEGP132C
+3
+at
+0
+4 -1
+IITP132C
+4
+vkc
+0
+5 -1
+EEDC132C
+5
+sanjay
+0
+
+1 6
+1
+11
+0 -1
+SMAT130C
+7
+abab
+0
+1 -1
+MLCS102C
+23
+sm
+0
+2 -1
+ECAS130C
+2
+aks
+0
+3 -1
+SEGP132C
+8
+sb
+0
+4 -1
+IITP132C
+9
+tp
+0
+5 -1
+EEDC132C
+6
+pk
+0
+
+2 6
+1
+12
+0 -1
+SMAT130C
+10
+akt
+0
+1 -1
+MLCS102C
+24
+sr
+0
+2 -1
+ECAS130C
+2
+aks
+0
+3 -1
+SEGP132C
+11
+sanjai
+0
+4 -1
+IITP132C
+12
+js
+0
+5 -1
+EEDC132C
+13
+sbh
+0
+
+3 5
+1
+20
+0 -1
+SMAT130C
+10
+akt
+0
+1 -1
+IOOM332C
+14
+rv
+0
+2 -1
+ITOC330C
+15
+mk
+0
+3 -1
+EMIP332C
+11
+sanjai
+0
+4 -1
+IOPS332C
+17
+bibhas
+0
+
+4 5
+1
+21
+0 -1
+SMAT130C
+0
+sku
+0
+1 -1
+IOOM332C
+9
+tp
+0
+2 -1
+ITOC330C
+15
+mk
+0
+3 -1
+EMIP332C
+16
+mg
+0
+4 -1
+IOPS332C
+12
+js
+0
+
+5 5
+1
+22
+0 -1
+EAES332C
+18
+rekha
+0
+1 -1
+EEFW330C
+19
+rajat
+0
+2 -1
+IOPS332C
+20
+maity
+0
+3 -1
+EACN332C
+21
+np
+0
+4 -1
+EBEE332C
+22
+ashutosh
+0
+
+6 5
+1
+30
+0 -1
+MPOE530C
+36
+pawank
+0
+1 -1
+ICNW532C
+28
+sv
+0
+2 -1
+IAIN532C
+20
+maity
+0
+3 -1
+IGVC532C
+30
+sks
+0
+4 -1
+ISOE532C
+37
+sa
+0
+
+7 5
+1
+31
+0 -1
+MPOE530C
+38
+sd
+0
+1 -1
+ICNW532C
+33
+venkat
+0
+2 -1
+IAIN532C
+39
+kps
+0
+3 -1
+IGVC532C
+29
+pc
+0
+4 -1
+ISOE532C
+40
+ca
+0
+
+8 5
+1
+32
+0 -1
+EAWP532C
+41
+gf2
+0
+1 -1
+ICNW532C
+4
+vkc
+0
+2 -1
+MPOE530C
+42
+sk
+0
+3 -1
+IDCN532C
+21
+np
+0
+4 -1
+ECSY532C
+22
+ashutosh
+0
+
+9 6
+3
+13
+23
+33
+0 3
+INRX730E
+27
+ust
+ICIS730E
+28
+sv
+IEMB730E
+17
+bibhas
+0
+1 4
+IDCO730E
+30
+sks
+IADA730E
+15
+mk
+IVIRX730E
+56
+aa
+SBNF730E
+60
+pv
+0
+2 3
+ICCS730E
+27
+ust
+IDBS730E
+33
+venkat
+IIWP730E
+31
+srv
+0
+3 2
+ISIM732C-SECA
+3
+at
+ISIM732C-SECB
+25
+vs
+0
+4 2
+MORB720C-SECA
+62
+av
+MORB720C-SECB
+63
+vnt
+0
+5 3
+ITGT730E
+34
+rrs
+IHUR340E
+29
+pc
+IMOC730E
+31
+srv
+0
+
+10 5
+7
+20
+32
+13
+33
+23
+41
+42
+0 -1
+EESD732C
+54
+prasanna
+0
+1 2
+ICCS730E
+27
+ust
+EODC730E
+13
+sbh
+0
+2 3
+EWCN732C
+51
+suneel
+EMES730E
+68
+sunny
+IECO730E
+30
+sks
+0
+3 2
+EMSD730E
+18
+rekha
+EMIM730E
+51
+suneel
+0
+4 3
+IHUR340E
+29
+pc
+IMOC730E
+31
+srv
+ERSC730E
+19
+rajat
+0
+
+11 5
+7
+13
+23
+33
+32
+41
+43
+20
+0 -1
+EESD732C
+54
+prasanna
+0
+1 -1
+EWCN732C
+51
+suneel
+0
+2 -1
+EMSD730E
+18
+rekha
+0
+3 -1
+EODC730E
+13
+sbh
+0
+4 -1
+EVLT-140C
+68
+sunny
+0
+
+12 5
+4
+41
+33
+32
+43
+0 -1
+EESD732C
+54
+prasanna
+0
+1 -1
+EODC703E
+13
+sbh
+0
+2 -1
+EDVD140
+54
+prasanna
+0
+3 -1
+EMSD730E
+18
+rekha
+0
+4 -1
+EVLT-140C
+68
+sunny
+0
+
+13 2
+1
+41
+0 -1
+EODC703E
+13
+sbh
+1
+12
+1 -1
+EMES730E
+68
+sunny
+1
+10
+
+14 4
+1
+91
+0 -1
+SANP131C/731C
+53
+ss
+0
+1 -1
+SMSA131C/731C
+2
+aks
+0
+2 -1
+SBCI131C/731C
+46
+ap
+0
+3 -1
+SRTS131C/731C
+45
+rs
+0
+
+15 4
+1
+92
+0 2
+SMFL930E
+46
+ap
+SBEL930E
+47
+am
+0
+1 -1
+SHCS931C
+50
+nm
+0
+2 -1
+SNEU931C
+45
+rs
+0
+3 -1
+SRSS931
+2
+aks
+0
+
+16 5
+4
+33
+23
+13
+42
+0 -1
+ITGT730E
+34
+rrs
+0
+1 -1
+IINP140C
+31
+srv
+0
+2 -1
+EWCS140C
+51
+suneel
+0
+3 -1
+ISIM732C
+25
+vs
+1
+9
+4 2
+MORB720C_SECA
+45
+rs
+MORB720C_SECB
+63
+vnt
+1
+9
+
+17 4
+3
+33
+42
+81
+0 -1
+IINP140C
+31
+srv
+1
+16
+1 -1
+EWCS140C
+51
+suneel
+1
+16
+2 -1
+IMIT140C
+39
+kps
+0
+3 -1
+IAAP113C
+52
+bss
+0
+
+18 5
+3
+13
+23
+33
+0 -1
+ICIS140C
+28
+sv
+1
+9
+1 -1
+IINP140C
+31
+srv
+1
+16
+2 -1
+ISIM732C
+25
+vs
+1
+9
+3 2
+MORB720C_SECA
+45
+rs
+MORB720_SECB
+63
+vnt
+1
+9
+4 -1
+ITGT730E
+34
+rrs
+1
+16
+
+19 4
+3
+23
+33
+81
+0 -1
+ICIS140C
+28
+sv
+1
+9
+1 -1
+IMIT140C
+39
+kps
+1
+17
+2 -1
+IINP140C
+31
+srv
+1
+16
+3 -1
+IAAP113C
+52
+bss
+1
+17
+
+20 5
+3
+80
+13
+23
+0 -1
+ISOM740C
+37
+sa
+0
+1 -1
+ISRE740C
+40
+ca
+0
+2 -1
+ISIM732C
+25
+vs
+1
+9
+3 -1
+MORB720C_SECB
+63
+vnt
+1
+9
+4 -1
+ITGT730E
+34
+rrs
+1
+16
+
+21 4
+2
+80
+81
+0 -1
+ISOM140C
+37
+sa
+1
+20
+1 -1
+ISRE140C
+40
+ca
+1
+20
+2 -1
+IMIT140C
+39
+kps
+1
+17
+3 -1
+IAAP113C
+52
+bss
+1
+17
+
+22 5
+3
+13
+23
+81
+0 -1
+ISIM732C
+25
+vs
+1
+9
+1 2
+MORB720C_SECA
+45
+rs
+MORB720C_SECB
+63
+vnt
+1
+9
+2 -1
+ICCP140C
+27
+ust
+0
+3 -1
+ITGT730E
+34
+rrs
+1
+16
+4 -1
+ICOI140C
+57
+rk
+0
+
+23 4
+2
+81
+13
+0 -1
+ICCP140C
+27
+ust
+1
+22
+1 -1
+ICOI140C
+57
+rk
+1
+22
+2 -1
+IMIT140C
+39
+kps
+1
+17
+3 -1
+IAAP113C
+52
+bss
+1
+17
+
+24 5
+3
+81
+13
+23
+0 -1
+ISIM732C
+25
+vs
+1
+9
+1 2
+MORB720C_SECA
+45
+rs
+MORB720C_SECB
+63
+vnt
+1
+9
+2 -1
+ICCP140C
+27
+ust
+0
+3 -1
+ITGT730E
+34
+rrs
+1
+16
+4 -1
+ICOI140C
+57
+rk
+1
+22
+
+25 4
+2
+81
+13
+0 -1
+ICCP140C
+27
+ust
+1
+22
+1 -1
+ICOI140C
+57
+rk
+1
+22
+2 -1
+IMIT140C
+39
+kps
+1
+17
+3 -1
+IAAP113C
+52
+bss
+1
+17
+
+26 5
+4
+40
+32
+13
+23
+0 -1
+IMFR140C
+43
+gcn
+0
+1 -1
+ECSY140C
+22
+ashutosh
+1
+8
+2 -1
+ISIM732C
+25
+vs
+1
+9
+3 2
+MORB720C_SECA
+45
+rs
+MORB720C_SECB
+63
+vnt
+1
+9
+4 -1
+ITGT730E
+34
+rrs
+1
+16
+
+27 4
+3
+40
+81
+32
+0 -1
+IMFR140C
+43
+gcn
+1
+26
+1 -1
+ECSY140C
+22
+ashutosh
+1
+8
+2 -1
+IMIT140C
+39
+kps
+1
+17
+3 -1
+IAAP113C
+52
+bss
+1
+17
+
+28 3
+2
+13
+23
+0 -1
+INRX340E
+27
+ust
+1
+9
+1 2
+IDCO340E
+30
+sks
+IVIRX340E
+56
+aa
+1
+9
+2 2
+IMOC730E
+31
+srv
+IHUR340E
+29
+pc
+1
+9
+
+29 3
+3
+13
+23
+33
+0 2
+INRX340E
+27
+ust
+IEMB340E
+17
+bibhas
+1
+9
+1 2
+IDCO340E
+30
+sks
+IVIRX340E
+56
+aa
+1
+9
+2 2
+IMOC730E
+31
+srv
+IHUR340E
+29
+pc
+1
+9
+
+30 4
+4
+13
+23
+33
+40
+0 -1
+IEMB340E
+17
+bibhas
+1
+9
+1 2
+IDCO340E
+30
+sks
+IVIRX340E
+56
+aa
+1
+9
+2 2
+IMOC730E
+31
+srv
+IHUR340E
+29
+pc
+1
+9
+3 -1
+IRMP340E
+57
+rk
+0
+
+31 4
+3
+13
+23
+33
+0 -1
+IMOC730E
+31
+srv
+1
+9
+1 -1
+ICCP340E
+27
+ust
+1
+22
+2 3
+IDCO340E
+30
+sks
+IVIRX340E
+56
+aa
+IADA340E
+15
+mk
+1
+9
+3 3
+INRX730E
+27
+ust
+ICIS730E
+28
+sv
+IEMB730E
+29
+pc
+1
+9
+
+32 5
+5
+23
+33
+13
+43
+41
+0 -1
+ICIS340E
+28
+sv
+1
+9
+1 2
+IDCO340E
+30
+sks
+IADA340E
+15
+mk
+1
+9
+2 -1
+EODC703E
+13
+sbh
+1
+10
+3 -1
+EMIM730E
+51
+suneel
+1
+10
+4 2
+IMOC730E
+31
+srv
+ERSC730E
+19
+rajat
+1
+10
+
+33 3
+3
+82
+23
+33
+0 -1
+IBCP340E
+58
+mm
+0
+1 -1
+IDBS340E
+33
+venkat
+1
+9
+2 -1
+IMOC730E
+31
+srv
+1
+9
+
+34 4
+1
+85
+0 -1
+SOMI131C/731C
+30
+sks
+0
+1 -1
+SBDA131C
+8
+sb
+0
+2 -1
+SBIS131C/731C
+60
+pv
+0
+3 -1
+SSCE131C/731C
+52
+bss
+0
+
+35 2
+1
+84
+0 2
+SBAN331E
+50
+nm
+SMMD331E
+49
+km
+0
+1 -1
+SMLB331E
+61
+tl
+0
+
+36 6
+3
+92
+23
+13
+0 -1
+MFAC120C
+42
+sk
+0
+1 -1
+ISIM732C
+3
+at
+1
+9
+2 -1
+MORB720C
+63
+vnt
+1
+9
+3 -1
+MBUE120C
+64
+ug
+0
+4 -1
+ITGT730E
+34
+rrs
+1
+16
+5 -1
+MBUL120C
+1
+ps
+0
+
+37 5
+6
+13
+23
+33
+92
+20
+32
+0 -1
+EESD732C
+54
+prasanna
+1
+10
+1 -1
+MFAC120C
+42
+sk
+1
+36
+2 -1
+EWCN732C
+51
+suneel
+1
+10
+3 -1
+MORB720C
+63
+vnt
+1
+9
+4 -1
+MBUL120C
+1
+ps
+1
+36
+
+38 2
+1
+100
+1 -1
+sub1120C
+72
+hero
+0
+2 -1
+sub2120C
+73
+waah
+0

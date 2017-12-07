@@ -1,0 +1,6 @@
+SEC : 15
+MONDAY;SMFL930E(ap)!SBEL930E(am)!Room No : 92;SMFL930E(ap)!SBEL930E(am)!Room No : 92;SHCS931C nm!Room No : 92;SHCS931C nm!Room No : 92;;
+TUESDAY;SMFL930E(ap)!SBEL930E(am)!Room No : 92;SHCS931C nm!Room No : 92;SNEU931C rs!Room No : 92;SNEU931C rs!Room No : 92;;
+WEDNESDAY;SNEU931C rs!Room No : 92;;;;;
+THURSDAY;;;;SRSS931 aks!Room No : 92;;
+FRIDAY;SRSS931 aks!Room No : 92;SRSS931 aks!Room No : 92;;;;

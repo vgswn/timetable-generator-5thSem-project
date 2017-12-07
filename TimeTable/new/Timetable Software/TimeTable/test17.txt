@@ -1,0 +1,6 @@
+SEC : 17
+MONDAY;;;IMIT140C kps!Room No : 33;IMIT140C kps!Room No : 81;EWCS140C suneel!Room No : 33;
+TUESDAY;;IMIT140C kps!Room No : 81;IAAP113C bss!Room No : 42;IAAP113C bss!Room No : 42;;
+WEDNESDAY;IAAP113C bss!Room No : 42;;IINP140C srv!Room No : 33;IINP140C srv!Room No : 33;;
+THURSDAY;;;IINP140C srv!Room No : 33;;;
+FRIDAY;;;EWCS140C suneel!Room No : 33;EWCS140C suneel!Room No : 33;EWCS140C suneel!Room No : 33;

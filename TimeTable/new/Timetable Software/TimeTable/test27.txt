@@ -1,0 +1,6 @@
+SEC : 27
+MONDAY;;;IMIT140C kps!Room No : 33;IMIT140C kps!Room No : 81;;
+TUESDAY;IMFR140C gcn!Room No : 40;IMIT140C kps!Room No : 81;IAAP113C bss!Room No : 42;IAAP113C bss!Room No : 42;;
+WEDNESDAY;IAAP113C bss!Room No : 42;;ECSY532C ashutosh!Room No : 32;ECSY532C ashutosh!Room No : 32;;
+THURSDAY;IMFR140C gcn!Room No : 40;IMFR140C gcn!Room No : 40;ECSY532C ashutosh!Room No : 32;;;
+FRIDAY;;;;;;

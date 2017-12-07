@@ -1,0 +1,6 @@
+SEC : 38
+MONDAY;sub1120C hero!Room No : 100;sub1120C hero!Room No : 100;sub2120C waah!Room No : 100;sub2120C waah!Room No : 100;;
+TUESDAY;sub1120C hero!Room No : 100;sub2120C waah!Room No : 100;;;;
+WEDNESDAY;;;;;;
+THURSDAY;;;;;;
+FRIDAY;;;;;;

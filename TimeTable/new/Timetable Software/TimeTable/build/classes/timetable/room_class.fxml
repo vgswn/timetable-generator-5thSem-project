@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetable.room_selectionController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="646.0" layoutX="-5.0" layoutY="-6.0" opacity="0.34" pickOnBounds="true">
+         <image>
+            <Image url="@14102133_1094699787276898_5613803484599245322_n.jpg" />
+         </image>
+
+      </ImageView>
+      <Text fill="#134651" layoutX="48.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indian Institute of Information Technology, Allahabad" textAlignment="CENTER" wrappingWidth="539.0000014603138">
+         <font>
+            <Font name="Andalus" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#123454" layoutX="223.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TIME TABLE" textAlignment="CENTER" wrappingWidth="199.13671875">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="room_combo" layoutX="308.0" layoutY="181.0" prefWidth="150.0" promptText="Rooms" />
+      <Text fill="#123454" layoutX="52.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Room" textAlignment="CENTER" wrappingWidth="199.13671875">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="room_btn" layoutX="275.0" layoutY="292.0" style="-fx-background-color: Cream;" text="OK" textAlignment="RIGHT" textFill="#236f8d" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </JFXButton>
+      <JFXButton fx:id="back" layoutX="373.0" layoutY="291.0" style="-fx-background-color: Cream;" text="BACK" textAlignment="RIGHT" textFill="#236f8d" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <Bloom />
+         </effect>
+      </JFXButton>
+   </children>
+</AnchorPane>

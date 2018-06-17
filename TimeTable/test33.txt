@@ -1,6 +1,0 @@
-SEC : 33
-MONDAY;IBCP340E mm!Room No : 82;IBCP340E mm!Room No : 82;;;ITGT730E(rrs)!IHUR340E(pc)!IMOC730E(srv)!Room No : 13;
-TUESDAY;IBCP340E mm!Room No : 82;;;;;
-WEDNESDAY;;ICCS730E(ust)!IDBS730E(venkat)!IIWP730E(srv)!Room No : 13;;;;
-THURSDAY;ICCS730E(ust)!IDBS730E(venkat)!IIWP730E(srv)!Room No : 13;ICCS730E(ust)!IDBS730E(venkat)!IIWP730E(srv)!Room No : 13;;;;
-FRIDAY;;;ITGT730E(rrs)!IHUR340E(pc)!IMOC730E(srv)!Room No : 13;ITGT730E(rrs)!IHUR340E(pc)!IMOC730E(srv)!Room No : 13;ITGT730E(rrs)!IHUR340E(pc)!IMOC730E(srv)!Room No : 13;

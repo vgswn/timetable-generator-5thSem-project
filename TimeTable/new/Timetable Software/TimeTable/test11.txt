@@ -1,6 +1,0 @@
-SEC : 11
-MONDAY;;;;EWCN732C suneel!Room No : 23;;
-TUESDAY;EWCN732C suneel!Room No : 23;EWCN732C suneel!Room No : 23;EESD732C prasanna!Room No : 23;EESD732C prasanna!Room No : 23;;
-WEDNESDAY;EESD732C prasanna!Room No : 23;EODC730E sbh!Room No : 23;EMSD730E rekha!Room No : 23;EMSD730E rekha!Room No : 23;;
-THURSDAY;EODC730E sbh!Room No : 23;EODC730E sbh!Room No : 23;EMSD730E rekha!Room No : 23;EVLT-140C sunny!Room No : 23;;
-FRIDAY;EVLT-140C sunny!Room No : 23;EVLT-140C sunny!Room No : 23;;;;

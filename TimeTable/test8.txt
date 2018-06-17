@@ -1,6 +1,0 @@
-SEC : 8
-MONDAY;;;;EAWP532C gf2!Room No : 32;;
-TUESDAY;EAWP532C gf2!Room No : 32;EAWP532C gf2!Room No : 32;ICNW532C vkc!Room No : 32;ICNW532C vkc!Room No : 32;;
-WEDNESDAY;ICNW532C vkc!Room No : 32;MPOE530C sk!Room No : 32;ECSY532C ashutosh!Room No : 32;ECSY532C ashutosh!Room No : 32;;
-THURSDAY;MPOE530C sk!Room No : 32;MPOE530C sk!Room No : 32;ECSY532C ashutosh!Room No : 32;IDCN532C np!Room No : 32;;
-FRIDAY;IDCN532C np!Room No : 32;IDCN532C np!Room No : 32;;;;

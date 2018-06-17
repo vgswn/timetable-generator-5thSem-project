@@ -1,6 +1,0 @@
-SEC : 3
-MONDAY;;;;SMAT130C akt!Room No : 20;;
-TUESDAY;IOOM332C rv!Room No : 20;SMAT130C akt!Room No : 20;ITOC330C mk!Room No : 20;ITOC330C mk!Room No : 20;;
-WEDNESDAY;SMAT130C akt!Room No : 20;IOOM332C rv!Room No : 20;ITOC330C mk!Room No : 20;EMIP332C sanjai!Room No : 20;;
-THURSDAY;IOOM332C rv!Room No : 20;EMIP332C sanjai!Room No : 20;IOPS332C bibhas!Room No : 20;IOPS332C bibhas!Room No : 20;;
-FRIDAY;EMIP332C sanjai!Room No : 20;IOPS332C bibhas!Room No : 20;;;;

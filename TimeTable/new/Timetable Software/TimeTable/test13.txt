@@ -1,6 +1,0 @@
-SEC : 13
-MONDAY;;;;EODC703E sbh!Room No : 41;;
-TUESDAY;EODC703E sbh!Room No : 41;EODC703E sbh!Room No : 41;;;;
-WEDNESDAY;;;EWCN732C(suneel)!EMES730E(sunny)!IECO730E(sks)!Room No : 13;EWCN732C(suneel)!EMES730E(sunny)!IECO730E(sks)!Room No : 13;;
-THURSDAY;;;EWCN732C(suneel)!EMES730E(sunny)!IECO730E(sks)!Room No : 13;;;
-FRIDAY;;;;;;

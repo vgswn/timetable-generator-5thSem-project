@@ -1,6 +1,0 @@
-SEC : 5
-MONDAY;;;;EAES332C rekha!Room No : 22;;
-TUESDAY;EAES332C rekha!Room No : 22;EAES332C rekha!Room No : 22;EEFW330C rajat!Room No : 22;EEFW330C rajat!Room No : 22;;
-WEDNESDAY;EEFW330C rajat!Room No : 22;IOPS332C maity!Room No : 22;EACN332C np!Room No : 22;EACN332C np!Room No : 22;;
-THURSDAY;IOPS332C maity!Room No : 22;IOPS332C maity!Room No : 22;EACN332C np!Room No : 22;EBEE332C ashutosh!Room No : 22;;
-FRIDAY;EBEE332C ashutosh!Room No : 22;EBEE332C ashutosh!Room No : 22;;;;

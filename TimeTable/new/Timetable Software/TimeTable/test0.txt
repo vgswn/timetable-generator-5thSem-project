@@ -1,6 +1,0 @@
-SEC : 0
-MONDAY;SMAT130C sku!Room No : 10;SMAT130C sku!Room No : 10;MLCS102C ps!Room No : 10;MLCS102C ps!Room No : 10;;
-TUESDAY;SMAT130C sku!Room No : 10;MLCS102C ps!Room No : 10;ECAS130C aks!Room No : 10;ECAS130C aks!Room No : 10;;
-WEDNESDAY;ECAS130C aks!Room No : 10;SEGP132C at!Room No : 10;IITP132C vkc!Room No : 10;IITP132C vkc!Room No : 10;;
-THURSDAY;SEGP132C at!Room No : 10;SEGP132C at!Room No : 10;IITP132C vkc!Room No : 10;EEDC132C sanjay!Room No : 10;;
-FRIDAY;EEDC132C sanjay!Room No : 10;EEDC132C sanjay!Room No : 10;;;;

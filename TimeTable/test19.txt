@@ -1,6 +1,0 @@
-SEC : 19
-MONDAY;INRX730E(ust)!ICIS730E(sv)!IEMB730E(bibhas)!Room No : 13;INRX730E(ust)!ICIS730E(sv)!IEMB730E(bibhas)!Room No : 13;IMIT140C kps!Room No : 33;IMIT140C kps!Room No : 81;;
-TUESDAY;INRX730E(ust)!ICIS730E(sv)!IEMB730E(bibhas)!Room No : 13;IMIT140C kps!Room No : 81;IAAP113C bss!Room No : 42;IAAP113C bss!Room No : 42;;
-WEDNESDAY;IAAP113C bss!Room No : 42;;IINP140C srv!Room No : 33;IINP140C srv!Room No : 33;;
-THURSDAY;;;IINP140C srv!Room No : 33;;;
-FRIDAY;;;;;;

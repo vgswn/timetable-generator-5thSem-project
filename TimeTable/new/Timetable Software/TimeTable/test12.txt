@@ -1,6 +1,0 @@
-SEC : 12
-MONDAY;;;;EODC703E sbh!Room No : 41;EVLT-140C sunny!Room No : 41;
-TUESDAY;EODC703E sbh!Room No : 41;EODC703E sbh!Room No : 41;EMSD730E rekha!Room No : 41;EMSD730E rekha!Room No : 41;;
-WEDNESDAY;EMSD730E rekha!Room No : 41;EESD732C prasanna!Room No : 41;EDVD140 prasanna!Room No : 41;EDVD140 prasanna!Room No : 41;;
-THURSDAY;EESD732C prasanna!Room No : 41;EESD732C prasanna!Room No : 41;EDVD140 prasanna!Room No : 41;;;
-FRIDAY;;;EVLT-140C sunny!Room No : 41;EVLT-140C sunny!Room No : 41;EVLT-140C sunny!Room No : 41;

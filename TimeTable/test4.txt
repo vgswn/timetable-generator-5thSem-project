@@ -1,6 +1,0 @@
-SEC : 4
-MONDAY;;;;SMAT130C sku!Room No : 21;;
-TUESDAY;IOOM332C tp!Room No : 21;SMAT130C sku!Room No : 21;EMIP332C mg!Room No : 21;EMIP332C mg!Room No : 21;;
-WEDNESDAY;SMAT130C sku!Room No : 21;IOOM332C tp!Room No : 21;EMIP332C mg!Room No : 21;ITOC330C mk!Room No : 21;;
-THURSDAY;IOOM332C tp!Room No : 21;ITOC330C mk!Room No : 21;IOPS332C js!Room No : 21;IOPS332C js!Room No : 21;;
-FRIDAY;ITOC330C mk!Room No : 21;IOPS332C js!Room No : 21;;;;
